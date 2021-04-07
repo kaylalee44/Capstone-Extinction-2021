@@ -3,8 +3,8 @@ import './index.css'
 import * as ROUTES from "./constants/routes"; 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import StoriesStart from "./pages/stories_start";
-import Stories from './Stories';
-import { NavBar } from './Home';
+import Stories from './pages/stories';
+import { NavBar } from './components/navbar/navbar';
 
 function App() {
   return (

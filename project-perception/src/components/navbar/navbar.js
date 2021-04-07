@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {React, useState} from 'react';
 
 // Create navbar component
 export function NavBar() {
