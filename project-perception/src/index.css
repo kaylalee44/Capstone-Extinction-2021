@@ -1,13 +1,243 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #3a444d;;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div {
+  display: flex;
+}
+
+.navbar-main, .navbar-left, .menu-dropdown ul, .tag-block {
+  align-items: center;
+}
+
+.navbar-main {
+  background-color: #e9e3cb;
+  color: #3a444d;
+  justify-content: space-between;
+} 
+
+.navbar-right {
+  display: none;
+}
+
+.navbar-title, .stories-title h1 {
+  font-family: 'Cinzel', serif;
+}
+
+.back-to-states p, .stories-title p, .story-name, .species-name {
+  font-family: 'Lato', sans-serif;
+}
+
+.hamburger-menu {
+  height: 40px;
+  width: 40px;
+  margin-right: 25px;
+}
+
+.eyes-logo {
+  height: 30px;
+  width: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.page-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-dropdown {
+  position: absolute; 
+  top: 0;
+  right: 0;
+  background-color: #e9e3cb;
+  height: 140px;
+  width: 100px;
+}
+
+.menu-dropdown ul {
+  flex-direction: column;
+}
+
+.menu-dropdown li {
+  margin-top: 30px;
+}
+
+.menu-dropdown li:hover {
+  border-bottom: .2rem solid #3a444d;
+}
+
+.left-arrow {
+  height: 30px;
+  width: 30px;
+}
+
+.back-to-states {
+  float: left;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.back-to-states p {
+  margin-left: 10px;
+  color: #e9e3cb;
+}
+
+.stories-title {
+  text-align: center;
+}
+
+.stories-title h1, .stories-title p {
+  color: #e9e3cb;
+}
+
+.stories-divider {
+  background-color: #e2a856;
+  height: 10px;
+}
+
+.species-card, .turtle-pic {
+  border-radius: 15px;
+}
+
+.species-card {
+  height: 200px;
+  width: 190px;
+  background-color: #e9e3cb;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.turtle-pic {
+  height: 90px;
+  width: 165px;
+  margin-top: 10px;
+}
+
+.turtle-border {
+  text-align: center;
+}
+
+.story-name {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.species-name {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.story-name, .species-name {
+  text-align: left;
+  margin-left: 15px;
+  
+}
+
+.tag-block {
+  margin-left: 10px;
+}
+
+.tag-name {
+  font-size: 12px;
+  margin-left: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.story-name, .species-name, .tag-name {
+  color: #74624e
+}
+
+@media (min-width: 768px) {
+  .navbar-title {
+    font-size: 30px;
+    margin-left: 10px;
+  }
+
+  .eyes-logo {
+    height: 52px;
+    width: 199px;
+  }
+
+  .menu-dropdown {
+    height: 140px;
+    width: 180px;
+  }
+
+  .menu-dropdown li {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .navbar-right {
+    display: block;
+  }
+
+  .navbar-right li:hover {
+    border-bottom: .2rem solid #3a444d; 
+  }
+
+  .page-links li {
+    display: inline;
+    font-size: 24px;
+    margin-right: 30px;
+  }
+
+  .left-arrow {
+    height: 50px;
+    width: 50px;
+  }
+
+  .back-to-states p {
+    font-size: 18px;
+  }
+
+  .stories-title h1 {
+    font-size: 48px;
+  }
+
+  .stories-title p {
+    font-size: 24px;
+  }
+
+  .stories-divider {
+    height: 20px;
+  }
+
+  .species-card {
+    height: 358px;
+    width: 350px;
+  }
+
+  .turtle-pic {
+    height: 190px;
+    width: 300px;
+  }
+
+  .story-name, .species-name {
+    margin-left: 25px;
+  }
+
+  .story-name {
+    font-size: 20px;
+  }
+
+  .species-name {
+    font-size: 18px;
+  }
+
+  .tags {
+    margin-top: 2.5em;
+    margin-left: 15px;
+  }
+
+  .tag-name {
+    font-size: 15px;
+  }
 }
