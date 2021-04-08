@@ -3,21 +3,29 @@ body {
   background-color: #3a444d;;
 }
 
-.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div {
+.footer-main {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .footer-main {
   display: flex;
 }
 
-.navbar-main, .navbar-left, .menu-dropdown ul, .tag-block {
+.navbar-main, .navbar-left, .menu-dropdown ul, .tag-block, .footer-main {
   align-items: center;
 }
 
-.navbar-main {
+.navbar-main, .footer-main {
   background-color: #e9e3cb;
   color: #3a444d;
   justify-content: space-between;
 } 
 
-.navbar-right {
+.navbar-right, .hidden {
   display: none;
 }
 
