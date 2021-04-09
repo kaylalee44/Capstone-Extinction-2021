@@ -1,6 +1,7 @@
 import React from 'react';
 import StoryImage from '../components/story/story_image';
 import TurtleStoryHeadingComponent from '../components/story/turtle_story_1';
+import Choices from '../components/story/choices';
 
 export default function TurtleStory1Container(props) {
     return(
@@ -14,6 +15,7 @@ export default function TurtleStory1Container(props) {
                         is a jellyfish. It looks good to eat!
                     </p>
                     <p className="story-question">What will you do?</p>
+                    <Choices choices={["Eat it.", "Pass - I'm full."]} />
                 </div>
             </div>
             
