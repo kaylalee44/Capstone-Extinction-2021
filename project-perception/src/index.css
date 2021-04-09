@@ -4,15 +4,42 @@ body {
 }
 
 .footer-main {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
+  margin-top: 10em;
 }
 
-.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .footer-main {
+.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .footer-main, .animal-details {
   display: flex;
+}
+
+.animal-details {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #e9e3cb;
+}
+
+.animal-details Button {
+  background-color: #E2A856;
+  border-radius: 0.5em;
+  padding: 1em 5em 1em 5em;
+  margin-top: 1em;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+.audio-off-logo {
+  float: right;
+  margin-left: 100em;
+  width: 2em;
+}
+
+.animal-details .turtle-pic {
+  width: 25em;
+  height: 14em;
 }
 
 .navbar-main, .navbar-left, .menu-dropdown ul, .tag-block, .footer-main {
@@ -25,15 +52,26 @@ body {
   justify-content: space-between;
 } 
 
+.footer-logo img {
+  height: 2em;
+  width: 7em;
+}
+
+.footer-logo, .footer-desc, .footer-copyright {
+  display: flex;
+  flex-direction: row;
+  margin: 3em 1em 3em 3em;
+}
+
 .navbar-right, .hidden {
   display: none;
 }
 
-.navbar-title, .stories-title h1 {
+.navbar-title, .stories-title h1, .footer-logo h3, .animal-details h1 {
   font-family: 'Cinzel', serif;
 }
 
-.back-to-states p, .stories-title p, .story-name, .species-name {
+.back-to-states p, .stories-title p, .story-name, .species-name, .animal-details {
   font-family: 'Lato', sans-serif;
 }
 
@@ -82,7 +120,7 @@ body {
   width: 30px;
 }
 
-.back-to-states {
+.back-to-states, .back-to-stories {
   float: left;
   display: flex;
   align-items: center;
@@ -90,9 +128,18 @@ body {
   width: 100%;
 }
 
-.back-to-states p {
+.back-to-states p, .back-to-stories p {
   margin-left: 10px;
   color: #e9e3cb;
+}
+
+.status {
+  display: flex;
+  flex-direction: row;
+}
+
+.status p {
+  margin-right: 1em;
 }
 
 .stories-title {

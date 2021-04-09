@@ -3,7 +3,7 @@ import { Button } from "reactstrap";
 
 function StoriesList() {
     return(
-        <div>
+        <div className="hidden">
             <BackStates />
             <StoriesTitle />
             <ChooseSpecies />
@@ -64,12 +64,12 @@ function StoriesDetail() {
 function AnimalDetails(props) {
     // for now, hard code everything in
     return (
-        <div className="animal-details hidden">
+        <div className="animal-details">
             <div className="back-to-stories">
                 <img src="img/book.jpg" alt="A opened book logo"/>
                 <p>back to stories</p>
             </div>
-            <img src="img/volume_off.jpg" alt="A volume off logo"/>
+            <img className="audio-off-logo" src="img/volume_off.jpg" alt="A volume off logo"/>
             <div>
                 <h1>Nesting</h1>
                 <img id="turtle-pic" className="turtle-pic" src="img/leatherback-sea-turtle.jpg" alt="A leatherback sea turtle" />
@@ -81,7 +81,7 @@ function AnimalDetails(props) {
             </div>
             <div>
                 <p>Status:</p>
-                <div>
+                <div className="status">
                     <p>Candidate</p>
                     <p>Threatened</p>
                     <p>Endangered</p>
