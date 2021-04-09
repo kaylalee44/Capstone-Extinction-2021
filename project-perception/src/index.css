@@ -46,7 +46,7 @@ body {
   height: 14em;
 }
 
-.navbar-main, .navbar-left, .menu-dropdown ul, .tag-block, .footer-main {
+.navbar-main, .navbar-left, .menu-dropdown ul, .tag-block, .footer-main, .story-title {
   align-items: center;
 }
 
