@@ -3,11 +3,11 @@ body {
   background-color: #3a444d;;
 }
 
-.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div {
+.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories {
   display: flex;
 }
 
-.navbar-main, .navbar-left, .menu-dropdown ul, .tag-block {
+.navbar-main, .navbar-left, .menu-dropdown ul, .tag-block, .story-title, .back-to-stories {
   align-items: center;
 }
 
@@ -21,11 +21,11 @@ body {
   display: none;
 }
 
-.navbar-title, .stories-title h1 {
+.navbar-title, .stories-title h1, .story-heading {
   font-family: 'Cinzel', serif;
 }
 
-.back-to-states p, .stories-title p, .story-name, .species-name {
+.back-to-states p, .stories-title p, .story-name, .species-name, .back-to-stories p, .story-paragraph, .story-question {
   font-family: 'Lato', sans-serif;
 }
 
@@ -91,7 +91,7 @@ body {
   text-align: center;
 }
 
-.stories-title h1, .stories-title p {
+.stories-title h1, .stories-title p, .story-title p {
   color: #e9e3cb;
 }
 
@@ -152,6 +152,31 @@ body {
   color: #74624e
 }
 
+.story-title {
+  height: 50px;
+  width: 400px;
+  background-color: #74624e;
+  margin: auto;
+  margin-top: 40px;
+  justify-content: space-between;
+}
+
+.back-to-stories, .back-to-stories p {
+  margin-left: 10px;
+}
+
+.audio-logo {
+  margin-right: 10px;
+}
+
+.jelly-gif {
+  display: none;
+}
+
+.story-paragraph, .story-question {
+  color: #72604C
+}
+
 @media (min-width: 768px) {
   .navbar-title {
     font-size: 30px;
@@ -170,6 +195,14 @@ body {
 
   .menu-dropdown li {
     font-size: 20px;
+  }
+
+  .story-title {
+    width: 700px;
+  }
+
+  .story-heading {
+    font-size: 24px;
   }
 }
 
@@ -239,5 +272,39 @@ body {
 
   .tag-name {
     font-size: 15px;
+  }
+
+  .story-title {
+    width: calc(100% - 92px);
+  }
+
+  .jelly-gif {
+    display: block;
+    margin-left: 46px;
+    height: 500px;
+    width: calc(50% - 80px);
+    float: left;
+  }
+
+  .story-content {
+    display: inline-block;
+    height: 500px;
+    width: calc(50% - 12px);
+    background-color: #e9e3cb;
+  }
+
+  .story-paragraph {
+    margin-top: 70px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 18px;
+    color: #72604C
+  }
+
+  .story-question {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 70px;
+    font-weight: 700;
   }
 }
