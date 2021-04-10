@@ -46,7 +46,7 @@ body {
   height: 14em;
 }
 
-.navbar-main, .navbar-left, .menu-dropdown ul, .tag-block, .footer-main, .story-title {
+.navbar-main, .navbar-left, .menu-dropdown ul, .tag-block, .footer-main, .story-title, .back-to-stories {
   align-items: center;
 }
 
@@ -124,7 +124,7 @@ body {
   width: 30px;
 }
 
-.back-to-states, .back-to-stories {
+.back-to-states {
   float: left;
   display: flex;
   align-items: center;
