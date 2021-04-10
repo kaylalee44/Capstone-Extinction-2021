@@ -3,8 +3,10 @@ import {React, useState} from 'react';
 export default function Footer() {
     return (
         <footer className="footer-main">
-            <FooterLogo />
-            <FooterDesc />
+            <div className="footer-content">
+                <FooterLogo />
+                <FooterDesc />
+            </div>
             <FooterCopyright />
         </footer>
     );
@@ -32,7 +34,7 @@ function FooterDesc() {
 function FooterCopyright() {
     return (
         <div className="footer-copyright">
-            <p>Project Perception. All rights reserved.</p>
+            <p><span>&#169;</span>2021 Project Perception. All rights reserved.</p>
         </div>
     );
 }
