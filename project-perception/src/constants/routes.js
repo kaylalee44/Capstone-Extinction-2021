@@ -5,3 +5,4 @@ export const STORIES = "/stories"
 export const STORY_TURTLE = "/story-turtle";
 export const STORY_TURTLE_1 = "/story-turtle-1";
 export const STORY_TURTLE_2 = "/story-turtle-2";
+export const STORY_TURTLE_3 = "/story-turtle-3";
