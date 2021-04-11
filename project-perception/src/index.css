@@ -4,7 +4,7 @@ body {
   background-color: #3a444d;;
 }
 
-.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories {
+.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories, .try-again, .ending-container {
   display: flex;
 }
 
@@ -12,7 +12,7 @@ body {
   display: flex;
 }
 
-.back-to-states p, .stories-title p, .story-name, .species-name, .animal-details, .choice-btn, .story-paragraph, .story-paragraph2 {
+.back-to-states p, .stories-title p, .story-name, .species-name, .animal-details, .choice-btn, .story-paragraph, .story-paragraph2, .explanation, .ending-btn {
   font-family: 'Lato', sans-serif;
 }
 
@@ -295,6 +295,54 @@ body {
   color: #72604C
 }
 
+.death {
+  color: #C10000;
+}
+
+.explanation {
+  color: #3a444d;
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.separation {
+  margin-top: 80px;
+}
+
+.learn-more {
+  color: #E2A856;
+  font-size: 20px;
+  margin-left: 30px;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.try-again {
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+.ending-container {
+  margin-top: 60px;
+  margin-left: 30px;
+}
+
+.ending-btn {
+  background-color: #E2A856;
+  color: #3a444d;
+  width: calc(50% - 30px);
+  border-radius: 10px;
+}
+
+.highlight {
+  background-color: #E2A856;
+  color:#3a444d;
+}
+
+.survive {
+  color: #1f5dfe;
+}
 
 /* Responsiveness */
 @media (min-width: 768px) {
@@ -411,6 +459,10 @@ body {
 
   .ocean {
     height: 600px;
+  }
+
+  .ending {
+    height: 650px;
   }
 
   .story-content {
