@@ -4,7 +4,7 @@ body {
   background-color: #3a444d;;
 }
 
-.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories, .try-again, .ending-container {
+.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories, .try-again, .ending-container, .choice-container {
   display: flex;
 }
 
@@ -88,7 +88,7 @@ body {
   margin-top: 5em;
 }
 
-.animal-details button {
+.details-btn {
   background-color: #E2A856;
   border-radius: 0.5em;
   padding: 1em 5em 1em 5em;
@@ -98,6 +98,8 @@ body {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   display: inline-block;
   text-align: center;
+  text-decoration: none;
+  color: #3a444d;
 }
 
 .animal-details .turtle-pic {
@@ -331,17 +333,24 @@ body {
 .ending-btn {
   background-color: #E2A856;
   color: #3a444d;
+  height: 40px;
   width: calc(50% - 30px);
   border-radius: 10px;
+  text-decoration: none;
 }
 
 .highlight {
   background-color: #E2A856;
   color:#3a444d;
+  cursor: pointer;
 }
 
 .survive {
   color: #1f5dfe;
+}
+
+.close {
+  cursor: pointer;
 }
 
 /* Responsiveness */
@@ -487,17 +496,22 @@ body {
   }
 
   .choice-container {
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .choice-btn {
     background-color: #E2A856;
     height: 52px;
-    width: 240px;
+    width: 300px;
     border-radius: 15px;
-    margin-top: 20px;
+    margin-top: 30px;
     color: #72604C;
     font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .choice-btn:hover {

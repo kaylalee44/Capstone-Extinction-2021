@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PopUp from '../components/story/popup';
 import StoryImage from '../components/story/story_image';
 import StoryTitle from '../components/story/story_title';
 import TryAgain from '../components/story/try_again';
 
 export default function TurtleStoryBycatchDeathContainer() {
+    const [seen, setSeen] = useState(false);
+    const togglePop = () => {
+        let seenCopy = seen;
+        if (!seenCopy) {
+            seenCopy = true; 
+        } else {
+            seenCopy = false;
+        }
+        setSeen(seenCopy);
+    }
     return(
         <div>
             <StoryTitle title={"NESTING"} />
@@ -11,7 +22,7 @@ export default function TurtleStoryBycatchDeathContainer() {
                 <StoryImage id="net-img" className="gif ocean" src="img/bycatch.jpg" alt="A net image" />
                 <div className="story-content ocean">
                     <p className="story-paragraph">
-                        You swim to the right and up and get entangled in buoy lines attached to a <span className="highlight">fishing pot.</span> <span className="death"><strong>You have become seriously injured and die within the next few days.</strong></span>
+                        You swim to the right and up and get entangled in buoy lines attached to a <span className="highlight" onClick={togglePop}>fishing pot.</span> <span className="death"><strong>You have become seriously injured and die within the next few days.</strong></span>
                     </p>
                     <p className="explanation separation"><strong>You got the "Bycatch in Fishing Gear" ending.</strong></p>
                     <p className="explanation">
@@ -20,7 +31,8 @@ export default function TurtleStoryBycatchDeathContainer() {
                     </p>
                     <TryAgain />
                 </div>
-            </div>    
+            </div>   
+            {seen ? <PopUp toggle={togglePop} /> : null} 
         </div>
     );
 }

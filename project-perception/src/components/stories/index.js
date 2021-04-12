@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 function StoriesList() {
     return(
@@ -88,7 +89,7 @@ function AnimalDetails(props) {
                     <p className="status-endangered">Endangered</p>
                 </div>
             </div>
-            <button>Begin Story</button>
+            <Link to="/story-turtle-1" className="details-btn">Begin Story</Link>
         </div>
     );
 }

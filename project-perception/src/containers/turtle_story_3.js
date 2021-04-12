@@ -1,7 +1,7 @@
 import React from 'react';
 import StoryTitle from '../components/story/story_title';
 import StoryImage from '../components/story/story_image';
-import Choices from '../components/story/choices';
+import { Link } from 'react-router-dom';
 
 export default function TurtleStory3Container() {
     return(
@@ -15,7 +15,11 @@ export default function TurtleStory3Container() {
                         After you catch a breath, you continue swimming towards the beach and are soon within reach.
                     </p>
                     <p className="story-question">Where will you go?</p>
-                    <Choices choices={["To the right of the beach.", "Towards the middle of the beach.", "To the left of the beach."]} />
+                    <div className="choice-container">
+                        <Link to="/story-turtle-3-1" className="choice-btn">To the right of the beach.</Link>
+                        <Link to="/story-turtle-3-2" className="choice-btn">Towards the middle of the beach.</Link>
+                        <Link to="/story-turtle-3-3" className="choice-btn">To the left of the beach.</Link>
+                    </div>
                 </div>
             </div>     
         </div>

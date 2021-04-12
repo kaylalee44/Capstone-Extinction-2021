@@ -1,7 +1,7 @@
 import React from 'react';
 import StoryImage from '../components/story/story_image';
 import StoryTitle from '../components/story/story_title';
-import Choices from '../components/story/choices';
+import { Link } from 'react-router-dom';
 
 export default function TurtleStory1Container() {
     return(
@@ -15,7 +15,10 @@ export default function TurtleStory1Container() {
                         is a jellyfish. It looks good to eat!
                     </p>
                     <p className="story-question">What will you do?</p>
-                    <Choices choices={["Eat it.", "Pass - I'm full."]} />
+                    <div className="choice-container">
+                        <Link to="/story-turtle-1-1" className="choice-btn">Eat it.</Link>
+                        <Link to="/story-turtle-2" className="choice-btn">Pass - I'm full.</Link>
+                    </div>
                 </div>
             </div>     
         </div>
