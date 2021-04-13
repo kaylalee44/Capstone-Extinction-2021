@@ -14,6 +14,8 @@ import TurtleStoryBycatchDeath from "./pages/turtle_story_2_2";
 import TurtleStorySurvive from "./pages/turtle_story_3_1";
 import TurtleStoryClimateDeath from "./pages/turtle_story_3_2";
 import TurtleStoryHarvestDeath from "./pages/turtle_story_3_3";
+import MakeAChangePage from "./pages/make-a-change";
+import HomePage from "./pages/home";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
             <Route path={ROUTES.STORY_TURTLE_3_1} component={TurtleStorySurvive} /> 
             <Route path={ROUTES.STORY_TURTLE_3_2} component={TurtleStoryClimateDeath} />
             <Route path={ROUTES.STORY_TURTLE_3_3} component={TurtleStoryHarvestDeath} />       
+            <Route path={ROUTES.CHANGE} component={MakeAChangePage} />
+            {/* <Route path={ROUTES.HOME} component={HomePage} /> */}
           </Switch>
         </Router>
       </main>
