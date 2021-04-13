@@ -4,12 +4,12 @@ export default function PopUp(props) {
     const handleClick = () => {
         props.toggle();
     }
-
     return(
         <div className="modal">
-            <div className="modal_content">
+            <div className="modal-content">
                 <span className="close" onClick={handleClick}>&times;</span>
-                <p>I'm a pop up!!!</p>
+                <p>{props.definition}</p>
+                <img id={props.id} className={props.className} src={props.src} alt={props.alt} />
             </div>
         </div>
     );

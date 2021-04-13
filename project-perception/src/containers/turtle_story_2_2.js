@@ -32,7 +32,7 @@ export default function TurtleStoryBycatchDeathContainer() {
                     <TryAgain />
                 </div>
             </div>   
-            {seen ? <PopUp toggle={togglePop} /> : null} 
+            {seen ? <PopUp toggle={togglePop} definition="A fishing pot is a receptable for catching fish or shellfish." id="fishing-pot" className="fishing-pot" src="img/fishing-pot.jpeg" alt="A fishing pot image"/> : null} 
         </div>
     );
 }
