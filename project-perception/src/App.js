@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import './index.css'
 import * as ROUTES from "./constants/routes"; 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
