@@ -84,7 +84,7 @@ function MeetTheTeam() {
 function ProfileCard(props) {
     return(
         <div>
-            <img src={props.profile-pic}/>
+            <img src={props["profile-pic"]}/>
             <div className="profile-desc-hover">
                 <p>{props.desc}</p>
             </div>
