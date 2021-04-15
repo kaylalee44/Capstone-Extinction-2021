@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-function StoriesList() {
+function StoriesList(props) {
+    const hideStories = () => {
+        props.hideStories();
+    }
     return(
-        <div className="hidden">
+        <div>
             <BackStates />
             <StoriesTitle />
-            <ChooseSpecies />
+            <ChooseSpecies hideStories={hideStories}/>
         </div>
     );
 }
@@ -29,9 +32,12 @@ function StoriesTitle() {
     );
 }
 
-function ChooseSpecies() {
+function ChooseSpecies(props) {
+    const hideStories = () => {
+        props.hideStories();
+    }
     return(
-        <div className="species-card">
+        <div className="species-card" onClick={hideStories}>
             <div className="turtle-border">
                 <img id="turtle-pic" className="turtle-pic" src="img/leatherback-sea-turtle.jpg" alt="A leatherback sea turtle" />
             </div>
