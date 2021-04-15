@@ -4,15 +4,11 @@ body {
   background-color: #3a444d;;
 }
 
-.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories, .try-again, .ending-container, .choice-container {
+.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories, .try-again, .ending-container, .choice-container, .navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .footer-main, .animal-details {
   display: flex;
 }
 
-.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .footer-main, .animal-details {
-  display: flex;
-}
-
-.back-to-states p, .stories-title p, .story-name, .species-name, .animal-details, .choice-btn, .story-paragraph, .story-paragraph2, .explanation, .ending-btn {
+.back-to-states p, .stories-title p, .story-name, .species-name, .animal-details, .choice-btn, .story-paragraph, .story-paragraph2, .explanation, .ending-btn, .back-to-stories {
   font-family: 'Lato', sans-serif;
 }
 
@@ -107,17 +103,13 @@ body {
   height: 14em;
 }
 
-.animal-details .details-title h1, .navbar-title, .stories-title h1, .story-heading, .back-to-states p, .stories-title p, .story-name, .species-name, .back-to-stories p {
+.animal-details .details-title h1, .navbar-title, .stories-title h1, .story-heading, .back-to-states p, .stories-title p, .back-to-stories p {
   font-family: 'Cinzel', serif;
 }
 
 .status {
   display: flex;
   flex-direction: row;
-}
-
-.down-arrow {
-  
 }
 
 .status .status-candidate {
@@ -285,8 +277,14 @@ body {
   justify-content: space-between;
 }
 
-.back-to-stories, .back-to-stories p {
+.back-to-stories {
   margin-left: 10px;
+  text-decoration: none;
+  color: #e9e3cb;
+}
+
+.back-to-stories svg {
+  margin-right: 10px;
 }
 
 .gif {
