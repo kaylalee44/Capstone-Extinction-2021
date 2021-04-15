@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { CardBody, CardText, CardTitle, Container, Col, Card, Row } from 'reactstrap';
+import { CardBody, CardText, Container, Col, Card, Row } from 'reactstrap';
 
 // takes in a story (ex. story1)
 function JourneyCard(props) {
@@ -16,7 +16,7 @@ function JourneyCard(props) {
             <Card>
                 <CardBody>
                     <CardText tag="ol">{choices}</CardText>
-                    <CardText>You got the ...ending.</CardText>
+                    <CardText>You got the {props.ending} ending.</CardText>
                     <Button className="learn-how-to-help-btn" handleClick={handleClick}>Learn how to help</Button>
                 </CardBody>
             </Card>

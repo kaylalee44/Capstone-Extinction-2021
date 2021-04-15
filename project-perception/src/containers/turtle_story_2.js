@@ -23,7 +23,7 @@ export default function TurtleStory2Container() {
                         <Link to="/story-turtle-3" className="choice-btn">Swim to the left and up.</Link>
                     </div>
                 </div>
-            </div>     
+            </div>
         </div>
     );
 }

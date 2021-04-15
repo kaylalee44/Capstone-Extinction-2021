@@ -2,6 +2,7 @@ import React from 'react';
 import StoryImage from '../components/story/story_image';
 import StoryTitle from '../components/story/story_title';
 import { Link } from 'react-router-dom';
+import AddChoiceToDB from "../components/story/add_choice_db";
 
 export default function TurtleStory1Container() {
     return(
