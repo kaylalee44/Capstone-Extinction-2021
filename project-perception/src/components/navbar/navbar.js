@@ -1,17 +1,20 @@
 import {React, useState} from 'react';
+import { NavLink } from 'react-router-dom';
 
 // Create navbar component
 export function NavBar() {
     return(
         <nav className="navbar-main">
-            <div className="navbar-left">
-                <img id="eyes-logo" className="eyes-logo" src="img/eyes.png" alt="A eyes logo" />
-                <h1 className="navbar-title">Project Perception</h1>
+            <div>  
+                <NavLink to="/" className="navbar-left">
+                    <img id="eyes-logo" className="eyes-logo" src="img/eyes.png" alt="A eyes logo" />
+                    <h1 className="navbar-title">Project Perception</h1>
+                </NavLink> 
             </div> 
             <div className="navbar-right">
                 <ul className="page-links">
-                    <li><strong>ABOUT</strong></li>
-                    <li><strong>MAKE A CHANGE</strong></li>
+                    <li><NavLink to="/about" className="nav-links">ABOUT</NavLink></li>
+                    <li><NavLink to="/make-a-change" className="nav-links">MAKE A CHANGE</NavLink></li>
                 </ul> 
             </div>
             {window.innerWidth < 992 ? <HamburgerMenu /> : null}

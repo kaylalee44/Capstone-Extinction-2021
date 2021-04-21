@@ -1,14 +1,14 @@
 /* General CSS */
 body {
   margin: 0;
-  background-color: #3a444d;;
+  background-color: #3a444d;
 }
 
-.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories, .try-again, .ending-container, .choice-container, .navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .footer-main, .animal-details {
+.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories, .try-again, .ending-container, .choice-container, .navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .footer-main, .animal-details, .mission-statement, .profile, .about-links, .profile-row {
   display: flex;
 }
 
-.back-to-states p, .stories-title p, .story-name, .species-name, .animal-details, .choice-btn, .story-paragraph, .story-paragraph2, .explanation, .ending-btn, .back-to-stories {
+.back-to-states p, .stories-title p, .story-name, .species-name, .animal-details, .choice-btn, .story-paragraph, .story-paragraph2, .explanation, .ending-btn, .back-to-stories, .about-statement, .profile-content, .overlay-text, .how-to-help p, .change-btn {
   font-family: 'Lato', sans-serif;
 }
 
@@ -35,7 +35,7 @@ body {
   bottom: 0;
   width: 100%;
   text-align: center;
-  margin-top: 10em;
+  margin-top: 3em;
   display: flex;
   flex-direction: column;
 }
@@ -75,6 +75,135 @@ body {
   text-align: start;
 }
 
+/* About page CSS */
+.leopard-container {
+  position: relative;
+  color: #e9e3cb;
+}
+
+.leopard-img {
+  display: block;
+  margin: auto;
+  height: 400px;
+  width: calc(100% - 100px);
+  opacity: 25%;
+}
+
+.about-header {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  white-space: nowrap;
+}
+
+.about-statement {
+  text-align: left;
+  margin-right: 5rem;
+}
+
+.mission-statement {
+  position: absolute;
+  top: 70px;
+  align-items: center;
+}
+
+.how-to-help {
+  text-align: center;
+  background-color: #74624e;
+  color: #e9e3cb;
+  height: 220px;
+}
+
+.how-to-help h1 {
+  margin-top: 0;
+  padding-top: 1rem;
+}
+
+.how-to-help p {
+  font-size: 18px;
+}
+
+.change-btn {
+  text-decoration: none;
+  color: #e9e3cb;
+  font-size: 18px;
+  background-color: #E2A856;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.change-container {
+  margin-top: 2.7rem;
+}
+
+.meet-team-header {
+  text-align: center;
+  color: #e9e3cb;
+}
+
+.profile {
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-links {
+  justify-content: center;
+}
+
+.about-links a:nth-child(1) {
+  margin-right: 2rem;
+}
+
+.profile-name, .profile-role {
+  font-size: 20px;
+}
+
+.profile-major {
+  font-size: 14px;
+  margin-top: 0;
+}
+
+.profile-name {
+  margin-bottom: 0;
+}
+
+.profile-content {
+  color: #e9e3cb;
+}
+
+.profile-pic-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #e9e3cb;
+  overflow: auto;
+}
+
+.overlay-text {
+  color: #3a444d;
+  vertical-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.profile-pic-container:hover .overlay {
+  opacity: 1;
+}
+
+.profile-row {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+
 /* Animal Detail page CSS */
 .animal-details {
   flex-direction: column;
@@ -103,7 +232,7 @@ body {
   height: 14em;
 }
 
-.animal-details .details-title h1, .navbar-title, .stories-title h1, .story-heading, .back-to-states p, .stories-title p, .back-to-stories p {
+.animal-details .details-title h1, .navbar-title, .stories-title h1, .story-heading, .back-to-states p, .stories-title p, .back-to-stories p, .about-header, .how-to-help h1, .meet-team-header, .nav-links {
   font-family: 'Cinzel', serif;
 }
 
@@ -159,9 +288,14 @@ body {
 }
 
 .page-links {
-  list-style-type: none;
+  text-decoration: none;
   margin: 0;
   padding: 0;
+}
+
+.nav-links, .navbar-left {
+  text-decoration: none;
+  color: #3a444d;
 }
 
 .menu-dropdown {

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function TryAgain() {
     return(
         <div>
-            <a href="https://www.fisheries.noaa.gov/species/leatherback-turtle" target="_blank" className="learn-more">Learn more about the Leatherback Sea Turtle</a>
+            <a href="https://www.fisheries.noaa.gov/species/leatherback-turtle" target="_blank" rel="noreferrer" className="learn-more">Learn more about the Leatherback Sea Turtle</a>
             <div className="ending-container">
                 <button className="ending-btn">View your Past Stories</button>
                 <Link to="/story-turtle-1" className="try-again ending-btn">
