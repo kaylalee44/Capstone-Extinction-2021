@@ -8,7 +8,7 @@ body {
   display: flex;
 }
 
-.back-to-states p, .stories-title p, .story-name, .species-name, .animal-details, .choice-btn, .story-paragraph, .story-paragraph2, .explanation, .ending-btn, .back-to-stories, .about-statement, .profile-content, .overlay-text, .how-to-help p, .change-btn {
+.back-to-states p, .stories-title p, .story-name, .species-name, .animal-details, .choice-btn, .story-paragraph, .story-paragraph2, .explanation, .ending-btn, .back-to-stories, .about-statement, .profile-content, .overlay-text, .how-to-help p, .change-btn, .map-header {
   font-family: 'Lato', sans-serif;
 }
 
@@ -74,6 +74,28 @@ body {
 .footer-main .footer-desc {
   text-align: start;
 }
+
+/* Home page CSS */
+.map-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-title {
+  font-family: 'Cinzel', serif;
+  margin-top: 1em;
+  margin-bottom: -0.5em;
+}
+
+.map-header {
+  font-size: 20px;
+}
+
+.map-title, .map-header {
+  color: #e9e3cb;
+}
+
 
 /* About page CSS */
 .leopard-container {
