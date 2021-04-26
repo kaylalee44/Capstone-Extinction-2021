@@ -4,11 +4,11 @@ body {
   background-color: #3a444d;
 }
 
-.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories, .try-again, .ending-container, .choice-container, .navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .footer-main, .animal-details, .mission-statement, .profile, .about-links, .profile-row {
+.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories, .try-again, .ending-container, .choice-container, .navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .footer-main, .animal-details, .mission-statement, .profile, .about-links, .profile-row, .change-rows, .org-button, .nonprofit-btns, .article-carousel {
   display: flex;
 }
 
-.back-to-states p, .stories-title p, .story-name, .species-name, .animal-details, .choice-btn, .story-paragraph, .story-paragraph2, .explanation, .ending-btn, .back-to-stories, .about-statement, .profile-content, .overlay-text, .how-to-help p, .change-btn, .map-header {
+.back-to-states p, .stories-title p, .story-name, .species-name, .animal-details, .choice-btn, .story-paragraph, .story-paragraph2, .explanation, .ending-btn, .back-to-stories, .about-statement, .profile-content, .overlay-text, .how-to-help p, .change-btn, .map-header, .change-title p, .change-card, .nonprofit-title p, .article-card a   {
   font-family: 'Lato', sans-serif;
 }
 
@@ -225,7 +225,6 @@ body {
   flex-wrap: wrap;
 }
 
-
 /* Animal Detail page CSS */
 .animal-details {
   flex-direction: column;
@@ -254,7 +253,7 @@ body {
   height: 14em;
 }
 
-.animal-details .details-title h1, .navbar-title, .stories-title h1, .story-heading, .back-to-states p, .stories-title p, .back-to-stories p, .about-header, .how-to-help h1, .meet-team-header, .nav-links {
+.animal-details .details-title h1, .navbar-title, .stories-title h1, .story-heading, .back-to-states p, .stories-title p, .back-to-stories p, .about-header, .how-to-help h1, .meet-team-header, .nav-links, .change-title h1, .nonprofit-title h1 {
   font-family: 'Cinzel', serif;
 }
 
@@ -524,6 +523,157 @@ body {
 
 .fishing-pot {
   width: 100%;
+}
+
+/* Make a Change Page */
+.red-panda-img {
+  display: block;
+  width: 100%;
+}
+
+.change-title {
+  position: absolute;
+  top: 25%;
+  text-align: center;
+  color: #e9e3cb;
+}
+
+.change-title p {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.change-divider {
+  background-color: #e2a856;
+  height: 20px;
+  width: 100%;
+}
+
+.change-card {
+  height: 360px;
+  width: 400px;
+  background-color: #e9e3cb;
+  border: 2px solid #E2A856;
+  color: #74624e;
+  border-radius: 10px;
+}
+
+.change-card a {
+  color: #74624e;
+}
+
+.change-card-content {
+  margin-left: 1rem;
+}
+
+.card-tip {
+  font-size: 24px;
+}
+
+.sources {
+  margin-top: 0;
+}
+
+.article-container {
+  margin-top: 3rem;
+}
+
+.change-rows {
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.divider2 {
+  margin-top: 2rem;
+}
+
+.nonprofit-title {
+  text-align: center;
+  color: #e9e3cb;
+}
+
+.nonprofit-card {
+  height: 400px;
+}
+
+.org-button {
+  align-items: center;
+  background-color: #E2A856;
+  color: #e9e3cb;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.org-button:hover {
+  cursor: pointer;
+}
+
+.org-button p {
+  margin-left: 2px;
+  font-family: 'Roboto', 'sans-serif';
+}
+
+.nonprofit-btns {
+  justify-content: space-around;
+  margin-top: 7rem;
+}
+
+.org-quote {
+  margin-right: 1rem;
+}
+
+.article-carousel {
+  margin: auto;
+  background-color: #e9e3cb;
+  height: 587px;
+  width: calc(100% - 150px);
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.article-card {
+  height: 450px;
+  width: 300px;
+}
+
+.article-card a {
+  text-decoration: none;
+  color:#e9e3cb;
+}
+
+.article-img {
+  display: block;
+}
+
+.article-info {
+  background-color: #74624e;
+  height: 100px;
+  width: 300px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.article-title {
+  margin-top: 0;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.article-extra {
+  text-align: right;
+  margin-right: 1rem;
+}
+
+.article-source {
+  margin-bottom: 0;
+}
+
+.article-date {
+  margin-top: 0;
 }
 
 /* Responsiveness */
