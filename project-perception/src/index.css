@@ -1,8 +1,20 @@
 /* General CSS */
+
+html {
+  /* position: relative;  */
+  min-height: 100%;
+}
+
 body {
   margin: 0;
+  padding:0;
   background-color: #3a444d;
 }
+
+/* html {
+  position: relative;
+  min-height: 100%;
+} */
 
 .navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories, .try-again, .ending-container, .choice-container, .navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .footer-main, .animal-details, .mission-statement, .profile, .about-links, .profile-row, .change-rows, .org-button, .nonprofit-btns, .article-carousel {
   display: flex;
@@ -33,11 +45,14 @@ body {
 .footer-main {
   left: 0;
   bottom: 0;
+  /* position: absolute; */
   width: 100%;
   text-align: center;
-  margin-top: 3em;
   display: flex;
   flex-direction: column;
+  background-color: #e9e3cb;
+  color: #3a444d;
+  justify-content: space-between;
 }
 
 .footer-logo img {
@@ -80,12 +95,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 2em;
 }
 
 .map-title {
   font-family: 'Cinzel', serif;
   margin-top: 1em;
-  margin-bottom: -0.5em;
+  margin-bottom: -0.1em;
+}
+
+.map-img {
+  height: 40em;
 }
 
 .map-header {
@@ -94,6 +114,37 @@ body {
 
 .map-title, .map-header {
   color: #e9e3cb;
+}
+
+.divider {
+  background-color: #E2A856;
+  width: 100%;
+  height: 3em;
+}
+
+.slide-btn {
+  text-decoration: none;
+  color: #e9e3cb;
+  font-size: 18px;
+  background-color: #E2A856;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  border-radius: 10px;
+}
+
+.slide-cap {
+  color: #E9E3CB;
+}
+
+.slide-title {
+  font-family: 'Cinzel', serif;
+}
+
+.slide-2-cap {
+  margin: 0em 0em 30em 56.4em;
+}
+
+.slide-3-cap {
+  margin: 0em 50em 30em 0em;
 }
 
 
@@ -298,10 +349,11 @@ body {
   align-items: center;
 }
 
-.navbar-main, .footer-main {
+.navbar-main {
   background-color: #e9e3cb;
   color: #3a444d;
   justify-content: space-between;
+  height: 5.5em;
 } 
 
 .navbar-right, .hidden {

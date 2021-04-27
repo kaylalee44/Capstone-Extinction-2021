@@ -1,9 +1,13 @@
 import React from 'react';
+import Carousel from 'react-bootstrap/Carousel'
+import { Link } from "react-router-dom";
 
 export function Home() {
     return(
         <div>
             <Map />
+            <div className="divider"></div>
+            <Slides />
         </div>
     );
 }
@@ -24,71 +28,50 @@ function Map() {
     );
 }
 
-//https://dev.to/willamesoares/how-to-build-an-image-carousel-with-react--24na
-function Carousel() {
+function Slides() {
     return (
-        <div className="carousel">
-            <ImageSlide url="" />
-        </div>
+        <Carousel className="carousel">
+            <Carousel.Item className="slide slide-1">
+                <img
+                    className="d-block w-100 slide-img"
+                    src="img/leatherback-sea-turtle.jpg"
+                    alt="First slide"
+                />
+                <Carousel.Caption className="slide-cap slide-1-cap">
+                    <h1 className="slide-title">There are over <strong>1,300 endangered</strong> or threatened species in the United States</h1>
+                    <p>In order to bring more awareness to this growing crisis, we wanted to create a platform to that brings 
+                        light to endangered species that are not widely popularized and commonly overlooked. By learning about 
+                        the different species that live around your area, it could help better understand how important these 
+                        creatures are for the ecosystem, and learn ways to protect them too. Small actions can make a big 
+                        impact in our ecosystems.</p>
+                    <Link to="/about"><button className="slide-btn">Read more about our mission</button></Link>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item className="slide slide-2">
+                <img
+                    className="d-block w-100 slide-img"
+                    src="img/caribou.jpg"
+                    alt="Second slide"
+                />
+
+                <Carousel.Caption className="slide-cap slide-2-cap">
+                <h1 className="slide-title">Woodland Caribou</h1>
+                <p>Only 51 herds remain in the wild</p>
+                <Link to="/stories"><button className="slide-btn">Learn More</button></Link>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item className="slide slide-3">
+                <img
+                    className="d-block w-100 slide-img"
+                    src="img/albatross.jpg"
+                    alt="Third slide"
+                />
+
+                <Carousel.Caption className="slide-cap slide-3-cap">
+                    <h1 className="slide-title">Short-tailed Albatross</h1>
+                    <Link to="/stories"><button className="slide-btn">Learn More</button></Link>
+                </Carousel.Caption>
+            </Carousel.Item>
+        </Carousel>
     );
-}
-
-function ImageSlide() {
-    const ImageSlide = ({ url }) => {
-        const styles = {
-          backgroundImage: `url(${url})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        };
-      
-        return (
-          <div className="image-slide" style={styles}></div>
-        );
-      }
-}
-
-function Arrow() {
-    const Arrow = ({ direction, clickFunction, glyph }) => (
-        <div
-          className={ `slide-arrow ${direction}` }
-          onClick={ clickFunction }>
-          { glyph }
-        </div>
-      );
-      
-}
-
-function Screen1() {
-    return (
-        <div>
-            <h3>There are over 1,300 endangered or threatened species in the United States</h3>
-            <p>In order to bring more awareness to this growing crisis, we wanted to create a platform to that brings 
-                light to endangered species that are not widely popularized and commonly overlooked. By learning about 
-                the different species that live around your area, it could help better understand how important these 
-                creatures are for the ecosystem, and learn ways to protect them too. Small actions can make a big 
-                impact in our ecosystems.</p>
-                <button>Read more about our mission</button>
-        </div>
-    );
-}
-
-function Screen2() {
-    return (
-         <div>
-             <img src="img/albatross.jpg"/>
-             <h5>Short-tailed Albatross</h5>
-             <button>Learn More</button>
-         </div>
-    );
-}
-
-function Screen3() {
-    return (
-        <div>
-            <img src="img/caribou.jpg"/>
-            <h5>Woodland Caribou</h5>
-            <p>Only 51 herds remain in the wild</p>
-            <button>Learn More</button>
-        </div>
-   );
 }

@@ -15,7 +15,7 @@ export default function Footer() {
 function FooterLogo() {
     return (
         <div className="footer-logo">
-            <img id="eyes-logo" className="eyes-logo" src="img/eyes.png" alt="A eyes logo" />
+            <img id="eyes-logo" className="eyes-logo" src="img/eyes1.png" alt="A eyes logo" />
             <h3>Project Perception</h3>
         </div>
     );

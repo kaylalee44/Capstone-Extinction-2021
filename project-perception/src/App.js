@@ -1,5 +1,4 @@
 import React from "react";
-import './index.css'
 import * as ROUTES from "./constants/routes"; 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import StoriesPage from './pages/stories';
@@ -17,6 +16,8 @@ import TurtleStoryHarvestDeath from "./pages/turtle_story_3_3";
 import MakeAChangePage from "./pages/make-a-change";
 import HomePage from "./pages/home";
 import About from "./pages/about";
+import 'bootstrap/dist/css/bootstrap.css';
+import './index.css'
 
 function App() {
   return (

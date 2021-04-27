@@ -7,7 +7,7 @@ export function NavBar() {
         <nav className="navbar-main">
             <div>  
                 <NavLink to="/" className="navbar-left">
-                    <img id="eyes-logo" className="eyes-logo" src="img/eyes.png" alt="A eyes logo" />
+                    <img id="eyes-logo" className="eyes-logo" src="img/eyes1.png" alt="A eyes logo" />
                     <h1 className="navbar-title">Project Perception</h1>
                 </NavLink> 
             </div> 
