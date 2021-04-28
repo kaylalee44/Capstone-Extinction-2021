@@ -53,6 +53,7 @@ body {
   background-color: #e9e3cb;
   color: #3a444d;
   justify-content: space-between;
+  margin-top: 5rem;
 }
 
 .footer-logo img {
@@ -211,6 +212,7 @@ body {
 .meet-team-header {
   text-align: center;
   color: #e9e3cb;
+  margin-top: 3rem;
 }
 
 .profile {
@@ -274,6 +276,7 @@ body {
 .profile-row {
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 /* Animal Detail page CSS */
@@ -627,7 +630,7 @@ body {
 }
 
 .article-container {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .change-rows {
@@ -643,6 +646,7 @@ body {
 .nonprofit-title {
   text-align: center;
   color: #e9e3cb;
+  margin-top: 3rem;
 }
 
 .nonprofit-card {
@@ -650,6 +654,7 @@ body {
 }
 
 .org-button {
+  height: 45px;
   align-items: center;
   background-color: #E2A856;
   color: #e9e3cb;
@@ -661,7 +666,7 @@ body {
   cursor: pointer;
 }
 
-.org-button p {
+.org-button div {
   margin-left: 2px;
   font-family: 'Roboto', 'sans-serif';
 }
@@ -713,6 +718,7 @@ body {
   margin-top: 0;
   text-align: center;
   padding-top: 5px;
+  margin-bottom: 0;
 }
 
 .article-extra {
@@ -755,6 +761,7 @@ body {
 
   .story-heading {
     font-size: 24px;
+    color: #E9E3CB;
   }
 }
 
@@ -838,11 +845,11 @@ body {
   }
 
   .jellyfish {
-    height: 500px;
+    height: 550px;
   }
 
   .ocean {
-    height: 600px;
+    height: 650px;
   }
 
   .ending {
