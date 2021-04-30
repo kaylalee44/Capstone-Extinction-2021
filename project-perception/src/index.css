@@ -562,6 +562,10 @@ body {
   float: right;
 }
 
+.modal {
+  display: block;
+}
+
 .modal-content {
   background-color: #74624e;
   color: #e9e3cb;

@@ -7,7 +7,9 @@ export default function PopUp(props) {
     return(
         <div className="modal">
             <div className="modal-content">
-                <span className="close" onClick={handleClick}>&times;</span>
+                <div>
+                    <span className="close" onClick={handleClick}>&times;</span>
+                </div>
                 <p>{props.definition}</p>
                 <img id={props.id} className={props.className} src={props.src} alt={props.alt} />
             </div>
