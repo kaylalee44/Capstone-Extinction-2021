@@ -1,5 +1,4 @@
 import React from "react";
-import PopUp from "../story/popup";
 
 export default function MakeAChange() {
     return (
@@ -32,7 +31,7 @@ export default function MakeAChange() {
 
 function MakeAChangeTitle() {
     return(
-        <div>
+        <div className="change-header">
             <img id="red-panda-img" className="red-panda-img" src="img/red-panda.png" alt="A red panda" />
             <div className="change-title">
                 <h1>YOU CAN MAKE A CHANGE</h1>

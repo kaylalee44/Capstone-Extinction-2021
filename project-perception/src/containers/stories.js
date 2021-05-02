@@ -7,13 +7,16 @@ export default function StoriesContainer(props) {
         let hideCopy = hide;
         if (!hideCopy) {
             hideCopy = true;     
+        } else {
+            hideCopy = false;
         }
         setHide(hideCopy);
-        console.log("worked!");
     }
     let stories = <StoriesList hideStories={hideStories} />
     if (hide) {
-        stories = <StoriesDetail />
+        stories = <StoriesDetail hideStories={hideStories} />
+    } else {
+        stories = <StoriesList hideStories={hideStories} />
     }
     return (
         <div>

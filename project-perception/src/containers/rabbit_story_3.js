@@ -1,0 +1,26 @@
+import React from 'react';
+import StoryTitle from '../components/story/story_title';
+import StoryImage from '../components/story/story_image';
+import { Link } from 'react-router-dom';
+
+export default function RabbitStory3Container() {
+    return(
+        <div>
+            <StoryTitle title="SEARCHING" />
+            <div className="story-container">
+                <StoryImage id="fox-plain" className="gif jellyfish" src="img/fox-plain.jpg" alt="A fox looking around in a plain" />
+                <div className="story-content jellyfish">
+                    <p className="story-paragraph2">
+                        You find a spot to hide within the grass and remain completely still. A fox comes out from the grass and sniffs the air, then walks away.
+                        After you check the coast is clear, you continue your journey. Finally, you come across a bunchgrass that you think looks good to eat.
+                    </p>
+                    <p className="story-question">Will you eat it?</p>
+                    <div className="choice-container">
+                        <Link to="/story-rabbit-3-1" className="choice-btn">You're so hungry you just eat this grass.</Link>
+                        <Link to="/story-rabbit-3-2" className="choice-btn">There might be a sagebrush in the distance if you wait a little longer.</Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}

@@ -18,6 +18,20 @@ import HomePage from "./pages/home";
 import About from "./pages/about";
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css'
+import { CaribouStory1 } from "./pages/caribou_story_1";
+import CaribouStoryPredatorDeath from "./pages/caribou_story_1_2";
+import CaribouStory2 from "./pages/caribou_story_2";
+import CaribouStoryHunterDeath from "./pages/caribou_story_2_1";
+import CaribouStory3 from "./pages/caribou_story_3";
+import CaribouStorySurviveRun from "./pages/caribou_story_3_1";
+import CaribouStorySurviveHuman from "./pages/caribou_story_3_2";
+import { RabbitStory1 } from "./pages/rabbit_story_1";
+import RabbitStory2 from "./pages/rabbit_story_2";
+import RabbitStoryClimateDeath from "./pages/rabbit_story_1_2";
+import RabbitStoryPredatorDeath from "./pages/rabbit_story_2_1";
+import RabbitStory3 from "./pages/rabbit_story_3";
+import RabbitStoryGeneticDeath from "./pages/rabbit_story_3_1";
+import RabbitStorySurvive from "./pages/rabbit_story_3_2";
 
 function App() {
   return (
@@ -41,7 +55,21 @@ function App() {
               <Route path={ROUTES.STORY_TURTLE_2_2} component={TurtleStoryBycatchDeath} /> 
               <Route path={ROUTES.STORY_TURTLE_3_1} component={TurtleStorySurvive} /> 
               <Route path={ROUTES.STORY_TURTLE_3_2} component={TurtleStoryClimateDeath} />
-              <Route path={ROUTES.STORY_TURTLE_3_3} component={TurtleStoryHarvestDeath} />     
+              <Route path={ROUTES.STORY_TURTLE_3_3} component={TurtleStoryHarvestDeath} /> 
+              <Route path={ROUTES.STORY_CARIBOU_1} component={CaribouStory1} /> 
+              <Route path={ROUTES.STORY_CARIBOU_1_2} component={CaribouStoryPredatorDeath} /> 
+              <Route path={ROUTES.STORY_CARIBOU_2} component={CaribouStory2} />    
+              <Route path={ROUTES.STORY_CARIBOU_2_1} component={CaribouStoryHunterDeath} /> 
+              <Route path={ROUTES.STORY_CARIBOU_3} component={CaribouStory3} />  
+              <Route path={ROUTES.STORY_CARIBOU_3_1} component={CaribouStorySurviveRun} /> 
+              <Route path={ROUTES.STORY_CARIBOU_3_2} component={CaribouStorySurviveHuman} /> 
+              <Route path={ROUTES.STORY_RABBIT_1} component={RabbitStory1} />
+              <Route path={ROUTES.STORY_RABBIT_1_2} component={RabbitStoryClimateDeath} /> 
+              <Route path={ROUTES.STORY_RABBIT_2} component={RabbitStory2} />
+              <Route path={ROUTES.STORY_RABBIT_2_1} component={RabbitStoryPredatorDeath} />
+              <Route path={ROUTES.STORY_RABBIT_3} component={RabbitStory3} />
+              <Route path={ROUTES.STORY_RABBIT_3_1} component={RabbitStoryGeneticDeath} />
+              <Route path={ROUTES.STORY_RABBIT_3_2} component={RabbitStorySurvive} />
             </Switch>
         </main>
         <Footer />

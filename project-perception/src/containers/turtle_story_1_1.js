@@ -19,7 +19,7 @@ export default function TurtleStoryPlasticDeathContainer() {
                         Pollution affects the habits of all sea animals, sea turtles included. Leatherback turtles can die from
                         swallowing fishing lines, ballons, plastic bags, or other plastic debris because it is mistaken for food.
                     </p>
-                    <TryAgain />
+                    <TryAgain to="/story-turtle-1" href="https://www.fisheries.noaa.gov/species/leatherback-turtle" learnMore="Learn more about the Leatherback Sea Turtle" />
                 </div>
             </div>    
         </div>

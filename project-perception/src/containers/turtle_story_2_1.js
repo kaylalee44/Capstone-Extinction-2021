@@ -18,7 +18,7 @@ export default function TurtleStoryVesselDeathContainer() {
                         Many types of water vehicles can kill or injure leatherback turtles when they come near the surface of the water. This
                         threat accounts for about one third of leatherback strandings in the eastern United States.
                     </p>
-                    <TryAgain />
+                    <TryAgain to="story-turtle-2" href="https://www.fisheries.noaa.gov/species/leatherback-turtle" learnMore="Learn more about the Leatherback Sea Turtle"/>
                 </div>
             </div>    
         </div>

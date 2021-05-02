@@ -16,11 +16,11 @@ body {
   min-height: 100%;
 } */
 
-.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories, .try-again, .ending-container, .choice-container, .navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .footer-main, .animal-details, .mission-statement, .profile, .about-links, .profile-row, .change-rows, .org-button, .nonprofit-btns, .article-carousel {
+.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories, .back-to-stories div, .try-again, .ending-container, .choice-container, .navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .footer-main, .animal-details, .mission-statement, .profile, .about-links, .profile-row, .change-rows, .org-button, .nonprofit-btns, .article-carousel, .stories-row {
   display: flex;
 }
 
-.back-to-states p, .stories-title p, .story-name, .species-name, .animal-details, .choice-btn, .story-paragraph, .story-paragraph2, .explanation, .ending-btn, .back-to-stories, .about-statement, .profile-content, .overlay-text, .how-to-help p, .change-btn, .map-header, .change-title p, .change-card, .nonprofit-title p, .article-card a   {
+.back-to-states div, .stories-title p, .story-name, .species-name, .animal-details, .choice-btn, .story-paragraph, .story-paragraph2, .explanation, .ending-btn, .back-to-stories, .about-statement, .profile-content, .overlay-text, .how-to-help p, .change-btn, .map-header, .change-title p, .change-card, .nonprofit-title p, .article-card a   {
   font-family: 'Lato', sans-serif;
 }
 
@@ -285,7 +285,6 @@ body {
   align-items: center;
   text-align: center;
   color: #e9e3cb;
-  margin-top: 5em;
 }
 
 .details-btn {
@@ -307,7 +306,7 @@ body {
   height: 14em;
 }
 
-.animal-details .details-title h1, .navbar-title, .stories-title h1, .story-heading, .back-to-states p, .stories-title p, .back-to-stories p, .about-header, .how-to-help h1, .meet-team-header, .nav-links, .change-title h1, .nonprofit-title h1 {
+.animal-details .details-title h1, .navbar-title, .stories-title h1, .story-heading, .stories-title p, .back-to-stories p, .about-header, .how-to-help h1, .meet-team-header, .nav-links, .change-title h1, .nonprofit-title h1 {
   font-family: 'Cinzel', serif;
 }
 
@@ -331,20 +330,24 @@ body {
   padding: 0.5em;
 }
 
-.animal-details .audio-logo {
-  position: absolute;
-  bottom: 50em;
-  right: 0px;
-}
-
-.animal-details .back-to-stories {
-  position: absolute;
-  bottom: 50em;
-  left: 0px;
-}
-
 .details-desc, .details-status {
   font-size: 18px;
+}
+
+.details-desc {
+  margin-top: 1rem;
+}
+
+.down-arrow-turtle {
+  margin-left: 10rem;
+}
+
+.down-arrow-caribou {
+  margin-left: 2rem;
+}
+
+.down-arrow-rabbit {
+  margin-left: 17rem;
 }
 
 /* Navbar CSS */
@@ -408,7 +411,7 @@ body {
   width: 100%;
 }
 
-.back-to-states p, .back-to-stories p {
+.back-to-states div, .back-to-stories p {
   margin-left: 10px;
   color: #e9e3cb;
 }
@@ -426,7 +429,11 @@ body {
   height: 10px;
 }
 
-.species-card, .turtle-pic {
+.stories-row {
+  justify-content: space-evenly;
+}
+
+.species-card, .turtle-pic, .bunny-pic {
   border-radius: 15px;
 }
 
@@ -434,8 +441,6 @@ body {
   height: 200px;
   width: 190px;
   background-color: #e9e3cb;
-  margin: auto;
-  margin-top: 20px;
 }
 
 .turtle-pic {
@@ -449,7 +454,8 @@ body {
 }
 
 .story-name {
-  margin-bottom: 5px;
+  margin-top: 1rem;
+  margin-bottom: 0;
   font-weight: bold;
 }
 
@@ -491,6 +497,14 @@ body {
   margin-left: 10px;
   text-decoration: none;
   color: #e9e3cb;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.back-to-stories:hover {
+  cursor: pointer;
 }
 
 .back-to-stories svg {
@@ -570,21 +584,29 @@ body {
   background-color: #74624e;
   color: #e9e3cb;
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 35%;
   width: 30%;
-  height: calc(100% - 50%);
+  height: calc(100% - 38%);
   padding: 20px;
   border-radius: 5px;
   border: 2px solid black;
   font-size: 24px;
 }
 
-.fishing-pot {
+.fishing-pot, .lichen-def {
   width: 100%;
 }
 
+.caribou-btn {
+  text-align: center;
+}
+
 /* Make a Change Page */
+.change-header {
+  position: relative;
+}
+
 .red-panda-img {
   display: block;
   width: 100%;
@@ -592,7 +614,7 @@ body {
 
 .change-title {
   position: absolute;
-  top: 25%;
+  top: 30%;
   text-align: center;
   color: #e9e3cb;
 }
@@ -790,7 +812,7 @@ body {
     width: 50px;
   }
 
-  .back-to-states p {
+  .back-to-states div {
     font-size: 18px;
   }
 
@@ -898,6 +920,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 
   .choice-btn:hover {

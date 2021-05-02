@@ -29,7 +29,7 @@ export default function TurtleStoryClimateDeathContainer() {
                         Climate change, along with the effects of it such as rising sea levels lead to nesting habitat loss. Humans are also contributing factor
                         due to creating sea walls that remove all dry sand, or artificial lighting that disorients hatchlings or nesting females.
                     </p>
-                    <TryAgain />
+                    <TryAgain to="story-turtle-3" href="https://www.fisheries.noaa.gov/species/leatherback-turtle" learnMore="Learn more about the Leatherback Sea Turtle" />
                 </div>
             </div> 
             {seen ? <PopUp toggle={togglePop} definition="&quot;Armoring&quot; is the practice of using physical structures to protect shorelines from coastal erosion." /> : null}    

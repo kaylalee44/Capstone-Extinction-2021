@@ -18,7 +18,7 @@ export default function TurtleStoryHarvestDeathContainer() {
                         Sea turtles were often killed for meat and eggs to be consumed in some countries. Now, those countries have protected
                         leatherback turtles but in some places adult female leatherback turtles are killed for their eggs.
                     </p>
-                    <TryAgain />
+                    <TryAgain to="story-turtle-3" href="https://www.fisheries.noaa.gov/species/leatherback-turtle" learnMore="Learn more about the Leatherback Sea Turtle" />
                 </div>
             </div>    
         </div>
