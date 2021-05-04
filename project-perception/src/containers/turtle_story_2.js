@@ -2,6 +2,7 @@ import React from 'react';
 import StoryTitle from '../components/story/story_title';
 import StoryImage from '../components/story/story_image';
 import { Link } from 'react-router-dom';
+import AddChoiceToDB from "../components/story/add_choice_db";
 
 export default function TurtleStory2Container() {
     return(
@@ -18,9 +19,15 @@ export default function TurtleStory2Container() {
                     </p>
                     <p className="story-question">Where will you swim?</p>
                     <div className="choice-container">
-                        <Link to="/story-turtle-2-1" className="choice-btn">Swim straight up.</Link>
-                        <Link to="/story-turtle-2-2" className="choice-btn">Swim to the right and up.</Link>
-                        <Link to="/story-turtle-3" className="choice-btn">Swim to the left and up.</Link>
+                        <button onClick={AddChoiceToDB} className="choice-btn">
+                            <Link to="/story-turtle-2-1">Swim straight up.</Link>
+                        </button>
+                        <button onClick={AddChoiceToDB} className="choice-btn">
+                            <Link to="/story-turtle-2-2">Swim to the right and up.</Link>
+                        </button>
+                        <button onClick={AddChoiceToDB} className="choice-btn">
+                            <Link to="/story-turtle-3">Swim to the left and up.</Link>
+                        </button>
                     </div>
                 </div>
             </div>

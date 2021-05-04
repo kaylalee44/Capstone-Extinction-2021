@@ -17,7 +17,7 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-firebase.database().ref('choices').remove(); //remove choices for refresh
+firebase.database().ref('journeys').remove(); //remove choices for refresh
 
 render(
   <>

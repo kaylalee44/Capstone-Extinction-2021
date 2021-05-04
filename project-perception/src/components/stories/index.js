@@ -44,6 +44,7 @@ function ChooseSpecies(props) {
     const hideStories = () => {
         props.hideStories();
         speciesName = props.speciesName;
+        window.name = props.storyName;
     }
     return(
         <div className="species-card" onClick={hideStories}>

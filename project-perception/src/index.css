@@ -11,6 +11,10 @@ body {
   background-color: #3a444d;
 }
 
+.hidden {
+  display: none;
+}
+
 /* html {
   position: relative;
   min-height: 100%;

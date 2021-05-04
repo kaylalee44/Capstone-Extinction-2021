@@ -2,6 +2,7 @@ import React from 'react';
 import StoryTitle from '../components/story/story_title';
 import StoryImage from '../components/story/story_image';
 import { Link } from 'react-router-dom';
+import AddChoiceToDB from "../components/story/add_choice_db";
 
 export default function RabbitStory2Container() {
     return(
@@ -15,8 +16,12 @@ export default function RabbitStory2Container() {
                     </p>
                     <p className="story-question">Where will you go?</p>
                     <div className="choice-container">
-                        <Link to="/story-rabbit-2-1" className="choice-btn">Run Away.</Link>
-                        <Link to="/story-rabbit-3" className="choice-btn">Hide.</Link>
+                        <button onClick={AddChoiceToDB} className="choice-btn">
+                            <Link to="/story-rabbit-2-1">Run Away.</Link>
+                        </button>
+                        <button onClick={AddChoiceToDB} className="choice-btn">
+                            <Link to="/story-rabbit-3">Hide.</Link>
+                        </button>
                     </div>
                 </div>
             </div>

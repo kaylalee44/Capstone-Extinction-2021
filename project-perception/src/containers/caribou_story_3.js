@@ -2,6 +2,7 @@ import React from 'react';
 import StoryTitle from '../components/story/story_title';
 import StoryImage from '../components/story/story_image';
 import { Link } from 'react-router-dom';
+import AddChoiceToDB from "../components/story/add_choice_db";
 
 export default function CaribouStory3Container() {
     return(
@@ -16,8 +17,12 @@ export default function CaribouStory3Container() {
                     </p>
                     <p className="story-question">What do you do?</p>
                     <div className="choice-container">
-                        <Link to="/story-caribou-3-1" className="choice-btn">Decide to run away with the herd.</Link>
-                        <Link to="/story-caribou-3-2" className="choice-btn">Go up to the humans.</Link>
+                        <button onClick={AddChoiceToDB} className="choice-btn caribou-btn">
+                            <Link to="/story-caribou-3-1">Decide to run away with the herd.</Link>
+                        </button>
+                        <button onClick={AddChoiceToDB} className="choice-btn caribou-btn">
+                            <Link to="/story-caribou-3-2">Go up to the humans.</Link>
+                        </button>
                     </div>
                 </div>
             </div>

@@ -17,8 +17,12 @@ export default function TurtleStory1Container() {
                     </p>
                     <p className="story-question">What will you do?</p>
                     <div className="choice-container">
-                        <Link to="/story-turtle-1-1" className="choice-btn">Eat it.</Link>
-                        <Link to="/story-turtle-2" className="choice-btn">Pass - I'm full.</Link>
+                        <button onClick={AddChoiceToDB} className="choice-btn">
+                            <Link to="/story-turtle-1-1">Eat it.</Link>
+                        </button>
+                        <button onClick={AddChoiceToDB} className="choice-btn">
+                            <Link to="/story-turtle-2">Pass - I'm full.</Link>
+                        </button>
                     </div>
                 </div>
             </div>     

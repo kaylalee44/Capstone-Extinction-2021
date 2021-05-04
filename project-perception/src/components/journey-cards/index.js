@@ -1,15 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import { CardBody, CardText, Container, Col, Card, Row } from 'reactstrap';
+import "firebase/database";
+import firebase from "firebase/app";
 
-// takes in a story (ex. story1)
 function JourneyCard(props) {
+    let choiceCount = 0;
     let choices = props.results.map((choice) => {
-        return <li key={choice}>{choice}</li>
+        choiceCount += 1;
+        return <li key={choice}>Choice {choiceCount + ": " + choice}</li>
     });
 
-    let handleClick = () => {
-        <Popup />
-    }
+    // let handleClick = () => {
+    //     <Popup />
+    // }
 
     return(
         <Col style={{flex: 1}}>
@@ -17,21 +20,22 @@ function JourneyCard(props) {
                 <CardBody>
                     <CardText tag="ol">{choices}</CardText>
                     <CardText>You got the {props.ending} ending.</CardText>
-                    <Button className="learn-how-to-help-btn" handleClick={handleClick}>Learn how to help</Button>
+                    <button className="learn-how-to-help-btn">Learn how to help</button>
                 </CardBody>
             </Card>
         </Col>
     )
 }
 
-// takes in a specific story (ex. story1)
 function JourneyList(props) {
     const [cards, setCards] = useState([]);
+    let currentStory = window.name;
     
     // pull the choices from the database and create cards for each one 
+    // TODO: figure out how to iterate through the children for a specific story
     useEffect(() => {
-        const allChoicesRef = firebase.database().ref('choices');
-        allChoicesRef.on('value', (snapshot) => {
+        const allJourneysRef = firebase.database().ref('journeys').child(currentStory);
+        allJourneysRef.on('value', (snapshot) => {
             const allChoicesObj = snapshot.val()
             let objectKeysArray = Object.keys(allChoicesObj); //grabs all the choices keys
             let allChoices = objectKeysArray.map((key) => { // [[choice1, choice2], [choice1, choice2], ...]
@@ -58,13 +62,14 @@ function JourneyList(props) {
 
 export default JourneyList;
 
+// TODO: create pop up with correct data
 function Popup(props) {
     let ending = props.ending;
     let desc = props.desc;
     let steps = props.steps;
     let source = props.source;
     return (
-        <div>
+        <div className="card-popup">
             <h2>Ocean Pollution</h2>
             <p>Marine pollution is a combination of chemicals and trash, most of which comes from land sources and is 
                 washed or blown into the ocean. This pollution results in damage to the environment, to the health of 
