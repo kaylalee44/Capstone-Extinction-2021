@@ -1,29 +1,65 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel'
 import { Link } from "react-router-dom";
+import { scroller } from "react-scroll";
 
+// smooth scrolling: https://www.codegrepper.com/code-examples/javascript/onclick+scroll+to+div+react
 export function Home() {
+    const scrollToSection = () => {
+        scroller.scrollTo("carousel", {
+          duration: 800,
+          delay: 0,
+          smooth: "easeInOutQuart",
+        });
+      };
     return(
         <div>
             <Map />
-            <div className="divider"></div>
+            <div className="divider">
+                <button className="divide-arrow-btn" onClick={scrollToSection}>
+                    <svg className="divide-arrow" width="60" height="38" viewBox="0 0 60 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M52.95 0.474899L30 23.3749L7.05 0.474899L0 7.5249L30 37.5249L60 7.5249L52.95 0.474899Z" fill="#E9E3CB"/>
+                    </svg>
+                </button>
+            </div>
             <Slides />
         </div>
     );
 }
 
+// https://www.w3schools.com/html/html_images_imagemap.asp
+// https://www.w3schools.com/howto/howto_css_button_on_image.asp
+// https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_areamap
+// https://css-tricks.com/the-many-ways-to-link-up-shapes-and-images-with-html-and-css/
 function Map() {
+    // let list = "";
+    // const showCoords = (event) => {
+    //     var x = event.clientX;
+    //     var y = event.clientY;
+    //     // var coords = "X coords: " + x + ", Y coords: " + y;
+    //     var coords = "," + x + "," + y + ",";
+    //     list += coords;
+    //     console.log(list);
+    //     // document.getElementById("demo").innerHTML = coords;
+    // }
     return (
         <div className="map-container">
             <h1 className="map-title">Enter An Interactive Story</h1>
             <p className="map-header">Click on the region that you live in to learn about the endangered species in your area</p>
-            <img className="map-img" src="img/Map.png" alt="Image of Washington State with different regions" useMap="#storymap-map"/>
+            <div className="map-btn-container">
+                <img className="map-img" src="img/new_map.png" alt="Image of Washington State with different regions" useMap="#storymap-map"/>
+                <a href="/stories"><button className="turtle-region-btn"></button></a>
+            </div>
 
-            {/* {document.getElementsByClassName("map-img").getBoundingClientRect()} */}
-
-            <map name="storymap-map">
-                <area shape="rect" coords="34,44,270,350" alt="West region on map"/>
-            </map>
+            {/* <map name="storymap-map">
+                <area href="#" shape="rect" class="turtle-region" 
+                    coords="552,282,782,538" 
+                    />
+                <area href="#" shape="poly" class="bird-region" coords="399,269,681,268,673,468,227,455" />
+                <area href="#" shape="poly" class="bat-region" coords="685,267,934,267,1134,473,676,468" />
+                <area href="#" shape="poly" class="mouse-region" coords="220,458,33,641,378,640,540,465,224,458" />
+                <area href="#" shape="poly" class="lizard-region" coords="542,467,380,643,975,641,802,471,547,467" />
+            </map> */}
         </div>
     );
 }
