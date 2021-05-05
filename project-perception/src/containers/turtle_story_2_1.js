@@ -11,7 +11,10 @@ export default function TurtleStoryVesselDeathContainer() {
                 <StoryImage id="boat-gif" className="gif jellyfish" src="img/boat.gif" alt="A boat gif" />
                 <div className="story-content jellyfish">
                     <p className="story-paragraph">
-                        You swim straight up and collide with a boat. <span className="death"><strong>You have become seriously injured and die within the next few days.</strong></span>
+                        You swim straight up and collide with a boat.
+                    </p>
+                    <p className="story-paragraph2">
+                        <span className="death"><strong>You have become seriously injured and die within the next few days.</strong></span>
                     </p>
                     <p className="explanation separation"><strong>You got the "Vessel Strikes" ending.</strong></p>
                     <p className="explanation">

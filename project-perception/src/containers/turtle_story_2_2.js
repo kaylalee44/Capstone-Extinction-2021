@@ -22,7 +22,10 @@ export default function TurtleStoryBycatchDeathContainer() {
                 <StoryImage id="net-img" className="gif ocean" src="img/bycatch.jpg" alt="A net image" />
                 <div className="story-content ocean">
                     <p className="story-paragraph">
-                        You swim to the right and up and get entangled in buoy lines attached to a <span className="highlight" onClick={togglePop}>fishing pot.</span> <span className="death"><strong>You have become seriously injured and die within the next few days.</strong></span>
+                        You swim to the right and up and get entangled in buoy lines attached to a <span className="highlight" onClick={togglePop}>fishing pot.</span>
+                    </p>
+                    <p className="story-paragraph2">
+                        <span className="death"><strong>You have become seriously injured and die within the next few days.</strong></span>
                     </p>
                     <p className="explanation separation"><strong>You got the "Bycatch in Fishing Gear" ending.</strong></p>
                     <p className="explanation">

@@ -22,8 +22,10 @@ export default function RabbitStoryClimateDeathContainer() {
                 <StoryImage id="drought-gif" className="gif ending" src="img/drought.gif" alt="A drought gif" />
                 <div className="story-content ending">
                     <p className="story-paragraph">
-                        Although it's current winter, the <span className="highlight" onClick={togglePop}>climate has been shifting </span> recently and the area has been experiencing a drought. No rain comes, and 
-                        <span className="death"><strong> you die within the next few days of starvation.</strong></span>
+                        Although it's current winter, the <span className="highlight" onClick={togglePop}>climate has been shifting </span> recently and the area has been experiencing a drought. No rain comes. 
+                    </p>
+                    <p className="story-paragraph2">
+                        <span className="death"><strong>You die within the next few days of starvation.</strong></span>
                     </p>
                     <p className="explanation separation"><strong>You got the "Climate Change" ending.</strong></p>
                     <p className="explanation">

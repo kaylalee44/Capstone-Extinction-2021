@@ -11,7 +11,10 @@ export default function CaribouStoryPredatorDeathContainer() {
                 <StoryImage id="plastic-img" className="gif ending" src="img/wolf.gif" alt="A wolf gif" />
                 <div className="story-content ending">
                     <p className="story-paragraph">
-                        By crossing the open space, it made you visible to a wolf. A wolf spots you and charges you. <span className="death"><strong>It catches up to you and kills you. You have been eaten.</strong></span>
+                        By crossing the open space, it made you visible to a wolf. A wolf spots you and charges you. <span className="death"><strong>It catches up to you and kills you.</strong></span>
+                    </p>
+                    <p className="story-paragraph2">
+                        <span className="death"><strong>You have been eaten.</strong></span>
                     </p>
                     <p className="explanation separation"><strong>You got the "Predator" ending.</strong></p>
                     <p className="explanation">

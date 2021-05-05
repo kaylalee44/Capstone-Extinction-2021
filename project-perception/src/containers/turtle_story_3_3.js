@@ -11,7 +11,10 @@ export default function TurtleStoryHarvestDeathContainer() {
                 <StoryImage id="people-beach-img" className="gif ocean" src="img/people-beach.jpg" alt="A person running along the beach image" />
                 <div className="story-content ocean">
                     <p className="story-paragraph">
-                        You swim to the left side of the beach and shuffle onto the sand. As you make your way to nest, humans rush towards you and brutually kill you for your meat and eggs. <span className="death"><strong>You have died.</strong></span>
+                        You swim to the left side of the beach and shuffle onto the sand. As you make your way to nest, humans rush towards you and brutually kill you for your meat and eggs.
+                    </p>
+                    <p className="story-paragraph2">
+                        <span className="death"><strong>You have died.</strong></span>
                     </p>
                     <p className="explanation separation"><strong>You got the "Direct Harvest of Turtles and Eggs" ending.</strong></p>
                     <p className="explanation">
