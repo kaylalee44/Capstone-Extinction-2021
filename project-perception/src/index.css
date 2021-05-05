@@ -192,6 +192,7 @@ body {
 .leopard-img {
   display: block;
   margin: auto;
+  object-fit: cover;
   height: 400px;
   width: calc(100% - 100px);
 }

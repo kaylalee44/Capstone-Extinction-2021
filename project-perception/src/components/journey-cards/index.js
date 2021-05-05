@@ -3,7 +3,6 @@ import {
     CardBody, 
     CardText, 
     Container, 
-    Col, 
     Card, 
     Row 
 } from 'reactstrap';
@@ -33,6 +32,7 @@ function JourneyCard(props) {
     )
 }
 
+// TODO: bug where the first card/first choice won't show up even though db is populated (prob somethign to do with how the choice is added to db)
 function JourneyList() {
     const [cards, setCards] = useState([]);
     let currentStory = window.name;
@@ -40,6 +40,7 @@ function JourneyList() {
     // pull the choices from the database and create cards for each one 
     useEffect(() => {
         const allJourneysRef = firebase.database().ref('journeys').child(currentStory);
+        console.log(allJourneysRef);
         let cardHolder = [];
         allJourneysRef.once("value", (snapshot) => {
             let journeys = [];
@@ -60,7 +61,7 @@ function JourneyList() {
             <h2 id="journey-list-title">Your Past "{currentStory}" Story Interactions</h2>
             <p id="journey-list-subtitle">These previous journeys can help you see what endings you came across, to help prevent harm in the future.</p>
             <div className="last-prev-text">
-                <p id="last-journey-text">Your last journey:</p>
+                {/* <p id="last-journey-text">Your last journey:</p> */}
                 {/* <p id="previously-text">Previously:</p> */}
             </div>
             <Row>{cards}</Row>
@@ -74,21 +75,20 @@ export default JourneyList;
 export function CardPopup(props) {
     let ending = props.ending;
     let desc = props.desc;
-    let steps = props.steps;
     let source = props.source;
+    let sourceText = props.sourceText;
+
+    let steps = props.steps.map((step) => {
+        return <li key={step}>{step}</li>
+    });
     return (
         <div className="card-popup">
-            <h2>Ocean Pollution</h2>
-            <p>Marine pollution is a combination of chemicals and trash, most of which comes from land sources and is 
-                washed or blown into the ocean. This pollution results in damage to the environment, to the health of 
-                all organisms, and to economic structures worldwide. Here are some ways to help:</p>
+            <h2>{ending}</h2>
+            <p>{desc}</p>
             <ol>
-                <li>Conserve water</li>
-                <li>Reduce waste</li>
-                <li>Use less energy</li>
-                <li>Reduce vehicle pollution</li>
-                <li><a href="https://www.coastsavers.org/index.php/wcc-cleanup/">Volunteer to clean up the beach</a></li>
+                {steps}
             </ol>
+            <a href={source}>{sourceText}</a>
         </div>
     );
 }
