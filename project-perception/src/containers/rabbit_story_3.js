@@ -8,7 +8,7 @@ export default function RabbitStory3Container() {
     return(
         <div>
             <StoryTitle title="SEARCHING" />
-            <div className="story-container">
+            <div className="story-container margins">
                 <StoryImage id="fox-plain" className="gif jellyfish" src="img/fox-plain.jpg" alt="A fox looking around in a plain" />
                 <div className="story-content jellyfish">
                     <p className="story-paragraph2">

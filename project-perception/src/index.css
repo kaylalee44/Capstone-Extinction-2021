@@ -15,10 +15,10 @@ body {
   display: none;
 }
 
-/* html {
-  position: relative;
-  min-height: 100%;
-} */
+.no-style {
+  list-style-type: none;
+  text-align: left;
+}
 
 .navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories, .back-to-stories div, .try-again, .ending-container, .choice-container, .navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .footer-main, .animal-details, .mission-statement, .profile, .about-links, .profile-row, .change-rows, .org-button, .nonprofit-btns, .article-carousel, .stories-row {
   display: flex;
@@ -532,6 +532,7 @@ body {
   justify-content: space-between;
 }
 
+/* Story CSS */
 .back-to-stories {
   margin-left: 10px;
   text-decoration: none;
@@ -640,6 +641,99 @@ body {
 .caribou-btn {
   text-align: center;
 }
+
+/* Journey Cards CSS */
+
+.journey-divider {
+  background-color: #e2a856;
+  height: 20px;
+  width: 100%;
+  margin-bottom: 10em;
+}
+
+.journey-card {
+  width: 300px;
+  height: 300px;
+  background: #3A444D;
+  border-radius: 5px;
+  margin: 0em 2em 2em 2em;
+}
+
+.journey-list-container {
+  background: #E9E3CB;
+  width: 1340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.back-to-top-btn {
+  margin: 3em 0em 3em 0em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #E9E3CB;
+}
+
+.card-text {
+  color: #E9E3CB;
+  margin-left: -2em;
+}
+
+#journey-list-title, #journey-list-subtitle {
+  color: #74624E;
+}
+
+#journey-list-subtitle {
+  font-size: 18px;
+  margin-bottom: 2em;
+}
+#journey-list-title {
+  font-size: 24px;
+  margin-top: 2em;
+}
+
+.journey-list-container {
+  margin-top: 2.5em;
+}
+
+.learn-how-to-help-btn {
+  margin-bottom: 1.5em;
+  color: #74624E;
+  background: #E9E3CB;
+  border-radius: 5px;
+  border: none;
+  width: 10em;
+  height: 3em;
+  align-self: center;
+}
+
+#last-journey-text, #previously-text {
+  font-family: Cinzel;
+  font-weight: bold;
+  font-size: 20px;
+  color: #3A444D;
+}
+
+.last-prev-text {
+  display: flex;
+  flex-direction: row;
+  /* margin-right: 26em; */
+  margin-right: 47em;
+}
+
+/* #last-journey-text {
+  margin-right: 11em;
+} */
+
 
 /* Make a Change Page */
 .change-header {
@@ -928,7 +1022,7 @@ body {
     background-color: #e9e3cb;
   }
 
-  .story-container {
+  .margins {
     margin-bottom: 15em;
   }
 

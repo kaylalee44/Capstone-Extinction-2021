@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
+import JourneyCardsContainer from "./journeycards";
 import PopUp from '../components/story/popup';
 import StoryImage from '../components/story/story_image';
 import StoryTitle from '../components/story/story_title';
@@ -15,10 +16,24 @@ export default function TurtleStoryBycatchDeathContainer() {
         }
         setSeen(seenCopy);
     }
+    const [journeyHidden, setJourneyHidden] = useState(false);
+    let className = 'hidden';
+    let margins = 'margins';
+    let buttonText = "View your Past Stories";
+    if (journeyHidden) {
+        className = '';
+        margins = '';
+        buttonText = "Hide your Past Stories";
+    }
+
+    // when button is clicked
+    const handleClick = () => {
+        setJourneyHidden(!journeyHidden);
+    }
     return(
         <div>
             <StoryTitle title={"NESTING"} />
-            <div className="story-container">
+            <div className={"story-container " + margins}>
                 <StoryImage id="net-img" className="gif ocean" src="img/bycatch.jpg" alt="A net image" />
                 <div className="story-content ocean">
                     <p className="story-paragraph">
@@ -29,9 +44,13 @@ export default function TurtleStoryBycatchDeathContainer() {
                         A primary threat to sea turtles is the unintended capture in fishing gear which can result in drowning or injury (such as swallowing hooks). 
                         Known as bycatch, this situation is a problem for sea turtles around the world due to equipment such as gillnets, longlines, and buoy lines.
                     </p>
-                    <TryAgain to="story-turtle-2" href="https://www.fisheries.noaa.gov/species/leatherback-turtle" learnMore="Learn more about the Leatherback Sea Turtle"/>
+                    <TryAgain to="story-turtle-2" href="https://www.fisheries.noaa.gov/species/leatherback-turtle" handleClick={handleClick} buttonText={buttonText} learnMore="Learn more about the Leatherback Sea Turtle"/>
                 </div>
-            </div>   
+            </div>
+            <div className={"journey-container " + className}>
+                <div className="journey-divider"></div>
+                <JourneyCardsContainer title={"NESTING"} />
+            </div>
             {seen ? <PopUp toggle={togglePop} definition="A fishing pot is a receptable for catching fish or shellfish." id="fishing-pot" className="fishing-pot" src="img/fishing-pot.jpeg" alt="A fishing pot image"/> : null} 
         </div>
     );

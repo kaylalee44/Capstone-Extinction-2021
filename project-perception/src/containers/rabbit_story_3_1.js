@@ -1,13 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
+import JourneyCardsContainer from "./journeycards";
 import StoryImage from '../components/story/story_image';
 import StoryTitle from '../components/story/story_title';
 import TryAgain from '../components/story/try_again';
 
 export default function RabbitStoryGeneticDeathContainer() {
+    const [journeyHidden, setJourneyHidden] = useState(false);
+    let className = 'hidden';
+    let margins = 'margins';
+    let buttonText = "View your Past Stories";
+    if (journeyHidden) {
+        className = '';
+        margins = '';
+        buttonText = "Hide your Past Stories";
+    }
+
+    // when button is clicked
+    const handleClick = () => {
+        setJourneyHidden(!journeyHidden);
+    }
     return(
         <div>
             <StoryTitle title="SEARCHING" />
-            <div className="story-container">
+            <div className={"story-container " + margins}>
                 <StoryImage id="new-grass-img" className="gif ending" src="img/new-grass.jpg" alt="A field of different grass, not sagebush" />
                 <div className="story-content ending">
                     <p className="story-paragraph">
@@ -19,9 +34,13 @@ export default function RabbitStoryGeneticDeathContainer() {
                         Genetic variation is the raw material of evolution. Without genetic variation, a population cannot evolve in response
                         to changing environment variables and, as a result, may face an increased risk of extinction.
                     </p>
-                    <TryAgain to="/story-rabbit-3" href="https://www.fws.gov/sagebrush/wildlife/pygmy-rabbit/" learnMore="Learn more about the Columbia Basin Pygmy Rabbit" />
+                    <TryAgain to="/story-rabbit-3" href="https://www.fws.gov/sagebrush/wildlife/pygmy-rabbit/" handleClick={handleClick} buttonText={buttonText} learnMore="Learn more about the Columbia Basin Pygmy Rabbit" />
                 </div>
-            </div>   
+            </div>
+            <div className={"journey-container " + className}>
+                <div className="journey-divider"></div>
+                <JourneyCardsContainer title="SEARCHING" />
+            </div>
         </div>
     );
 }

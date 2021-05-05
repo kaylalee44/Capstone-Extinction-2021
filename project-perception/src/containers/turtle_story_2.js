@@ -8,7 +8,7 @@ export default function TurtleStory2Container() {
     return(
         <div>
             <StoryTitle title={"NESTING"} />
-            <div className="story-container">
+            <div className="story-container margins">
                 <StoryImage id="ocean-gif" className="gif ocean" src="img/ocean.gif" alt="An ocean gif" />
                 <div className="story-content ocean">
                     <p className="story-paragraph2">You decide to pass on the jellyfish and continue swimming towards the beach.</p>

@@ -8,7 +8,7 @@ export default function TurtleStory1Container() {
     return(
         <div>
             <StoryTitle title={"NESTING"} />
-            <div className="story-container">
+            <div className="story-container margins">
                 <StoryImage id="jelly-gif" className="gif jellyfish" src="img/jellyfish.gif" alt="A jellyfish gif" />
                 <div className="story-content jellyfish">
                     <p className="story-paragraph">2 years after you last nested you are returning to the beach to nest again. Your tough rubbery skin helps you glide

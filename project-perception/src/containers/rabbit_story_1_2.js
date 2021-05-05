@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
+import JourneyCardsContainer from "./journeycards";
 import StoryImage from '../components/story/story_image';
 import StoryTitle from '../components/story/story_title';
 import TryAgain from '../components/story/try_again';
@@ -15,10 +16,24 @@ export default function RabbitStoryClimateDeathContainer() {
         }
         setSeen(seenCopy);
     }
+    const [journeyHidden, setJourneyHidden] = useState(false);
+    let className = 'hidden';
+    let margins = 'margins';
+    let buttonText = "View your Past Stories";
+    if (journeyHidden) {
+        className = '';
+        margins = '';
+        buttonText = "Hide your Past Stories";
+    }
+
+    // when button is clicked
+    const handleClick = () => {
+        setJourneyHidden(!journeyHidden);
+    }
     return(
         <div>
             <StoryTitle title="SEARCHING" />
-            <div className="story-container">
+            <div className={"story-container " + margins}>
                 <StoryImage id="drought-gif" className="gif ending" src="img/drought.gif" alt="A drought gif" />
                 <div className="story-content ending">
                     <p className="story-paragraph">
@@ -30,9 +45,13 @@ export default function RabbitStoryClimateDeathContainer() {
                         Climate change is a huge issue that has been affecting our weather. Global warming is getting worse and worse and causing more
                         hot weather to occur and less rain to fall which greatly affects the livelihood of all species.
                     </p>
-                    <TryAgain to="/story-rabbit-1" href="https://www.fws.gov/sagebrush/wildlife/pygmy-rabbit/" learnMore="Learn more about the Columbia Basin Pygmy Rabbit" />
+                    <TryAgain to="/story-rabbit-1" href="https://www.fws.gov/sagebrush/wildlife/pygmy-rabbit/" handleClick={handleClick} buttonText={buttonText} learnMore="Learn more about the Columbia Basin Pygmy Rabbit" />
                 </div>
-            </div>  
+            </div>
+            <div className={"journey-container " + className}>
+                <div className="journey-divider"></div>
+                <JourneyCardsContainer title="SEARCHING" />
+            </div>
             {seen ? <PopUp toggle={togglePop} id="climate-change-chart" className="fishing-pot" src="img/climate-change-chart.jpeg" alt="A climate change chart" /> : null}   
         </div>
     );

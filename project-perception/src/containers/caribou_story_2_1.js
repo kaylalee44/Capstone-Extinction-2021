@@ -1,13 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
+import JourneyCardsContainer from "./journeycards";
 import StoryImage from '../components/story/story_image';
 import StoryTitle from '../components/story/story_title';
 import TryAgain from '../components/story/try_again';
 
 export default function CaribouStoryHunterDeathContainer() {
+    const [journeyHidden, setJourneyHidden] = useState(false);
+
+    let className = 'hidden';
+    let margins = 'margins';
+    let buttonText = "View your Past Stories";
+    if (journeyHidden) {
+        className = '';
+        margins = '';
+        buttonText = "Hide your Past Stories";
+    }
+
+    // when button is clicked
+    const handleClick = () => {
+        setJourneyHidden(!journeyHidden);
+    }
     return(
         <div>
             <StoryTitle title="SURVIVAL" />
-            <div className="story-container">
+            <div className={"story-container " + margins}>
                 <StoryImage id="hunting-img" className="gif ocean" src="img/hunting.jpg" alt="A sniper" />
                 <div className="story-content ocean">
                     <p className="story-paragraph">
@@ -18,9 +34,13 @@ export default function CaribouStoryHunterDeathContainer() {
                         With increased logging and large open spaces, woodland caribou are at a higher chance of getting hunted as they are easy to see and shoot.
                         Woodland caribou tend to move in herds, so by moving alone, it decreases its chance of surival and likelihood of getting shot and killed.
                     </p>
-                    <TryAgain to="story-caribou-2" href="https://naturecanada.ca/discover-nature/endangered-species/woodland-caribou/" learnMore="Learn more about the Woodland Caribou" />
+                    <TryAgain to="story-caribou-2" href="https://naturecanada.ca/discover-nature/endangered-species/woodland-caribou/" handleClick={handleClick} buttonText={buttonText} learnMore="Learn more about the Woodland Caribou" />
                 </div>
-            </div>    
+            </div>
+            <div className={"journey-container " + className}>
+                <div className="journey-divider"></div>
+                <JourneyCardsContainer title="SURVIVAL" />
+            </div> 
         </div>
     );
 }
