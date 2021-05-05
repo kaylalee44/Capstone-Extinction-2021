@@ -27,6 +27,8 @@ export default function RabbitStoryGeneticDeathContainer() {
                 <div className="story-content ending">
                     <p className="story-paragraph">
                         Because this isn't the grass you normally eat, your digestive system isn't able to properly digest the food.
+                    </p>
+                    <p className="story-paragraph2">
                         <span className="death"><strong> You feel sick after a few hours and die.</strong></span>
                     </p>
                     <p className="explanation separation"><strong>You got the "Lack of Genetic Diversity" ending.</strong></p>

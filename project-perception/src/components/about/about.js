@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export function MissionStatement() {
     return(
         <div className="leopard-container">
-            <img id="leopard-img" className="leopard-img" src="img/leopard.jpg" alt="A leopard in the forest" />
+            <img id="leopard-img" className="leopard-img" src="img/leopard.png" alt="A leopard in the forest" />
             <div className="mission-statement">
                 <h1 className="about-header">OUR MISSION</h1>
                 <div className="about-statement">

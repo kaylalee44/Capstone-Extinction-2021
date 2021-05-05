@@ -44,7 +44,10 @@ export default function TurtleStoryPlasticDeathContainer() {
                 <div className="story-content ending">
                     <p className="story-paragraph">
                         You swim towards the "jellyfish" and use your pointed tooth-like cusps and sharp-edged jaws to eat it.
-                        The backward-pointing spines in your mouth and throat lodge the "jellyfish" in your mouth. <span className="death"><strong>It ends up being a plastic bag and you are unable to digest it properly. You have died.</strong></span>
+                        The backward-pointing spines in your mouth and throat lodge the "jellyfish" in your mouth. 
+                    </p>
+                    <p className="story-paragraph2"> 
+                        <span className="death"><strong>It ends up being a plastic bag and you are unable to digest it properly. You have died.</strong></span>
                     </p>
                     <p className="explanation separation"><strong>You got the "Ocean Pollution/Marine Debris" ending.</strong></p>
                     <p className="explanation">

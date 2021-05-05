@@ -194,7 +194,6 @@ body {
   margin: auto;
   height: 400px;
   width: calc(100% - 100px);
-  opacity: 25%;
 }
 
 .about-header {
@@ -570,7 +569,7 @@ body {
 }
 
 .separation {
-  margin-top: 80px;
+  margin-top: 70px;
 }
 
 .learn-more {
@@ -738,6 +737,7 @@ body {
 /* Make a Change Page */
 .change-header {
   position: relative;
+  text-align: center;
 }
 
 .red-panda-img {
@@ -747,14 +747,11 @@ body {
 
 .change-title {
   position: absolute;
-  top: 30%;
-  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
   color: #e9e3cb;
-}
-
-.change-title p {
-  margin-left: 2rem;
-  margin-right: 2rem;
 }
 
 .change-divider {

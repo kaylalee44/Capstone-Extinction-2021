@@ -27,7 +27,10 @@ export default function CaribouStoryHunterDeathContainer() {
                 <StoryImage id="hunting-img" className="gif ocean" src="img/hunting.jpg" alt="A sniper" />
                 <div className="story-content ocean">
                     <p className="story-paragraph">
-                        As you continue to go alone, a bang goes off. A hunter has just shot you. You wished you went with with the herd because it might have increased your chance of survival. <span className="death"><strong>You have been killed by the hunter.</strong></span>
+                        As you continue to go alone, a bang goes off. A hunter has just shot you. You wished you went with with the herd because it might have increased your chance of survival.
+                    </p>
+                    <p className="story-paragraph2">
+                        <span className="death"><strong>You have been killed by the hunter.</strong></span>
                     </p>
                     <p className="explanation separation"><strong>You got the "Logging/Hunter" ending.</strong></p>
                     <p className="explanation">
