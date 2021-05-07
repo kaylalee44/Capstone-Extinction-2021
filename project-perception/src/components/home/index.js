@@ -70,7 +70,7 @@ function Slides() {
             <Carousel.Item className="slide slide-1">
                 <img
                     className="d-block w-100 slide-img"
-                    src="img/leatherback-sea-turtle.jpg"
+                    src="img/leopard.jpg"
                     alt="First slide"
                 />
                 <Carousel.Caption className="slide-cap slide-1-cap">
