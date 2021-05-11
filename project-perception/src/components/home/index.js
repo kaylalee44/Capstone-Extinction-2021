@@ -66,11 +66,11 @@ function Map() {
 
 function Slides() {
     return (
-        <Carousel className="carousel">
+        <Carousel className="home-carousel">
             <Carousel.Item className="slide slide-1">
                 <img
                     className="d-block w-100 slide-img"
-                    src="img/leopard.jpg"
+                    src="img/tiger.jpg"
                     alt="First slide"
                 />
                 <Carousel.Caption className="slide-cap slide-1-cap">

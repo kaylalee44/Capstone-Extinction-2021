@@ -139,6 +139,15 @@ body {
   border-radius: 10px;
 }
 
+/* .slide-img {
+  height: 100em;
+  object-fit: contain;
+} */
+
+/* .home-carousel {
+  height: 100em;
+} */
+
 .slide-cap {
   color: #E9E3CB;
 }
@@ -666,6 +675,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .row {
@@ -683,9 +693,13 @@ body {
   color: #E9E3CB;
 }
 
-.card-text {
+.card-text-choices {
   color: #E9E3CB;
   margin-left: -2em;
+}
+
+.card-ending-text {
+  color: #E9E3CB;
 }
 
 #journey-list-title, #journey-list-subtitle {
@@ -733,6 +747,36 @@ body {
 /* #last-journey-text {
   margin-right: 11em;
 } */
+
+.ending-popup {
+  background-color: #E2A856;
+  color: #3A444D;
+  width: 945px;
+  height: 370px;
+  border: 2px solid #3A444D;
+  box-sizing: border-box;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  /* margin-top: 10em; */
+}
+
+.ending-popup-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0em 2em 1em 2em;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.ending-popup-content h2 {
+  text-align: center;
+  font-family: "Cinzel";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 32px;
+}
 
 
 /* Make a Change Page */

@@ -35,7 +35,16 @@ export default function TurtleStoryPlasticDeathContainer() {
           delay: 0,
           smooth: "easeInOutQuart",
         });
-      };
+    };
+
+    let popupData = {
+        "ending": "Ocean Pollution",
+        "desc": "Marine pollution is a combination of chemicals and trash, most of which comes from land sources and is washed or blown into the ocean. This pollution results in damage to the environment, to the health of all organisms, and to economic structures worldwide. Here are some ways to help:",
+        "steps": ["Conserve water", "Reduce waste", "Use less energy", "Reduce vehicle pollution", "Volunteer to clean up the beach"],
+        "volunteerLink": "https://www.coastsavers.org/index.php/wcc-cleanup/",
+        "sourceText": "National Geographic",
+        "source": "https://www.nationalgeographic.org/encyclopedia/marine-pollution/"
+    };
     return(
         <div>
             <StoryTitle title={"NESTING"} />
@@ -59,7 +68,11 @@ export default function TurtleStoryPlasticDeathContainer() {
             </div>
             <div className={"journey-divider " + className}></div>
             <div className={"journey-container " + className}>
-                <JourneyCardsContainer title={"NESTING"} />
+                <JourneyCardsContainer 
+                    title={"NESTING"} 
+                    ending={"Ocean Pollution/Marine Debris"}
+                    popup={popupData}
+                />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.15625 24.0781L19.5 9.76563L33.8438 24.0781L38.25 19.6719L19.5 0.921875L0.75 19.6719L5.15625 24.0781Z" fill="#E9E3CB"/>
