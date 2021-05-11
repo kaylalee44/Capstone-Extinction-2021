@@ -1,5 +1,5 @@
 export const HOME = "/";
-export const ABOUT = "/about";
+export const STORY_HOME = "/story-home";
 export const CHANGE = "/make-a-change";
 export const STORIES = "/stories";
 export const STORY_TURTLE = "/story-turtle";

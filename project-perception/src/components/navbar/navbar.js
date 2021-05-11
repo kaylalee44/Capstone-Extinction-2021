@@ -13,7 +13,7 @@ export function NavBar() {
             </div> 
             <div className="navbar-right">
                 <ul className="page-links">
-                    <li><NavLink to="/about" className="nav-links">ABOUT</NavLink></li>
+                    <li><NavLink to="/story-home" className="nav-links">STORIES</NavLink></li>
                     <li><NavLink to="/make-a-change" className="nav-links">MAKE A CHANGE</NavLink></li>
                 </ul> 
             </div>

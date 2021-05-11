@@ -7,7 +7,7 @@ function StoriesList(props) {
     }
     return(
         <div>
-            <Link to="/">
+            <Link to="/story-home">
                 <BackStates />
             </Link>
             <StoriesTitle />

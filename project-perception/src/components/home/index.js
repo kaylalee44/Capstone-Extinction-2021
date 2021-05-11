@@ -80,7 +80,7 @@ function Slides() {
                         the different species that live around your area, it could help better understand how important these 
                         creatures are for the ecosystem, and learn ways to protect them too. Small actions can make a big 
                         impact in our ecosystems.</p>
-                    <Link to="/about"><button className="slide-btn">Read more about our mission</button></Link>
+                    <Link to="/"><button className="slide-btn">Read more about our mission</button></Link>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item className="slide slide-2">

@@ -1,18 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+export function LandingPageHeader() {
+    return(
+        <div class="landing-header-container">
+            <p className="landing-title">THERE ARE OVER <strong><u>1,300 ENDANGERED</u></strong> OR THREATENED SPECIES IN THE UNITED STATES...</p>
+            <p className="landing-subtitle">...and more than <strong>35,500 species are threatened</strong> with extinction around the world. Though people might have a broad understanding of this ongoing crisis, the impacts of species endangerment hit closer to home than one might expect. Our actions in our daily lives impact wildlife populations, ecosystems, and food chains, thus impacting us as well.</p>
+        </div>
+    );
+}
+
 export function MissionStatement() {
     return(
-        <div className="leopard-container">
-            <img id="leopard-img" className="leopard-img" src="img/leopard.png" alt="A leopard in the forest" />
+        <div className="mission-statement-container">
             <div className="mission-statement">
                 <h1 className="about-header">OUR MISSION</h1>
                 <div className="about-statement">
-                    <p>
-                        There are over <strong>1,300 endangered or threatened species</strong> in the United States alone, and more than <strong>35,500 species are threatened</strong> with extinction around the world.
-                        Though people might have a broad understanding of this ongoing crisis, the impacts of species endangerment hit closer to home than one might expect. Our actions in our daily lives impact wildlife
-                        populations, ecosystems, and food chains, thus impacting us as well.
-                    </p>
                     <p>
                         We are called <strong>Project Perception</strong> because we have created interactive stories that put you in the shoes of these endangered
                         species and bring to light to commonly overlooked endangered species due to their less widely popularized or marketable image. By learning
@@ -23,6 +26,47 @@ export function MissionStatement() {
             </div>
         </div>
     );
+}
+
+export function NoticeStatement() {
+    return(
+        <div className="notice-container">
+            <div className="notice-content">
+                <p className="notice-main">NOTICE: Project Perception is being transitioned to Open Source!</p>
+                <p className="notice-sub">To add more states and stories to Project Perception, find the project repository on <a href="https://github.com/kaylalee44/Capstone-ProjectPerception-2021" target="_blank" rel="noreferrer">Github</a></p>
+            </div>
+        </div>
+    );
+}
+
+export function KeyFeatures() {
+    return(
+        <div className="key-feature-container">
+            <p className="solution-title">OUR SOLUTION</p>
+            <div>
+                <KeyFeature  number="1" />
+            </div>
+        </div>
+    );
+}
+
+function KeyFeature(props) {
+    return(
+        <div>
+            <div className="circle">{props.number}</div>
+        </div>
+    ); 
+}
+
+export function StartAdventure() {
+    return(
+        <div className="start-adventure-container">
+            <div className="adventure-content">
+                <div>Ready to embark on a journey?</div>
+                <Link to="/story-home" className="change-btn adventure-btn">Start your adventure</Link>
+            </div>
+        </div>
+    ); 
 }
 
 export function HowToHelp() {
@@ -44,7 +88,7 @@ export function MeetTheTeam() {
     let samanthaBlurb = "I never realized how interconnected our lives are with the livelihood of animals. With this project, I have a better understanding of the ripple effect that ultimately improves or destroys animal habitats and our ecosystems. I helped out with our project’s initial market/literature research and prototyping phases."
     return(
         <div>
-            <h1 className="meet-team-header">MEET THE TEAM</h1>
+            <h1 className="meet-team-header">OUR TEAM</h1>
             <div className="profile-row">
                 <ProfileCard id="wendy-img" className="profile-pic" src="img/wendy.png" alt="Wendy" name="Wenqin Ding" major="Informatics &amp; Psychology" role="Product Manager" linkedin="https://www.linkedin.com/in/wendyd35/" mail="mailto:wding99@uw.edu" blurb={wendyBlurb} /> 
                 <ProfileCard id="bryan-img" className="profile-pic" src="img/bryan.png" alt="Bryan" name="Bryan Lin" major="Informatics (Information Assurance &amp; Cybersecurity)" role="Developer" linkedin="https://www.linkedin.com/in/bryan-lin-a84458174/" mail="mailto:linb8@uw.edu" blurb={bryanBlurb} />

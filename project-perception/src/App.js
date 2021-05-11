@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect} from "react";
 import * as ROUTES from "./constants/routes"; 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, useLocation } from 'react-router-dom';
 import StoriesPage from './pages/stories';
 import { NavBar } from './components/navbar/navbar';
 import { TurtleStory1 } from "./pages/turtle_story_1";
@@ -15,7 +15,7 @@ import TurtleStoryClimateDeath from "./pages/turtle_story_3_2";
 import TurtleStoryHarvestDeath from "./pages/turtle_story_3_3";
 import MakeAChangePage from "./pages/make-a-change";
 import HomePage from "./pages/home";
-import About from "./pages/about";
+import LandingPage from "./pages/landing_page";
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css'
 import { CaribouStory1 } from "./pages/caribou_story_1";
@@ -33,18 +33,27 @@ import RabbitStory3 from "./pages/rabbit_story_3";
 import RabbitStoryGeneticDeath from "./pages/rabbit_story_3_1";
 import RabbitStorySurvive from "./pages/rabbit_story_3_2";
 
+export function ScrollToTop() {
+  const { pathname} = useLocation();
+
+  useEffect(()=> {
+    window.scrollTo(0,0);
+  }, [pathname])
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <header>
           <NavBar />
         </header>
         <main>
-          
             <Switch>
-              <Route exact path={ROUTES.HOME} component={HomePage} />
-              <Route path={ROUTES.ABOUT} component={About} />
+              <Route exact path={ROUTES.HOME} component={LandingPage} />
+              <Route path={ROUTES.STORY_HOME} component={HomePage} />
               <Route path={ROUTES.CHANGE} component={MakeAChangePage} />
               <Route path={ROUTES.STORIES} component={StoriesPage} />
               <Route path={ROUTES.STORY_TURTLE_1}  component={TurtleStory1} />

@@ -183,17 +183,28 @@ body {
 }
 
 
-/* About page CSS */
-.leopard-container {
-  position: relative;
-  color: #e9e3cb;
+/* Landing page CSS */
+.landing-header-container {
+  text-align: center;
+  color: #E9E3CB;
+  background: url('img/snow-caribou.png');
+  background-size: cover;
+  background-position: center;
+  height: 850px;
 }
 
-.leopard-img {
-  display: block;
-  margin: auto;
-  height: 400px;
-  width: calc(100% - 100px);
+.landing-title {
+  padding-top: 3rem;
+  font-size: 50px;
+  font-family: 'Cinzel', serif;
+}
+
+.landing-subtitle {
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 19em;
 }
 
 .about-header {
@@ -208,9 +219,14 @@ body {
 }
 
 .mission-statement {
-  position: absolute;
-  top: 70px;
+  padding-top: 5em;
+  padding-bottom: 5em;
   align-items: center;
+  color: #3a444d;
+}
+
+.mission-statement-container {
+  background-color: #E9E3CB;
 }
 
 .how-to-help {
@@ -313,6 +329,75 @@ body {
   margin-bottom: 5em;
 }
 
+.notice-container {
+  height: 150px;
+  width: 100%;
+  background-color: #73614d;
+  text-align: center;
+  color: #E9E3CB;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notice-main {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.start-adventure-container {
+  height: 130px;
+  width: 100%;
+  background-color: #74624e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adventure-content {
+  display: flex;
+  align-items: center;
+}
+
+.adventure-content div {
+  color: #E9E3CB;
+  font-family: 'Lato', serif;
+  font-size: 28px;
+  margin-right: 3em;
+}
+
+.adventure-btn {
+  font-size: 28px;
+  text-align: center;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.landing-page-divider {
+  background-color: #E2A856;
+  width: 100%;
+  height: 20px;
+}
+
+.solution-title {
+  text-align: center;
+  color: #E9E3CB;
+  font-family: 'Cinzel', sans-serif;
+  font-size: 40px;
+  margin-top: 1em;
+}
+
+.circle {
+  background: #E2A856;
+  height: 100px;
+  width: 100px;
+  color: #3a444d;
+  font-family: 'Cinzel', sans-serif;
+  border-radius: 50%;
+  text-align: center;
+  padding: 1em;
+}
 /* Animal Detail page CSS */
 .animal-details {
   flex-direction: column;
