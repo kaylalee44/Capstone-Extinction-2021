@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
 
 function StoriesList(props) {
@@ -44,7 +44,7 @@ function ChooseSpecies(props) {
     const hideStories = () => {
         props.hideStories();
         speciesName = props.speciesName;
-        window.name = props.storyName;
+        window.name = props.storyName; //global variable to get the current story
     }
     return(
         <div className="species-card" onClick={hideStories}>

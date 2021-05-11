@@ -8,7 +8,7 @@ export default function CaribouStory3Container() {
     return(
         <div>
             <StoryTitle title="SURVIVAL" />
-            <div className="story-container">
+            <div className="story-container margins">
                 <StoryImage id="sunset-trees" className="gif jellyfish" src="img/sunset-trees.jpg" alt="A groups of trees in a sunset" />
                 <div className="story-content jellyfish">
                     <p className="story-paragraph2">

@@ -47,7 +47,7 @@ function Map() {
             <h1 className="map-title">Enter An Interactive Story</h1>
             <p className="map-header">Click on the region that you live in to learn about the endangered species in your area</p>
             <div className="map-btn-container">
-                <img className="map-img" src="img/new_map.png" alt="Image of Washington State with different regions" useMap="#storymap-map"/>
+                <img className="map-img" src="img/new_map.png" alt="Washington State with different regions" useMap="#storymap-map"/>
                 <a href="/stories"><button className="turtle-region-btn"></button></a>
             </div>
 
@@ -66,11 +66,11 @@ function Map() {
 
 function Slides() {
     return (
-        <Carousel className="carousel">
+        <Carousel className="home-carousel">
             <Carousel.Item className="slide slide-1">
                 <img
                     className="d-block w-100 slide-img"
-                    src="img/leatherback-sea-turtle.jpg"
+                    src="img/tiger.jpg"
                     alt="First slide"
                 />
                 <Carousel.Caption className="slide-cap slide-1-cap">

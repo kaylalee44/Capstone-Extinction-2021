@@ -44,7 +44,9 @@ export function KeyFeatures() {
         <div className="key-feature-container">
             <p className="solution-title">OUR SOLUTION</p>
             <div>
-                <KeyFeature  number="1" />
+                <KeyFeature  number="1" solution="Enter the eyes of a species from your local area. Get led through different paths to read about their life and habitat." id="feature-1" className="feature-img" src="img/feature-1.png" alt="Screenshot of the story game" />
+                <KeyFeature number="2" solution="View the past journeys of your story and learn about specific ways you can make a difference in the species' life based on your story ending." id="feature-2" className="feature-img" src="img/feature-2.png" alt="Screenshot of the journey cards" />
+                <KeyFeature number="3" solution="Take action by implementing small changes to lead a more sustainable life. Learn about established organizations who are making a difference today in their own ways." id="feature-3" className="feature-img" src="img/feature-3.png" alt="Screenshot of the Related Articles section" />
             </div>
         </div>
     );
@@ -52,8 +54,14 @@ export function KeyFeatures() {
 
 function KeyFeature(props) {
     return(
-        <div>
-            <div className="circle">{props.number}</div>
+        <div className="row-container">
+            <div className="circle">
+                <div className="numbers">{props.number}</div>
+            </div>
+            <div className="solution">{props.solution}</div>
+            <div>
+                <img id={props.id} className={props.className} src={props.src} alt={props.alt} />
+            </div>
         </div>
     ); 
 }

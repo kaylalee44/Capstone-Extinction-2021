@@ -19,7 +19,7 @@ export default function CaribouStory1Container() {
     return(
         <div>
             <StoryTitle title="SURVIVAL" />
-            <div className="story-container">
+            <div className="story-container margins">
                 <StoryImage id="lichen-gif" className="gif jellyfish" src="img/ground-lichen.gif" alt="A ground lichen gif" />
                 <div className="story-content jellyfish">
                     <p className="story-paragraph">It is winter and you are trudging along the snow. You are roaming the woodlands in search for food. You are by yourself with no other woodland caribou with you, so you continue

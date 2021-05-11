@@ -19,7 +19,7 @@ export default function RabbitStory1Container() {
     return(
         <div>
             <StoryTitle title="SEARCHING" />
-            <div className="story-container">
+            <div className="story-container margins">
                 <StoryImage id="sagebush-img" className="gif jellyfish" src="img/sagebush.jpg" alt="A whole area of sagebush" />
                 <div className="story-content jellyfish">
                     <p className="story-paragraph">

@@ -8,7 +8,7 @@ export default function TurtleStory3Container() {
     return(
         <div>
             <StoryTitle title={"NESTING"} />
-            <div className="story-container">
+            <div className="story-container margins">
                 <StoryImage id="waves-gif" className="gif ocean" src="img/waves.gif" alt="A waves gif" />
                 <div className="story-content ocean">
                     <p className="story-paragraph2">You swim to the left and up and are able to catch a breath.</p>

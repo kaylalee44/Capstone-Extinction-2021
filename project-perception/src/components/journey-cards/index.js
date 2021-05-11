@@ -1,61 +1,80 @@
 import React, {useEffect, useState} from 'react';
-import { CardBody, CardText, Container, Col, Card, Row } from 'reactstrap';
+import { 
+    CardBody, 
+    CardText, 
+    Container, 
+    Card, 
+    Row 
+} from 'reactstrap';
 import "firebase/database";
 import firebase from "firebase/app";
 
 function JourneyCard(props) {
     let choiceCount = 0;
-    let choices = props.results.map((choice) => {
+    let choices = props.choices.map((choice) => {
         choiceCount += 1;
-        return <li key={choice}>Choice {choiceCount + ": " + choice}</li>
+        return <li className="no-style" key={choice}>Choice {choiceCount + ": " + choice}</li>
     });
 
-    // let handleClick = () => {
-    //     <Popup />
-    // }
+    const handleClick = () => {
+        props.toggle();
+    }
 
     return(
-        <Col style={{flex: 1}}>
-            <Card>
-                <CardBody>
-                    <CardText tag="ol">{choices}</CardText>
-                    <CardText>You got the {props.ending} ending.</CardText>
-                    <button className="learn-how-to-help-btn">Learn how to help</button>
-                </CardBody>
-            </Card>
-        </Col>
+        <Card className="journey-card">
+            <CardBody>
+                <CardText tag="ol" className="card-text-choices">{choices}</CardText>
+                <CardText className="card-ending-text">You got the {props.ending} ending.</CardText>
+            </CardBody>
+            <button className="learn-how-to-help-btn" onClick={handleClick}>Learn how to help</button>
+        </Card>
     )
 }
 
+// TODO: bug where the first card/first choice won't show up even though db is populated (prob somethign to do with how the choice is added to db)
 function JourneyList(props) {
+    const [seen, setSeen] = useState(false);
+    const togglePop = () => {
+        let seenCopy = seen;
+        if (!seenCopy) {
+            seenCopy = true; 
+        } else {
+            seenCopy = false;
+        }
+        setSeen(seenCopy);
+    }
     const [cards, setCards] = useState([]);
-    let currentStory = window.name;
+    // let currentStory = window.name;
     
     // pull the choices from the database and create cards for each one 
-    // TODO: figure out how to iterate through the children for a specific story
     useEffect(() => {
-        const allJourneysRef = firebase.database().ref('journeys').child(currentStory);
-        allJourneysRef.on('value', (snapshot) => {
-            const allChoicesObj = snapshot.val()
-            let objectKeysArray = Object.keys(allChoicesObj); //grabs all the choices keys
-            let allChoices = objectKeysArray.map((key) => { // [[choice1, choice2], [choice1, choice2], ...]
-                let singleChoicesObj = allChoicesObj[key];
-                singleChoicesObj.key = key;
-                return singleChoicesObj;
+        const allJourneysRef = firebase.database().ref('journeys').child(props.title);
+        // console.log(allJourneysRef);
+        let cardHolder = [];
+        allJourneysRef.once("value", (snapshot) => {
+            let journeys = [];
+            snapshot.forEach((childSnapshot) => { //iterates through each journey
+                journeys.push(childSnapshot.val());
             });
-
-            let cardHolder = [];
-            for (let choices of allChoices) {
-                cardHolder.push(<JourneyCard key={choices} results={choices} />);
-            }
-
+            journeys = journeys.reverse(); // reverse array to get most recent at the beginning
+            journeys.forEach((journey) => {
+                let choices = Object.values(journey); //grabs all the choice values
+                cardHolder.push(<JourneyCard key={choices + Math.random()} choices={choices} ending={props.ending} toggle={togglePop} />);
+            });
             setCards(cardHolder); // [JourneyCard, JourneyCard, ...]
-        })
+        });
     }, []);
 
     return (
-        <Container className={"journey " + props.className}>
-            <Row style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>{cards}</Row>
+        <Container className="journey-list-container">
+            <h2 id="journey-list-title">Your Past "{props.title}" Story Interactions</h2>
+            <p id="journey-list-subtitle">These previous journeys can help you see what endings you came across, to help prevent harm in the future.</p>
+            <div className="last-prev-text">
+                {/* <p id="last-journey-text">Your last journey:</p> */}
+                {/* <p id="previously-text">Previously:</p> */}
+            </div>
+            <Row>{cards}</Row>
+            {seen ? <CardPopup toggle={togglePop} data={props.popup} /> : null}
         </Container>
     )
 }
@@ -63,24 +82,32 @@ function JourneyList(props) {
 export default JourneyList;
 
 // TODO: create pop up with correct data
-function Popup(props) {
-    let ending = props.ending;
-    let desc = props.desc;
-    let steps = props.steps;
-    let source = props.source;
+export function CardPopup(props) {
+    let ending = props.data["ending"];
+    let desc = props.data["desc"];
+    let source = props.data["source"];
+    let sourceText = props.data["sourceText"];
+
+    let steps = props.data["steps"].map((step) => {
+        return <li key={step}>{step}</li>
+    });
+
+    const handleClick = () => {
+        props.toggle();
+    }
     return (
-        <div className="card-popup">
-            <h2>Ocean Pollution</h2>
-            <p>Marine pollution is a combination of chemicals and trash, most of which comes from land sources and is 
-                washed or blown into the ocean. This pollution results in damage to the environment, to the health of 
-                all organisms, and to economic structures worldwide. Here are some ways to help:</p>
-            <ol>
-                <li>Conserve water</li>
-                <li>Reduce waste</li>
-                <li>Use less energy</li>
-                <li>Reduce vehicle pollution</li>
-                <li><a href="https://www.coastsavers.org/index.php/wcc-cleanup/">Volunteer to clean up the beach</a></li>
-            </ol>
+        <div className="ending-popup">
+            <div className="ending-popup-content">
+                <div>
+                    <span className="close" onClick={handleClick}>&times;</span>
+                </div>
+                <h2>{ending}</h2>
+                <p>{desc}</p>
+                <ol>
+                    {steps}
+                </ol>
+                <p>Source: <a href={source}>{sourceText}</a></p>
+            </div>
         </div>
     );
 }

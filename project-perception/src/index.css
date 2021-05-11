@@ -15,10 +15,10 @@ body {
   display: none;
 }
 
-/* html {
-  position: relative;
-  min-height: 100%;
-} */
+.no-style {
+  list-style-type: none;
+  text-align: left;
+}
 
 .navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories, .back-to-stories div, .try-again, .ending-container, .choice-container, .navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .footer-main, .animal-details, .mission-statement, .profile, .about-links, .profile-row, .change-rows, .org-button, .nonprofit-btns, .article-carousel, .stories-row {
   display: flex;
@@ -138,6 +138,15 @@ body {
   padding: 0.2rem 1rem 0.2rem 1rem;
   border-radius: 10px;
 }
+
+/* .slide-img {
+  height: 100em;
+  object-fit: contain;
+} */
+
+/* .home-carousel {
+  height: 100em;
+} */
 
 .slide-cap {
   color: #E9E3CB;
@@ -386,17 +395,42 @@ body {
   font-family: 'Cinzel', sans-serif;
   font-size: 40px;
   margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 .circle {
   background: #E2A856;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  min-width: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2em;
+}
+
+.numbers {
   color: #3a444d;
   font-family: 'Cinzel', sans-serif;
-  border-radius: 50%;
-  text-align: center;
-  padding: 1em;
+  font-size: 48px;
+}
+
+.solution {
+  font-family: 'Lato', serif;
+  color: #E9E3CB;
+  font-size: 28px;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.feature-img {
+  margin-right: 1em;
+}
+
+.row-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8em;
 }
 /* Animal Detail page CSS */
 .animal-details {
@@ -616,6 +650,7 @@ body {
   justify-content: space-between;
 }
 
+/* Story CSS */
 .back-to-stories {
   margin-left: 10px;
   text-decoration: none;
@@ -724,6 +759,134 @@ body {
 .caribou-btn {
   text-align: center;
 }
+
+/* Journey Cards CSS */
+
+.journey-divider {
+  background-color: #e2a856;
+  height: 20px;
+  width: 100%;
+  margin-bottom: 10em;
+}
+
+.journey-card {
+  width: 300px;
+  height: 300px;
+  background: #3A444D;
+  border-radius: 5px;
+  margin: 0em 2em 2em 2em;
+}
+
+.journey-list-container {
+  background: #E9E3CB;
+  width: 1340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.back-to-top-btn {
+  margin: 3em 0em 3em 0em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #E9E3CB;
+}
+
+.card-text-choices {
+  color: #E9E3CB;
+  margin-left: -2em;
+}
+
+.card-ending-text {
+  color: #E9E3CB;
+}
+
+#journey-list-title, #journey-list-subtitle {
+  color: #74624E;
+}
+
+#journey-list-subtitle {
+  font-size: 18px;
+  margin-bottom: 2em;
+}
+#journey-list-title {
+  font-size: 24px;
+  margin-top: 2em;
+}
+
+.journey-list-container {
+  margin-top: 2.5em;
+}
+
+.learn-how-to-help-btn {
+  margin-bottom: 1.5em;
+  color: #74624E;
+  background: #E9E3CB;
+  border-radius: 5px;
+  border: none;
+  width: 10em;
+  height: 3em;
+  align-self: center;
+}
+
+#last-journey-text, #previously-text {
+  font-family: Cinzel;
+  font-weight: bold;
+  font-size: 20px;
+  color: #3A444D;
+}
+
+.last-prev-text {
+  display: flex;
+  flex-direction: row;
+  /* margin-right: 26em; */
+  margin-right: 47em;
+}
+
+/* #last-journey-text {
+  margin-right: 11em;
+} */
+
+.ending-popup {
+  background-color: #E2A856;
+  color: #3A444D;
+  width: 945px;
+  height: 370px;
+  border: 2px solid #3A444D;
+  box-sizing: border-box;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  /* margin-top: 10em; */
+}
+
+.ending-popup-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0em 2em 1em 2em;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.ending-popup-content h2 {
+  text-align: center;
+  font-family: "Cinzel";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 32px;
+}
+
 
 /* Make a Change Page */
 .change-header {
@@ -1010,7 +1173,7 @@ body {
     background-color: #e9e3cb;
   }
 
-  .story-container {
+  .margins {
     margin-bottom: 15em;
   }
 

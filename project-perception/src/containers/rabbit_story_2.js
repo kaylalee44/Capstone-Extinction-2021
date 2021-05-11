@@ -8,7 +8,7 @@ export default function RabbitStory2Container() {
     return(
         <div>
             <StoryTitle title="SEARCHING" />
-            <div className="story-container">
+            <div className="story-container margins">
                 <StoryImage id="grass-gif" className="gif jellyfish" src="img/grass.gif" alt="A grass gif" />
                 <div className="story-content jellyfish">
                     <p className="story-paragraph2">

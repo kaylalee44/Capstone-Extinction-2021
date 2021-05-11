@@ -8,7 +8,7 @@ export default function CaribouStory2Container() {
     return(
         <div>
             <StoryTitle title="SURVIVAL" />
-            <div className="story-container">
+            <div className="story-container margins">
                 <StoryImage id="caribou-chilling" className="gif jellyfish" src="img/caribou-lounge.jpg" alt="A couple of caribou sitting on a patch of grass" />
                 <div className="story-content jellyfish">
                     <p className="story-paragraph2">
