@@ -20,7 +20,7 @@ body {
   text-align: left;
 }
 
-.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .story-title, .back-to-stories, .back-to-stories div, .try-again, .ending-container, .choice-container, .navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .footer-main, .animal-details, .mission-statement, .profile, .about-links, .profile-row, .change-rows, .org-button, .nonprofit-btns, .article-carousel, .stories-row {
+.navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .back-to-stories, .back-to-stories div, .try-again, .ending-container, .choice-container, .navbar-main, .navbar-left, .menu-dropdown ul, .tags, .tags div, .footer-main, .animal-details, .mission-statement, .profile, .about-links, .profile-row, .change-rows, .org-button, .nonprofit-btns, .article-carousel, .stories-row, .story-title {
   display: flex;
 }
 
@@ -38,10 +38,6 @@ body {
   height: 30px;
   width: 100px;
   margin-left: 10px;
-  margin-right: 10px;
-}
-
-.audio-logo {
   margin-right: 10px;
 }
 
@@ -504,8 +500,18 @@ body {
   margin-left: 17rem;
 }
 
+.detail-note {
+  font-size: 24px;
+  font-family: 'Lato', serif;
+}
+
+.highlight-note {
+  background-color: #E2A856;
+  color: #3A444D;
+}
+
 /* Navbar CSS */
-.navbar-main, .navbar-left, .menu-dropdown ul, .tag-block, .footer-main, .story-title, .back-to-stories {
+.navbar-main, .navbar-left, .menu-dropdown ul, .tag-block, .footer-main, .back-to-stories {
   align-items: center;
 }
 
@@ -647,6 +653,7 @@ body {
   background-color: #74624e;
   margin: auto;
   margin-top: 40px;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -657,8 +664,8 @@ body {
   color: #e9e3cb;
   margin-bottom: 1rem;
   margin-top: 1rem;
-  justify-content: space-between;
   width: 100%;
+  align-items: center;
 }
 
 .back-to-stories:hover {
