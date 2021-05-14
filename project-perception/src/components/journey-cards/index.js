@@ -81,7 +81,6 @@ function JourneyList(props) {
 
 export default JourneyList;
 
-// TODO: create pop up with correct data
 export function CardPopup(props) {
     let ending = props.data["ending"];
     let desc = props.data["desc"];
@@ -89,7 +88,11 @@ export function CardPopup(props) {
     let sourceText = props.data["sourceText"];
 
     let steps = props.data["steps"].map((step) => {
-        return <li key={step}>{step}</li>
+        let li = <li key={step}>{step}</li>;
+        if (step.toLowerCase().includes("volunteer")) {
+            li = <li key={step}><a href={props.data["volunteerLink"]}>{step}</a></li>;
+        }
+        return li;
     });
 
     const handleClick = () => {
