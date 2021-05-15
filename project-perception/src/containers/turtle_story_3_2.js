@@ -45,7 +45,23 @@ export default function TurtleStoryClimateDeathContainer() {
           delay: 0,
           smooth: "easeInOutQuart",
         });
-      };
+    };
+
+    let popupData = {
+        "ending": "Loss and Degradation of Nesting Habit",
+        "desc": "Sea turtles use beaches and the lower dunes to nest and lay their eggs. Sea turtles deposit an average of about 100 eggs in each nest and lay between 3 and 7 nests during the nesting season. Here are some ways to help:",
+        "steps": ["Reduce marine debris", "Volunteer to do beach clean-ups", "Carry reusable water bottles and shopping bags", "Do not disturb nesting turtles, nests, or hatchlings", "Fill in holes and knock down sandcastles before leaving the beach", "Refrain from releasing balloons, as they usually end up in the ocean"],
+        "volunteerLink": "https://www.coastsavers.org/index.php/wcc-cleanup/",
+        "sourceText": "NOAA Fisheries",
+        "source": "https://www.fisheries.noaa.gov/feature-story/what-can-you-do-save-sea-turtles",
+        "source2Text": "",
+        "source2": ""
+    };
+
+    if (!window.endingsGotTurtle.includes("Loss and Degradation of Nesting Habit")) {
+        window.endingsGotTurtle.push("Loss and Degradation of Nesting Habit");
+        window.numEndingsGotTurtle += 1;
+    }
     return(
         <div>
             <StoryTitle title={"NESTING"} />
@@ -63,12 +79,17 @@ export default function TurtleStoryClimateDeathContainer() {
                         Climate change, along with the effects of it such as rising sea levels lead to nesting habitat loss. Humans are also contributing factor
                         due to creating sea walls that remove all dry sand, or artificial lighting that disorients hatchlings or nesting females.
                     </p>
+                    <p className="num-endings-text">Number of endings gotten: {window.numEndingsGotTurtle}/6</p>
                     <TryAgain to="story-turtle-3" href="https://www.fisheries.noaa.gov/species/leatherback-turtle" handleClick={handleClick} buttonText={buttonText} learnMore="Learn more about the Leatherback Sea Turtle" />
                 </div>
             </div>
             <div className={"journey-divider " + className}></div>
             <div className={"journey-container " + className}>
-                <JourneyCardsContainer title={"NESTING"} />
+                <JourneyCardsContainer 
+                    title={"NESTING"} 
+                    ending={"Loss and Degradation of Nesting Habit"}
+                    popup={popupData}
+                />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.15625 24.0781L19.5 9.76563L33.8438 24.0781L38.25 19.6719L19.5 0.921875L0.75 19.6719L5.15625 24.0781Z" fill="#E9E3CB"/>

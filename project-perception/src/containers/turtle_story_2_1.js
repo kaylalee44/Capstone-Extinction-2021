@@ -35,7 +35,23 @@ export default function TurtleStoryVesselDeathContainer() {
           delay: 0,
           smooth: "easeInOutQuart",
         });
-      };
+    };
+
+    let popupData = {
+        "ending": "Vessel Strikes",
+        "desc": "A vessel strike is a collision between any type of boat and a marine animal in the ocean. All sizes and types of vessels—from large ships to jet skis—have the potential to collide with nearly any marine species. Strikes that result in death or injury to the animal may go unnoticed by the vessel operator or unreported to researchers that keep track of such incidents. Here are some ways to help:",
+        "steps": ["Keep a sharp lookout", "Watch your speed", "Keep your distance", "Reduce vehicle pollution", "Slow your boat immediately and put it in neutral"],
+        "volunteerLink": "",
+        "sourceText": "NOAA Fisheries",
+        "source": "https://www.fisheries.noaa.gov/insight/understanding-vessel-strikes",
+        "source2Text": "",
+        "source2": ""
+    };
+
+    if (!window.endingsGotTurtle.includes("Vessel Strikes")) {
+        window.endingsGotTurtle.push("Vessel Strikes");
+        window.numEndingsGotTurtle += 1;
+    }
     return(
         <div>
             <StoryTitle title={"NESTING"} />
@@ -53,12 +69,17 @@ export default function TurtleStoryVesselDeathContainer() {
                         Many types of water vehicles can kill or injure leatherback turtles when they come near the surface of the water. This
                         threat accounts for about one third of leatherback strandings in the eastern United States.
                     </p>
+                    <p className="num-endings-text">Number of endings gotten: {window.numEndingsGotTurtle}/6</p>
                     <TryAgain to="story-turtle-2" href="https://www.fisheries.noaa.gov/species/leatherback-turtle" handleClick={handleClick} buttonText={buttonText} learnMore="Learn more about the Leatherback Sea Turtle"/>
                 </div>
             </div>
             <div className={"journey-divider " + className}></div>
             <div className={"journey-container " + className}>
-                <JourneyCardsContainer title={"NESTING"} />
+                <JourneyCardsContainer 
+                    title={"NESTING"} 
+                    ending={"Vessel Strikes"}
+                    popup={popupData}
+                />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.15625 24.0781L19.5 9.76563L33.8438 24.0781L38.25 19.6719L19.5 0.921875L0.75 19.6719L5.15625 24.0781Z" fill="#E9E3CB"/>

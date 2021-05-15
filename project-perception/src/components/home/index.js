@@ -70,42 +70,42 @@ function Slides() {
             <Carousel.Item className="slide slide-1">
                 <img
                     className="d-block w-100 slide-img"
-                    src="img/tiger.jpg"
+                    src="img/turtle.jpg"
                     alt="First slide"
                 />
                 <Carousel.Caption className="slide-cap slide-1-cap">
-                    <h1 className="slide-title">There are over <strong>1,300 endangered</strong> or threatened species in the United States</h1>
+                    <h1 className="slide-title slide-title-turtle">There are over <strong>1,300 endangered</strong> or threatened species in the United States</h1>
                     <p>In order to bring more awareness to this growing crisis, we wanted to create a platform to that brings 
                         light to endangered species that are not widely popularized and commonly overlooked. By learning about 
                         the different species that live around your area, it could help better understand how important these 
                         creatures are for the ecosystem, and learn ways to protect them too. Small actions can make a big 
                         impact in our ecosystems.</p>
-                    <Link to="/"><button className="slide-btn">Read more about our mission</button></Link>
+                    <Link to="/"><button className="slide-btn slide-btn-turtle">Read more about our mission</button></Link>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item className="slide slide-2">
                 <img
                     className="d-block w-100 slide-img"
-                    src="img/caribou.jpg"
+                    src="img/caribou2.jpg"
                     alt="Second slide"
                 />
 
                 <Carousel.Caption className="slide-cap slide-2-cap">
-                <h1 className="slide-title">Woodland Caribou</h1>
+                <h1 className="slide-title slide-title-caribou">Woodland Caribou</h1>
                 <p>Only 51 herds remain in the wild</p>
-                <Link to="/stories"><button className="slide-btn">Learn More</button></Link>
+                <Link to="/stories"><button className="slide-btn slide-btn-caribou">Learn More</button></Link>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item className="slide slide-3">
                 <img
                     className="d-block w-100 slide-img"
-                    src="img/albatross.jpg"
+                    src="img/rabbit2.jpg"
                     alt="Third slide"
                 />
 
                 <Carousel.Caption className="slide-cap slide-3-cap">
-                    <h1 className="slide-title">Short-tailed Albatross</h1>
-                    <Link to="/stories"><button className="slide-btn">Learn More</button></Link>
+                    <h1 className="slide-title slide-title-rabbit">Columbia Basin Pygmy Rabbit</h1>
+                    <Link to="/stories"><button className="slide-btn slide-btn-rabbit">Learn More</button></Link>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>

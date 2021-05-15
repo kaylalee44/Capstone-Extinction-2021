@@ -46,7 +46,24 @@ export default function RabbitStorySurviveContainer() {
           delay: 0,
           smooth: "easeInOutQuart",
         });
-      };
+    };
+
+    let popupData = {
+        "ending": "Survival",
+        "desc": "Pygmy rabbits are preyed upon by coyotes, badgers, bobcats, owls, foxes, and sometimes humans. Morality rates for this species can be as high as 50% in the first five weeks of life. Here are some ways to help:",
+        "steps": ["Volunteer to protect local wildlife", "Support environmental organizations that protect wildlife habitats", "Read up on the recovery plan"],
+        "volunteerLink": "",
+        "recoveryLink": "https://ecos.fws.gov/docs/recovery_plan/Columbia%20Basin%20Pygmy%20Rabbit%20Final%20RP.pdf",
+        "sourceText": "U.S. Fish and Wildlife Service",
+        "source": "https://www.fws.gov/sagebrush/wildlife/pygmy-rabbit/",
+        "source2Text": "",
+        "source2": ""
+    };
+
+    if (!window.endingsGotRabbit.includes("Survival")) {
+        window.endingsGotRabbit.push("Survival");
+        window.numEndingsGotRabbit += 1;
+    }
     return(
         <div>
             <StoryTitle title="SEARCHING" />
@@ -58,12 +75,17 @@ export default function RabbitStorySurviveContainer() {
                         <span className="survive"><strong> live to survive another day.</strong></span>
                     </p>
                     <p className="explanation separation"><strong>You got the good ending and managed to survive.</strong></p>
+                    <p className="num-endings-text">Number of endings gotten: {window.numEndingsGotRabbit}/4</p>
                     <TryAgain to="/story-rabbit-3" href="https://www.fws.gov/sagebrush/wildlife/pygmy-rabbit/" handleClick={handleClick} buttonText={buttonText} learnMore="Learn more about the Columbia Basin Pygmy Rabbit" />
                 </div>
             </div>
             <div className={"journey-divider " + className}></div>
             <div className={"journey-container " + className}>
-                <JourneyCardsContainer title="SEARCHING" />
+                <JourneyCardsContainer 
+                    title="SEARCHING" 
+                    ending={"Survival"}
+                    popup={popupData}
+                />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.15625 24.0781L19.5 9.76563L33.8438 24.0781L38.25 19.6719L19.5 0.921875L0.75 19.6719L5.15625 24.0781Z" fill="#E9E3CB"/>

@@ -135,15 +135,6 @@ body {
   border-radius: 10px;
 }
 
-/* .slide-img {
-  height: 100em;
-  object-fit: contain;
-} */
-
-/* .home-carousel {
-  height: 100em;
-} */
-
 .slide-cap {
   color: #E9E3CB;
 }
@@ -767,6 +758,12 @@ body {
   text-align: center;
 }
 
+.num-endings-text {
+  margin-left: 30px;
+  font-size: 20px;
+  color: #3a444d;
+}
+
 /* Journey Cards CSS */
 
 .journey-divider {
@@ -868,7 +865,7 @@ body {
   background-color: #E2A856;
   color: #3A444D;
   width: 945px;
-  height: 370px;
+  height: 25em;
   border: 2px solid #3A444D;
   box-sizing: border-box;
   border-radius: 5px;
@@ -1052,6 +1049,8 @@ body {
 }
 
 /* Responsiveness */
+
+/* iPads  ----------- */
 @media (min-width: 768px) {
   .navbar-title {
     font-size: 30px;
@@ -1082,6 +1081,7 @@ body {
   }
 }
 
+/* Desktops and laptops ----------- */
 @media (min-width: 992px) {
 
   .navbar-right {
@@ -1160,24 +1160,26 @@ body {
     margin-left: 46px;
     width: calc(50% - 80px);
     float: left;
+    height: 800px;
   }
 
   .jellyfish {
-    height: 550px;
+    height: 800px;
   }
 
   .ocean {
-    height: 650px;
+    height: 800px;
   }
 
   .ending {
-    height: 650px;
+    height: 800px;
   }
 
   .story-content {
     display: inline-block;
     width: calc(50% - 12px);
     background-color: #e9e3cb;
+    height: 50em;
   }
 
   .margins {
@@ -1204,12 +1206,17 @@ body {
     align-items: center;
   }
 
+  .choice-btn-container {
+    background-color: transparent;
+    border: none;
+    margin-top: 30px;
+  }
+
   .choice-btn {
     background-color: #E2A856;
     height: 52px;
-    width: 300px;
+    width: 360px;
     border-radius: 15px;
-    margin-top: 30px;
     color: #72604C;
     font-size: 20px;
     text-decoration: none;
@@ -1225,5 +1232,124 @@ body {
 
   .story-content .story-paragraph2:nth-child(2) {
     margin-top: 0;
+  }
+
+  /* Home page CSS */
+  .map-img {
+    height: 50em;
+    margin-top: -6em;
+    margin-bottom: -8em;
+  }
+
+  .slide-1-cap {
+    margin: 0em 0em 6em 0em;
+  }
+
+  .slide-title-turtle {
+    margin-bottom: 1em;
+  }
+
+  .slide-2-cap {
+    margin: 0em 0em 2em 0em;
+  }
+
+  .slide-3-cap {
+    margin: 0em 0em 5em 0em;
+  }
+
+  .turtle-region-btn {
+    position: absolute;
+    margin-left: -58em;
+    margin-top: 5em;
+    width: 16em;
+    height: 14em;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+@media (min-width: 1224px) {
+  /* Stories */
+  .gif {
+    display: block;
+    margin-left: 46px;
+    width: calc(50% - 80px);
+    float: left;
+    height: 48em;
+  }
+
+  .jellyfish {
+    height: 48em;
+  }
+
+  .ocean {
+    height: 48em;
+  }
+
+  .ending {
+    height: 48em;
+  }
+
+  .story-content {
+    display: inline-block;
+    width: calc(50% - 12px);
+    background-color: #e9e3cb;
+    height: 48em;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+  /* Stories */
+  .gif {
+    display: block;
+    margin-left: 46px;
+    width: calc(50% - 80px);
+    float: left;
+  }
+
+  .jellyfish {
+    height: 650px;
+  }
+
+  .ocean {
+    height: 650px;
+  }
+
+  .ending {
+    height: 650px;
+  }
+
+  .story-content {
+    display: inline-block;
+    width: calc(50% - 12px);
+    background-color: #e9e3cb;
+  }
+
+  /* Home page CSS */
+  .map-img {
+    height: 55em;
+    margin-top: -7em;
+    margin-bottom: -8em;
+  }
+
+  .slide-title-turtle {
+    margin-bottom: 1em;
+  }
+
+  .slide-cap {
+    font-size: 23px;
+  }
+
+  .slide-1-cap {
+    margin: 0em 0em 16em 0em;
+  }
+
+  .slide-2-cap {
+    margin: 0em 0em 18em 35em;
+  }
+
+  .slide-3-cap {
+    margin: 0em 0em 30em 35em;
   }
 }

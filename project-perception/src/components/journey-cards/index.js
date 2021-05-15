@@ -24,7 +24,7 @@ function JourneyCard(props) {
         <Card className="journey-card">
             <CardBody>
                 <CardText tag="ol" className="card-text-choices">{choices}</CardText>
-                <CardText className="card-ending-text">You got the {props.ending} ending.</CardText>
+                <CardText className="card-ending-text">You got the "{props.ending}" ending.</CardText>
             </CardBody>
             <button className="learn-how-to-help-btn" onClick={handleClick}>Learn how to help</button>
         </Card>
@@ -33,6 +33,11 @@ function JourneyCard(props) {
 
 // TODO: bug where the first card/first choice won't show up even though db is populated (prob somethign to do with how the choice is added to db)
 function JourneyList(props) {
+    // let currentStory = window.name;
+    // let currentJourney = window.value + 1; 
+    // let ref = firebase.database().ref("journeys");
+    // ref.child(currentStory + "/" + currentJourney).set({"ending": props.ending}); 
+
     const [seen, setSeen] = useState(false);
     const togglePop = () => {
         let seenCopy = seen;
@@ -44,12 +49,10 @@ function JourneyList(props) {
         setSeen(seenCopy);
     }
     const [cards, setCards] = useState([]);
-    // let currentStory = window.name;
     
     // pull the choices from the database and create cards for each one 
     useEffect(() => {
         const allJourneysRef = firebase.database().ref('journeys').child(props.title);
-        // console.log(allJourneysRef);
         let cardHolder = [];
         allJourneysRef.once("value", (snapshot) => {
             let journeys = [];
@@ -58,13 +61,16 @@ function JourneyList(props) {
             });
             journeys = journeys.reverse(); // reverse array to get most recent at the beginning
             journeys.forEach((journey) => {
+                // console.log(journey.ending)
                 let choices = Object.values(journey); //grabs all the choice values
-                cardHolder.push(<JourneyCard key={choices + Math.random()} choices={choices} ending={props.ending} toggle={togglePop} />);
+                // console.log(choices)
+                cardHolder.push(<JourneyCard key={choices + Math.random()} choices={choices} ending={journey.ending} toggle={togglePop} />);
             });
             setCards(cardHolder); // [JourneyCard, JourneyCard, ...]
         });
     }, []);
 
+    window.value = cards.length; //global int variable to keep track of how many times user has gone through a story
     return (
         <Container className="journey-list-container">
             <h2 id="journey-list-title">Your Past "{props.title}" Story Interactions</h2>
@@ -89,11 +95,19 @@ export function CardPopup(props) {
 
     let steps = props.data["steps"].map((step) => {
         let li = <li key={step}>{step}</li>;
-        if (step.toLowerCase().includes("volunteer")) {
+        if (step.toLowerCase().includes("volunteer") && props.data["volunteerLink"] !== "") {
             li = <li key={step}><a href={props.data["volunteerLink"]}>{step}</a></li>;
+        } 
+        if (step.toLowerCase().includes("recovery") && props.data["recoveryLink"] !== "") {
+            li = <li key={step}><a href={props.data["recoveryLink"]}>{step}</a></li>;
         }
         return li;
     });
+
+    let source2 = <a></a>;
+    if (props.data["source2"] != "") {
+        source2 = <a href={props.data["source2"]}>{" & " + props.data["source2Text"]}</a>;
+    }
 
     const handleClick = () => {
         props.toggle();
@@ -109,7 +123,7 @@ export function CardPopup(props) {
                 <ol>
                     {steps}
                 </ol>
-                <p>Source: <a href={source}>{sourceText}</a></p>
+                <p>Source: <a href={source}>{sourceText}</a>{source2}</p>
             </div>
         </div>
     );

@@ -46,7 +46,23 @@ export default function RabbitStoryClimateDeathContainer() {
           delay: 0,
           smooth: "easeInOutQuart",
         });
-      };
+    };
+
+    let popupData = {
+        "ending": "Climate Change",
+        "desc": "Due to climate change, the pygmy rabbits’ ecosystem is expected to get warmer, drier, and prone to drought. These conditions will cause an increased likelihood of wildfires and kill the necessary sagebrush. The large scale loss of the native shrub is a major factor for the population’s decline. Here are some ways to help:",
+        "steps": ["Reduce water waste", "Buy organic and local food", "Invest in energy-efficient appliances and bulbs", "Drive fuel-efficient vehicles"],
+        "volunteerLink": "",
+        "sourceText": "Washington Department of Fish and Wildlife",
+        "source": "https://wdfw.wa.gov/species-habitats/species/brachylagus-idahoensis#climate",
+        "source2Text": "Natural Resources Defense Council",
+        "source2": "https://www.nrdc.org/stories/how-you-can-stop-global-warming"
+    };
+
+    if (!window.endingsGotRabbit.includes("Climate Change")) {
+        window.endingsGotRabbit.push("Climate Change");
+        window.numEndingsGotRabbit += 1;
+    }
     return(
         <div>
             <StoryTitle title="SEARCHING" />
@@ -64,12 +80,17 @@ export default function RabbitStoryClimateDeathContainer() {
                         Climate change is a huge issue that has been affecting our weather. Global warming is getting worse and worse and causing more
                         hot weather to occur and less rain to fall which greatly affects the livelihood of all species.
                     </p>
+                    <p className="num-endings-text">Number of endings gotten: {window.numEndingsGotRabbit}/4</p>
                     <TryAgain to="/story-rabbit-1" href="https://www.fws.gov/sagebrush/wildlife/pygmy-rabbit/" handleClick={handleClick} buttonText={buttonText} learnMore="Learn more about the Columbia Basin Pygmy Rabbit" />
                 </div>
             </div>
             <div className={"journey-divider " + className}></div>
             <div className={"journey-container " + className}>
-                <JourneyCardsContainer title="SEARCHING" />
+                <JourneyCardsContainer 
+                    title="SEARCHING" 
+                    ending={"Climate Change"}
+                    popup={popupData}
+                />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.15625 24.0781L19.5 9.76563L33.8438 24.0781L38.25 19.6719L19.5 0.921875L0.75 19.6719L5.15625 24.0781Z" fill="#E9E3CB"/>

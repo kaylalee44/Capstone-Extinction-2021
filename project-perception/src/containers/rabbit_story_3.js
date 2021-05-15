@@ -17,10 +17,10 @@ export default function RabbitStory3Container() {
                     </p>
                     <p className="story-question">Will you eat it?</p>
                     <div className="choice-container">
-                        <button onClick={AddChoiceToDB} className="choice-btn">
+                        <button onClick={AddChoiceToDB} className="choice-btn-container">
                             <Link to="/story-rabbit-3-1" className="choice-btn">You're so hungry you just eat this grass.</Link>
                         </button>
-                        <button onClick={AddChoiceToDB} className="choice-btn">
+                        <button onClick={AddChoiceToDB} className="choice-btn-container">
                             <Link to="/story-rabbit-3-2" className="choice-btn">There might be a sagebrush in the distance if you wait a little longer.</Link>
                         </button>
                     </div>

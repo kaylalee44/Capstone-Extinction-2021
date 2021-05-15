@@ -4,6 +4,7 @@ import StoryImage from '../components/story/story_image';
 import StoryTitle from '../components/story/story_title';
 import TryAgain from '../components/story/try_again';
 import { scroller } from "react-scroll";
+import "../Global";
 
 export default function TurtleStoryPlasticDeathContainer() {
     const [journeyHidden, setJourneyHidden] = useState(false);
@@ -43,8 +44,15 @@ export default function TurtleStoryPlasticDeathContainer() {
         "steps": ["Conserve water", "Reduce waste", "Use less energy", "Reduce vehicle pollution", "Volunteer to clean up the beach"],
         "volunteerLink": "https://www.coastsavers.org/index.php/wcc-cleanup/",
         "sourceText": "National Geographic",
-        "source": "https://www.nationalgeographic.org/encyclopedia/marine-pollution/"
+        "source": "https://www.nationalgeographic.org/encyclopedia/marine-pollution/",
+        "source2Text": "",
+        "source2": ""
     };
+
+    if (!window.endingsGotTurtle.includes("Ocean Pollution/Marine Debris")) {
+        window.endingsGotTurtle.push("Ocean Pollution/Marine Debris");
+        window.numEndingsGotTurtle += 1;
+    }
     return(
         <div>
             <StoryTitle title={"NESTING"} />
@@ -63,6 +71,7 @@ export default function TurtleStoryPlasticDeathContainer() {
                         Pollution affects the habits of all sea animals, sea turtles included. Leatherback turtles can die from
                         swallowing fishing lines, ballons, plastic bags, or other plastic debris because it is mistaken for food.
                     </p>
+                    <p className="num-endings-text">Number of endings gotten: {window.numEndingsGotTurtle}/6</p>
                     <TryAgain to="/story-turtle-1" href="https://www.fisheries.noaa.gov/species/leatherback-turtle" handleClick={handleClick} buttonText={buttonText} learnMore="Learn more about the Leatherback Sea Turtle" />
                 </div>
             </div>

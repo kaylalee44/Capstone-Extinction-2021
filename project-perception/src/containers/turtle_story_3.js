@@ -17,14 +17,14 @@ export default function TurtleStory3Container() {
                     </p>
                     <p className="story-question">Where will you go?</p>
                     <div className="choice-container">
-                        <button onClick={AddChoiceToDB} className="choice-btn">
-                            <Link to="/story-turtle-3-1">To the right of the beach.</Link>
+                        <button onClick={AddChoiceToDB} className="choice-btn-container">
+                            <Link to="/story-turtle-3-1" className="choice-btn">To the right of the beach.</Link>
                         </button>
-                        <button onClick={AddChoiceToDB} className="choice-btn">
-                            <Link to="/story-turtle-3-2">Towards the middle of the beach.</Link>
+                        <button onClick={AddChoiceToDB} className="choice-btn-container">
+                            <Link to="/story-turtle-3-2" className="choice-btn">Towards the middle of the beach.</Link>
                         </button>
-                        <button onClick={AddChoiceToDB} className="choice-btn">
-                            <Link to="/story-turtle-3-3">To the left of the beach.</Link>
+                        <button onClick={AddChoiceToDB} className="choice-btn-container">
+                            <Link to="/story-turtle-3-3" className="choice-btn">To the left of the beach.</Link>
                         </button>
                     </div>
                 </div>

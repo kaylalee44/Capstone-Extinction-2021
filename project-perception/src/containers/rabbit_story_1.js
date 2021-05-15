@@ -29,11 +29,11 @@ export default function RabbitStory1Container() {
                     </p>
                     <p className="story-question">What will you do?</p>
                     <div className="choice-container">
-                        <button onClick={AddChoiceToDB} className="choice-btn">
-                            <Link to="/story-rabbit-2">Start a journey to find a different source of food.</Link>
+                        <button onClick={AddChoiceToDB} className="choice-btn-container">
+                            <Link to="/story-rabbit-2" className="choice-btn">Start a journey to find a different source of food.</Link>
                         </button>
-                        <button onClick={AddChoiceToDB} className="choice-btn">
-                            <Link to="/story-rabbit-1-2">Wait for rain to come and revive this sagebrush.</Link>
+                        <button onClick={AddChoiceToDB} className="choice-btn-container">
+                            <Link to="/story-rabbit-1-2" className="choice-btn">Wait for rain to come and revive this sagebrush.</Link>
                         </button>
                     </div>
                 </div>
