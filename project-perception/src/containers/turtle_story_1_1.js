@@ -5,8 +5,6 @@ import StoryTitle from '../components/story/story_title';
 import TryAgain from '../components/story/try_again';
 import { scroller } from "react-scroll";
 import "../Global";
-import "firebase/database";
-import firebase from "firebase/app";
 
 export default function TurtleStoryPlasticDeathContainer() {
     const [journeyHidden, setJourneyHidden] = useState(false);
@@ -40,22 +38,6 @@ export default function TurtleStoryPlasticDeathContainer() {
         });
     };
 
-    let popupData = {
-        "ending": "Ocean Pollution",
-        "desc": "Marine pollution is a combination of chemicals and trash, most of which comes from land sources and is washed or blown into the ocean. This pollution results in damage to the environment, to the health of all organisms, and to economic structures worldwide. Here are some ways to help:",
-        "steps": ["Conserve water", "Reduce waste", "Use less energy", "Reduce vehicle pollution", "Volunteer to clean up the beach"],
-        "volunteerLink": "https://www.coastsavers.org/index.php/wcc-cleanup/",
-        "sourceText": "National Geographic",
-        "source": "https://www.nationalgeographic.org/encyclopedia/marine-pollution/",
-        "source2Text": "",
-        "source2": ""
-    };
-    // let ref = firebase.database().ref("journeys");
-    // ref.once("value")
-    //     .then(function() {
-    //         ref.child(window.name + "/" + (window.value - 1) + "/popup").set(popupData); 
-    // });
-
     if (!window.endingsGotTurtle.includes("Ocean Pollution/Marine Debris")) {
         window.endingsGotTurtle.push("Ocean Pollution/Marine Debris");
         window.numEndingsGotTurtle += 1;
@@ -86,8 +68,6 @@ export default function TurtleStoryPlasticDeathContainer() {
             <div className={"journey-container " + className}>
                 <JourneyCardsContainer 
                     title={"NESTING"} 
-                    ending={"Ocean Pollution/Marine Debris"}
-                    popup={popupData}
                 />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">

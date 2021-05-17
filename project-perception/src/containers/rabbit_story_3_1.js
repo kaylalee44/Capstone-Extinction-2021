@@ -37,18 +37,6 @@ export default function RabbitStoryGeneticDeathContainer() {
         });
     };
 
-    let popupData = {
-        "ending": "Lack of Genetic Diversity",
-        "desc": "10,000 years ago the Columbia Basin pygmy rabbit became genetically isolated. Disease can easily kill off their species as there is only one known colony left in Washington with 50 individuals. Their lack of genetic diversity and inbreeding decreases their chance of survival when faced with major changes in diet or disease. Here are some ways to help:",
-        "steps": ["Support environmental organizations that work to reestablish species population", "Read up on the recovery plan"],
-        "volunteerLink": "",
-        "recoveryLink": "https://ecos.fws.gov/docs/recovery_plan/Columbia%20Basin%20Pygmy%20Rabbit%20Final%20RP.pdf",
-        "sourceText": "Washington Fish and Wildlife",
-        "source": "https://www.fws.gov/wafwo/articles.cfm?id=149489590",
-        "source2Text": "",
-        "source2": ""
-    };
-
     if (!window.endingsGotRabbit.includes("Lack of Genetic Diversity")) {
         window.endingsGotRabbit.push("Lack of Genetic Diversity");
         window.numEndingsGotRabbit += 1;
@@ -78,8 +66,6 @@ export default function RabbitStoryGeneticDeathContainer() {
             <div className={"journey-container " + className}>
                 <JourneyCardsContainer 
                     title="SEARCHING" 
-                    ending={"Lack of Genetic Diversity"}
-                    popup={popupData}
                 />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">

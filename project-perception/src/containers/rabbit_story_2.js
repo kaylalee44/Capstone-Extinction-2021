@@ -5,6 +5,17 @@ import { Link } from 'react-router-dom';
 import AddChoiceToDB from "../components/story/add_choice_db";
 
 export default function RabbitStory2Container() {
+    let popupData = {
+        "ending": "Predator",
+        "desc": "Pygmy rabbits are preyed upon by coyotes, badgers, bobcats, owls, foxes, and sometimes humans. Morality rates for this species can be as high as 50% in the first five weeks of life. Here are some ways to help:",
+        "steps": ["Volunteer to protect local wildlife", "Support environmental organizations that protect wildlife habitats", "Read up on the recovery plan"],
+        "volunteerLink": "",
+        "recoveryLink": "https://ecos.fws.gov/docs/recovery_plan/Columbia%20Basin%20Pygmy%20Rabbit%20Final%20RP.pdf",
+        "sourceText": "U.S. Fish and Wildlife Service",
+        "source": "https://www.fws.gov/sagebrush/wildlife/pygmy-rabbit/",
+        "source2Text": "",
+        "source2": ""
+    };
     return(
         <div>
             <StoryTitle title="SEARCHING" />
@@ -16,10 +27,10 @@ export default function RabbitStory2Container() {
                     </p>
                     <p className="story-question">Where will you go?</p>
                     <div className="choice-container">
-                        <button onClick={(e) => AddChoiceToDB(e, true, "Predator")} className="choice-btn-container">
+                        <button onClick={(e) => AddChoiceToDB(e, true, "Predator", popupData)} className="choice-btn-container">
                             <Link to="/story-rabbit-2-1" className="choice-btn">Run Away.</Link>
                         </button>
-                        <button onClick={(e) => AddChoiceToDB(e, false, "")} className="choice-btn-container">
+                        <button onClick={(e) => AddChoiceToDB(e, false, "", "")} className="choice-btn-container">
                             <Link to="/story-rabbit-3" className="choice-btn">Hide.</Link>
                         </button>
                     </div>

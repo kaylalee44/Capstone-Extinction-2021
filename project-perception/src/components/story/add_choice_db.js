@@ -1,7 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/database";
 
-const AddChoiceToDB = (event, storyEnded, ending) => {
+const AddChoiceToDB = (event, storyEnded, ending, popupData) => {
     event.preventDefault();
     let t = event.target.textContent;
     window.pastChoices.push(t);
@@ -21,6 +21,7 @@ const AddChoiceToDB = (event, storyEnded, ending) => {
 
     if (storyEnded) {
         ref.child(currentStory + "/" + currentJourney + "/ending").set(ending); 
+        ref.child(currentStory + "/" + currentJourney + "/popup").set(popupData); 
     }
 }
 

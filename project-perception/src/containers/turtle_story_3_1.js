@@ -37,17 +37,6 @@ export default function TurtleStorySurviveContainer() {
         });
     };
 
-    let popupData = {
-        "ending": "Survival",
-        "desc": "After an adult female sea turtle nests, she returns to the sea, leaving her nest and the eggs within it to develop on their own. The amount of time the egg takes to hatch varies among the different species and is influenced by environmental conditions such as the temperature of the sand. The hatchlings do not have sex chromosomes so their gender is determined by the temperature within the nest. Here’s some ways to help increase the survival of the hatchlings:",
-        "steps": ["Remove any leftover trash on the beach", "Avoid leaving pet food (intended for domesticated animals) outside as these food sources also may attract predatory wildlife", "Remember to minimize obstacles on your coastal property"],
-        "volunteerLink": "https://www.coastsavers.org/index.php/wcc-cleanup/",
-        "sourceText": "SEE Turtles",
-        "source": "https://www.seeturtles.org/baby-turtles",
-        "source2Text": "Dune Doctors",
-        "source2": "https://dunedoctors.com/help-save-baby-sea-turtles/"
-    };
-
     if (!window.endingsGotTurtle.includes("Survival")) {
         window.endingsGotTurtle.push("Survival");
         window.numEndingsGotTurtle += 1;
@@ -70,8 +59,6 @@ export default function TurtleStorySurviveContainer() {
             <div className={"journey-container " + className}>
                 <JourneyCardsContainer 
                     title={"NESTING"} 
-                    ending={"Survival"}
-                    popup={popupData}
                 />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">

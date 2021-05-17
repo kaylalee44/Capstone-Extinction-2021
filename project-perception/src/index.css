@@ -703,6 +703,10 @@ body {
   margin-left: 30px;
 }
 
+.try-again-link {
+  color: #3a444d;
+}
+
 .ending-container {
   margin-top: 60px;
   margin-left: 30px;

@@ -37,17 +37,6 @@ export default function TurtleStoryVesselDeathContainer() {
         });
     };
 
-    let popupData = {
-        "ending": "Vessel Strikes",
-        "desc": "A vessel strike is a collision between any type of boat and a marine animal in the ocean. All sizes and types of vessels—from large ships to jet skis—have the potential to collide with nearly any marine species. Strikes that result in death or injury to the animal may go unnoticed by the vessel operator or unreported to researchers that keep track of such incidents. Here are some ways to help:",
-        "steps": ["Keep a sharp lookout", "Watch your speed", "Keep your distance", "Reduce vehicle pollution", "Slow your boat immediately and put it in neutral"],
-        "volunteerLink": "",
-        "sourceText": "NOAA Fisheries",
-        "source": "https://www.fisheries.noaa.gov/insight/understanding-vessel-strikes",
-        "source2Text": "",
-        "source2": ""
-    };
-
     if (!window.endingsGotTurtle.includes("Vessel Strikes")) {
         window.endingsGotTurtle.push("Vessel Strikes");
         window.numEndingsGotTurtle += 1;
@@ -77,8 +66,6 @@ export default function TurtleStoryVesselDeathContainer() {
             <div className={"journey-container " + className}>
                 <JourneyCardsContainer 
                     title={"NESTING"} 
-                    ending={"Vessel Strikes"}
-                    popup={popupData}
                 />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">

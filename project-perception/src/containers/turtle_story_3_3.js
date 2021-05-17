@@ -37,17 +37,6 @@ export default function TurtleStoryHarvestDeathContainer() {
         });
     };
 
-    let popupData = {
-        "ending": "Direct Harvest of Turtles and Eggs",
-        "desc": "Although sea turtles have spiritual or mythological importance in many cultures around the world, this has not prevented humans from consuming their eggs or meat. In many coastal communities, especially in Central America and Asia, sea turtles are considered a food source. During the nesting season, hunters comb the beaches at night looking for nesting females. Often, they will wait until the female has deposited her eggs to kill her. Then, they take both the eggs and meat. In some countries, sea turtle eggs are prized as an aphrodisiac. Others customarily consume sea turtle meat in observance of religious holidays. Here are some ways to help:",
-        "steps": ["Educate people about the effects of sea turtles going extinct and how endangered they are", "Patrol nesting beaches", "Relocating eggs to hatchers in locations where no other solution will work", "Push the government to impose limits on consumption"],
-        "volunteerLink": "https://www.coastsavers.org/index.php/wcc-cleanup/",
-        "sourceText": "Conserve Turtles",
-        "source": "https://conserveturtles.org/information-sea-turtles-threats-harvest-consumption/",
-        "source2Text": "",
-        "source2": ""
-    };
-
     if (!window.endingsGotTurtle.includes("Direct Harvest of Turtles and Eggs")) {
         window.endingsGotTurtle.push("Direct Harvest of Turtles and Eggs");
         window.numEndingsGotTurtle += 1;
@@ -77,8 +66,6 @@ export default function TurtleStoryHarvestDeathContainer() {
             <div className={"journey-container " + className}>
                 <JourneyCardsContainer 
                     title={"NESTING"} 
-                    ending={"Direct Harvest of Turtles and Eggs"}
-                    popup={popupData}
                 />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -37,17 +37,6 @@ export default function CaribouStoryHunterDeathContainer() {
         });
     };
 
-    let popupData = {
-        "ending": "Logging/Hunter",
-        "desc": "Logging has been proven to be one of the major causes of caribou habitat degradation. Not only do these explorations remove trees, but it also supports the construction of new roads in the forest. These roads are providing access to recreational hunters, poachers, and snowmobiles. Here are some ways to help:",
-        "steps": ["Support environmental organizations that protect wildlife habitats", "Be aware of forestry development projects", "Recycle and reduce use of paper", "Read up on recovery strategies and action plans", "Get involved with legislation, sign petitions"],
-        "volunteerLink": "https://www.canada.ca/en/environment-climate-change/services/species-risk-public-registry/recovery-strategies/woodland-caribou-boreal-population-2012.html",
-        "sourceText": "Government of Canada",
-        "source": "https://www.nrcan.gc.ca/our-natural-resources/forests/sustainable-forest-management/conservation-and-protection-canadas-forests/woodland-caribou-boreal-population/13201",
-        "source2Text": "",
-        "source2": ""
-    };
-
     if (!window.endingsGotCaribou.includes("Logging/Hunter")) {
         window.endingsGotCaribou.push("Logging/Hunter");
         window.numEndingsGotCaribou += 1;
@@ -77,8 +66,6 @@ export default function CaribouStoryHunterDeathContainer() {
             <div className={"journey-container " + className}>
                 <JourneyCardsContainer 
                     title="SURVIVAL"
-                    ending={"Logging/Hunter"}
-                    popup={popupData}
                 />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">

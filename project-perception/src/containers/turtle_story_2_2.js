@@ -47,17 +47,6 @@ export default function TurtleStoryBycatchDeathContainer() {
         });
     };
 
-    let popupData = {
-        "ending": "Bycatch in Fishing Gea",
-        "desc": "Incidental capture in fishing gear (also known as bycatch) is likely the greatest threat to sea turtles and many other species worldwide. Approximately 40% of all animals caught in fisheries are discarded as trash. Marine mammals, sea turtles, seabirds, and other species are caught and discarded, usually dead. For those animals that are caught and released injured but still alive, their fate after being released is unknown. Here are some ways to help:",
-        "steps": ["Choose seafood that is sustainable and fished according to regulation", "Purchase alternative gear that are less likely to be swallowed or tangle turtles"],
-        "volunteerLink": "",
-        "sourceText": "World Wildlife Fund",
-        "source": "https://www.worldwildlife.org/threats/bycatch",
-        "source2Text": "SEE Turtles",
-        "source2": "https://www.seeturtles.org/fisheries-bycatch"
-    };
-
     if (!window.endingsGotTurtle.includes("Bycatch in Fishing Gear")) {
         window.endingsGotTurtle.push("Bycatch in Fishing Gear");
         window.numEndingsGotTurtle += 1;
@@ -87,8 +76,6 @@ export default function TurtleStoryBycatchDeathContainer() {
             <div className={"journey-container " + className}>
                 <JourneyCardsContainer 
                     title={"NESTING"} 
-                    ending={"Bycatch in Fishing Gear"}
-                    popup={popupData}
                 />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">

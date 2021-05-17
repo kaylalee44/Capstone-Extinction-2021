@@ -37,17 +37,6 @@ export default function CaribouStorySurviveRunContainer() {
         });
     };
 
-    let popupData = {
-        "ending": "Survival",
-        "desc": "Caribou need intact forests to be able to freely roam and hide in order to thrive. Deforestation, habitat fragmentation, and climate change are the greatest ecological threats creating “holes” in their habitats. Though they can survive alone, they are also equipped to survive in small herds. Here’s some ways to help increase the survival of the caribou:",
-        "steps": ["Improve health of forest areas", "Reduce disturbances of forest areas", "Limit paper waste"],
-        "volunteerLink": "",
-        "sourceText": "PEW Environment",
-        "source": "https://www.pewtrusts.org/en/research-and-analysis/articles/2014/03/02/save-the-boreal-save-the-caribou",
-        "source2Text": "",
-        "source2": ""
-    };
-
     if (!window.endingsGotCaribou.includes("Survival")) {
         window.endingsGotCaribou.push("Survival");
         window.numEndingsGotCaribou += 1;
@@ -71,8 +60,6 @@ export default function CaribouStorySurviveRunContainer() {
             <div className={"journey-container " + className}>
                 <JourneyCardsContainer 
                     title="SURVIVAL"
-                    ending={"Survival"}
-                    popup={popupData}
                 />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -48,19 +48,6 @@ export default function RabbitStorySurviveContainer() {
         });
     };
 
-    let popupData = {
-        "ending": "Survival",
-        "desc": "The large scale loss of native shrub is the primary role of the decline of the Columbia Basin Pygmy Rabbit. Because of their small population, things can easily wipe their species out such as extreme weather, predation, disease, demographic limitations, or inbreeding.  Here’s some ways to help increase the survival of the pygmy rabbit:",
-        "steps": ["Reduce water waste indoors and outdoors", "Help conserve habitat and protect shrub landscape", "Partner with Conservation Projects"],
-        "volunteerLink": "",
-        "recoveryLink": "",
-        "conservationLink": "https://www.conservationnw.org/conserving-the-cutest-sagelands-critter/",
-        "sourceText": "Conservation Northwest",
-        "source": "https://www.conservationnw.org/our-work/wildlife/pygmy-rabbit/",
-        "source2Text": "",
-        "source2": ""
-    };
-
     if (!window.endingsGotRabbit.includes("Survival")) {
         window.endingsGotRabbit.push("Survival");
         window.numEndingsGotRabbit += 1;
@@ -84,8 +71,6 @@ export default function RabbitStorySurviveContainer() {
             <div className={"journey-container " + className}>
                 <JourneyCardsContainer 
                     title="SEARCHING" 
-                    ending={"Survival"}
-                    popup={popupData}
                 />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">
