@@ -11,13 +11,15 @@ import firebase from "firebase/app";
 
 function JourneyCard(props) {
     let choiceCount = 0;
-    let choices = props.choices.map((choice) => {
+    var filteredAry = props.choices.filter(function(e) { return e !== props.ending });
+    let choices = filteredAry.map((choice) => {
         choiceCount += 1;
         return <li className="no-style" key={choice}>Choice {choiceCount + ": " + choice}</li>
     });
 
     const handleClick = () => {
         props.toggle();
+        console.log("button here")
     }
 
     return(
@@ -31,12 +33,10 @@ function JourneyCard(props) {
     )
 }
 
-// TODO: bug where the first card/first choice won't show up even though db is populated (prob somethign to do with how the choice is added to db)
+// TODO: popup is not coming up
 function JourneyList(props) {
-    // let currentStory = window.name;
-    // let currentJourney = window.value + 1; 
-    // let ref = firebase.database().ref("journeys");
-    // ref.child(currentStory + "/" + currentJourney).set({"ending": props.ending}); 
+    const [cards, setCards] = useState([]);
+    const [popups, setPopups] = useState([]);
 
     const [seen, setSeen] = useState(false);
     const togglePop = () => {
@@ -48,12 +48,12 @@ function JourneyList(props) {
         }
         setSeen(seenCopy);
     }
-    const [cards, setCards] = useState([]);
     
     // pull the choices from the database and create cards for each one 
     useEffect(() => {
         const allJourneysRef = firebase.database().ref('journeys').child(props.title);
         let cardHolder = [];
+        let popupHolder = [];
         allJourneysRef.once("value", (snapshot) => {
             let journeys = [];
             snapshot.forEach((childSnapshot) => { //iterates through each journey
@@ -61,26 +61,28 @@ function JourneyList(props) {
             });
             journeys = journeys.reverse(); // reverse array to get most recent at the beginning
             journeys.forEach((journey) => {
-                // console.log(journey.ending)
-                let choices = Object.values(journey); //grabs all the choice values
-                // console.log(choices)
+                let choices = Object.values(journey); //grabs all the journey values
+                let popup = choices.pop();
+                console.log("im here")
                 cardHolder.push(<JourneyCard key={choices + Math.random()} choices={choices} ending={journey.ending} toggle={togglePop} />);
+                popupHolder.push(<CardPopup title={props.title} data={popup} toggle={togglePop} />);
             });
             setCards(cardHolder); // [JourneyCard, JourneyCard, ...]
+            setPopups(popupHolder); 
         });
-    }, []);
-
+    }, [cards]); // have argument to render (everytime "cards" change, callback function will be called)
+    
     window.value = cards.length; //global int variable to keep track of how many times user has gone through a story
     return (
         <Container className="journey-list-container">
             <h2 id="journey-list-title">Your Past "{props.title}" Story Interactions</h2>
             <p id="journey-list-subtitle">These previous journeys can help you see what endings you came across, to help prevent harm in the future.</p>
-            <div className="last-prev-text">
-                {/* <p id="last-journey-text">Your last journey:</p> */}
-                {/* <p id="previously-text">Previously:</p> */}
-            </div>
+            {/* <div className="last-prev-text">
+                <p id="last-journey-text">Your last journey:</p> 
+                <p id="previously-text">Previously:</p>
+            </div> */}
             <Row>{cards}</Row>
-            {seen ? <CardPopup toggle={togglePop} data={props.popup} /> : null}
+            {seen ? popups : null}
         </Container>
     )
 }
@@ -101,6 +103,9 @@ export function CardPopup(props) {
         if (step.toLowerCase().includes("recovery") && props.data["recoveryLink"] !== "") {
             li = <li key={step}><a href={props.data["recoveryLink"]}>{step}</a></li>;
         }
+        if (step.toLowerCase().includes("conservation") && props.data["conservationLink"] !== "") {
+            li = <li key={step}><a href={props.data["conservationLink"]}>{step}</a></li>;
+        }
         return li;
     });
 
@@ -111,6 +116,7 @@ export function CardPopup(props) {
 
     const handleClick = () => {
         props.toggle();
+        console.log("x button")
     }
     return (
         <div className="ending-popup">

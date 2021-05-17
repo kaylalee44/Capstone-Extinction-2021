@@ -37,18 +37,6 @@ export default function RabbitStoryPredatorDeathContainer() {
         });
     };
 
-    let popupData = {
-        "ending": "Predator",
-        "desc": "Pygmy rabbits are preyed upon by coyotes, badgers, bobcats, owls, foxes, and sometimes humans. Morality rates for this species can be as high as 50% in the first five weeks of life. Here are some ways to help:",
-        "steps": ["Volunteer to protect local wildlife", "Support environmental organizations that protect wildlife habitats", "Read up on the recovery plan"],
-        "volunteerLink": "",
-        "recoveryLink": "https://ecos.fws.gov/docs/recovery_plan/Columbia%20Basin%20Pygmy%20Rabbit%20Final%20RP.pdf",
-        "sourceText": "U.S. Fish and Wildlife Service",
-        "source": "https://www.fws.gov/sagebrush/wildlife/pygmy-rabbit/",
-        "source2Text": "",
-        "source2": ""
-    };
-
     if (!window.endingsGotRabbit.includes("Predator")) {
         window.endingsGotRabbit.push("Predator");
         window.numEndingsGotRabbit += 1;
@@ -78,8 +66,6 @@ export default function RabbitStoryPredatorDeathContainer() {
             <div className={"journey-container " + className}>
                 <JourneyCardsContainer 
                     title="SEARCHING" 
-                    ending={"Predator"}
-                    popup={popupData}
                 />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">

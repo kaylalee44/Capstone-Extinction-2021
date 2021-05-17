@@ -16,6 +16,16 @@ export default function CaribouStory1Container() {
         }
         setSeen(seenCopy);
     }
+    let popupData = {
+        "ending": "Predator",
+        "desc": "Because oil, gas, and mining explorations are developing into the forests, it opens up the caribou’s previously isolated habitats. Predators such as wolves, lynx, cougars, coyotes, and bears are finding their way to prey on caribou in these areas. Here are some ways to help:",
+        "steps": ["Support environmental organizations that protect wildlife habitats", "Be aware of forestry development projects", "Recycle and reduce use of paper"],
+        "volunteerLink": "",
+        "sourceText": "Nature Canada",
+        "source": "https://naturecanada.ca/discover-nature/endangered-species/woodland-caribou/",
+        "source2Text": "",
+        "source2": ""
+    };
     return(
         <div>
             <StoryTitle title="SURVIVAL" />
@@ -27,10 +37,10 @@ export default function CaribouStory1Container() {
                     </p>
                     <p className="story-question">What will you do?</p>
                     <div className="choice-container">
-                        <button onClick={AddChoiceToDB} className="choice-btn-container caribou-btn">
+                        <button onClick={(e) => AddChoiceToDB(e, false, "", "")} className="choice-btn-container caribou-btn">
                             <Link to="/story-caribou-2" className="choice-btn">Do not cross and continue to stay among the trees.</Link>
                         </button>
-                        <button onClick={AddChoiceToDB} className="choice-btn-container caribou-btn">
+                        <button onClick={(e) => AddChoiceToDB(e, true, "Predator", popupData)} className="choice-btn-container caribou-btn">
                             <Link to="/story-caribou-1-2" className="choice-btn">Cross the gap of open space.</Link>
                         </button>
                     </div>

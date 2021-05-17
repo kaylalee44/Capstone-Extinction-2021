@@ -48,17 +48,6 @@ export default function RabbitStoryClimateDeathContainer() {
         });
     };
 
-    let popupData = {
-        "ending": "Climate Change",
-        "desc": "Due to climate change, the pygmy rabbits’ ecosystem is expected to get warmer, drier, and prone to drought. These conditions will cause an increased likelihood of wildfires and kill the necessary sagebrush. The large scale loss of the native shrub is a major factor for the population’s decline. Here are some ways to help:",
-        "steps": ["Reduce water waste", "Buy organic and local food", "Invest in energy-efficient appliances and bulbs", "Drive fuel-efficient vehicles"],
-        "volunteerLink": "",
-        "sourceText": "Washington Department of Fish and Wildlife",
-        "source": "https://wdfw.wa.gov/species-habitats/species/brachylagus-idahoensis#climate",
-        "source2Text": "Natural Resources Defense Council",
-        "source2": "https://www.nrdc.org/stories/how-you-can-stop-global-warming"
-    };
-
     if (!window.endingsGotRabbit.includes("Climate Change")) {
         window.endingsGotRabbit.push("Climate Change");
         window.numEndingsGotRabbit += 1;
@@ -88,8 +77,6 @@ export default function RabbitStoryClimateDeathContainer() {
             <div className={"journey-container " + className}>
                 <JourneyCardsContainer 
                     title="SEARCHING" 
-                    ending={"Climate Change"}
-                    popup={popupData}
                 />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,15 +1,15 @@
 import firebase from "firebase/app";
 import "firebase/database";
 
-const AddChoiceToDB = (event, storyEnded, ending) => {
+const AddChoiceToDB = (event, storyEnded, ending, popupData) => {
     event.preventDefault();
     let t = event.target.textContent;
-    let currentStory = window.name;
+    window.pastChoices.push(t);
 
-    let currentJourney = window.value + 1; 
+    let currentStory = window.name;
+    let currentJourney = window.value; 
     let ref = firebase.database().ref("journeys");
     
-    // TODO: if user clicks try again and starts in the middle of a story, keep previous choices
     ref.once("value")
         .then(function(snapshot) {
             if (snapshot.child(currentStory).exists()) { // if the current story exists in database (ie. user has played story before)
@@ -19,9 +19,10 @@ const AddChoiceToDB = (event, storyEnded, ending) => {
             }
         });
 
-    // if (storyEnded) {
-    //     ref.child(currentStory + "/" + currentJourney).set({"ending": ending}); 
-    // }
+    if (storyEnded) {
+        ref.child(currentStory + "/" + currentJourney + "/ending").set(ending); 
+        ref.child(currentStory + "/" + currentJourney + "/popup").set(popupData); 
+    }
 }
 
 export default AddChoiceToDB;

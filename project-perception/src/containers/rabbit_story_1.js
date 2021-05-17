@@ -16,6 +16,16 @@ export default function RabbitStory1Container() {
         }
         setSeen(seenCopy);
     }
+    let popupData = {
+        "ending": "Climate Change",
+        "desc": "Due to climate change, the pygmy rabbits’ ecosystem is expected to get warmer, drier, and prone to drought. These conditions will cause an increased likelihood of wildfires and kill the necessary sagebrush. The large scale loss of the native shrub is a major factor for the population’s decline. Here are some ways to help:",
+        "steps": ["Reduce water waste", "Buy organic and local food", "Invest in energy-efficient appliances and bulbs", "Drive fuel-efficient vehicles"],
+        "volunteerLink": "",
+        "sourceText": "Washington Department of Fish and Wildlife",
+        "source": "https://wdfw.wa.gov/species-habitats/species/brachylagus-idahoensis#climate",
+        "source2Text": "Natural Resources Defense Council",
+        "source2": "https://www.nrdc.org/stories/how-you-can-stop-global-warming"
+    };
     return(
         <div>
             <StoryTitle title="SEARCHING" />
@@ -29,10 +39,10 @@ export default function RabbitStory1Container() {
                     </p>
                     <p className="story-question">What will you do?</p>
                     <div className="choice-container">
-                        <button onClick={AddChoiceToDB} className="choice-btn-container">
+                        <button onClick={(e) => AddChoiceToDB(e, false, "", "")} className="choice-btn-container">
                             <Link to="/story-rabbit-2" className="choice-btn">Start a journey to find a different source of food.</Link>
                         </button>
-                        <button onClick={AddChoiceToDB} className="choice-btn-container">
+                        <button onClick={(e) => AddChoiceToDB(e, true, "Climate Change", popupData)} className="choice-btn-container">
                             <Link to="/story-rabbit-1-2" className="choice-btn">Wait for rain to come and revive this sagebrush.</Link>
                         </button>
                     </div>

@@ -6,8 +6,6 @@ export default function JourneyCardsContainer(props) {
         <div>
             <JourneyList
                 title={props.title}
-                ending={props.ending}
-                popup={props.popup}
             />
         </div>
     )

@@ -47,17 +47,6 @@ export default function TurtleStoryClimateDeathContainer() {
         });
     };
 
-    let popupData = {
-        "ending": "Loss and Degradation of Nesting Habit",
-        "desc": "Sea turtles use beaches and the lower dunes to nest and lay their eggs. Sea turtles deposit an average of about 100 eggs in each nest and lay between 3 and 7 nests during the nesting season. Here are some ways to help:",
-        "steps": ["Reduce marine debris", "Volunteer to do beach clean-ups", "Carry reusable water bottles and shopping bags", "Do not disturb nesting turtles, nests, or hatchlings", "Fill in holes and knock down sandcastles before leaving the beach", "Refrain from releasing balloons, as they usually end up in the ocean"],
-        "volunteerLink": "https://www.coastsavers.org/index.php/wcc-cleanup/",
-        "sourceText": "NOAA Fisheries",
-        "source": "https://www.fisheries.noaa.gov/feature-story/what-can-you-do-save-sea-turtles",
-        "source2Text": "",
-        "source2": ""
-    };
-
     if (!window.endingsGotTurtle.includes("Loss and Degradation of Nesting Habit")) {
         window.endingsGotTurtle.push("Loss and Degradation of Nesting Habit");
         window.numEndingsGotTurtle += 1;
@@ -87,8 +76,6 @@ export default function TurtleStoryClimateDeathContainer() {
             <div className={"journey-container " + className}>
                 <JourneyCardsContainer 
                     title={"NESTING"} 
-                    ending={"Loss and Degradation of Nesting Habit"}
-                    popup={popupData}
                 />
                 <div className="back-to-top-btn" onClick={scrollToTop}>
                     <svg width="39" height="25" viewBox="0 0 39 25" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -10,16 +10,24 @@ A lot of the basis of the project has been prepared through the components folde
 
 # How to deploy the code:
 
-To deploy the code, we used Firebase hosting. 
+To deploy the code, we used Firebase hosting. To host on your own Firebase, you will need to follow the steps to connecting your Firebase project to the React application. 
+To do so, you will need to run `firebase init`. Once your project has been has been connected with Firebase, you will need to run `npm run build`. Once the build finishes,
+you can deploy the application to Firebase hosting by running the command, `firebase deploy`. 
 
 For more details on how to host using Firebase: https://firebase.google.com/docs/hosting
 
 # How to contribute:
 
+Here's a list of things that we wanted to add but either didn't have time for it or couldn't figure out how to fix/implement it:
+
 - Add more regions
 - Add more stories
 - Add more facts about each species
 - Add more information on what can be done to help the animal endangerment crisis
+- Fix bugs (journey cards render in weird order, automatic scrolling down when journey cards are shown, etc.)
+- Add audio to the stories
+- Add mobile responsiveness
+- Add a custom domain
 
 # Contact information:
 

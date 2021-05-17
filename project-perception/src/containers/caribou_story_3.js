@@ -5,6 +5,16 @@ import { Link } from 'react-router-dom';
 import AddChoiceToDB from "../components/story/add_choice_db";
 
 export default function CaribouStory3Container() {
+    let popupData = {
+        "ending": "Survival",
+        "desc": "Caribou need intact forests to be able to freely roam and hide in order to thrive. Deforestation, habitat fragmentation, and climate change are the greatest ecological threats creating “holes” in their habitats. Though they can survive alone, they are also equipped to survive in small herds. Here’s some ways to help increase the survival of the caribou:",
+        "steps": ["Improve health of forest areas", "Reduce disturbances of forest areas", "Limit paper waste"],
+        "volunteerLink": "",
+        "sourceText": "PEW Environment",
+        "source": "https://www.pewtrusts.org/en/research-and-analysis/articles/2014/03/02/save-the-boreal-save-the-caribou",
+        "source2Text": "",
+        "source2": ""
+    };
     return(
         <div>
             <StoryTitle title="SURVIVAL" />
@@ -17,10 +27,10 @@ export default function CaribouStory3Container() {
                     </p>
                     <p className="story-question">What do you do?</p>
                     <div className="choice-container">
-                        <button onClick={AddChoiceToDB} className="choice-btn-container caribou-btn">
+                        <button onClick={(e) => AddChoiceToDB(e, true, "Survival", popupData)} className="choice-btn-container caribou-btn">
                             <Link to="/story-caribou-3-1" className="choice-btn">Decide to run away with the herd.</Link>
                         </button>
-                        <button onClick={AddChoiceToDB} className="choice-btn-container caribou-btn">
+                        <button onClick={(e) => AddChoiceToDB(e, true, "Survival", popupData)} className="choice-btn-container caribou-btn">
                             <Link to="/story-caribou-3-2" className="choice-btn">Go up to the humans.</Link>
                         </button>
                     </div>
