@@ -8,3 +8,5 @@ window.numEndingsGotCaribou = 0;
 window.endingsGotCaribou = [];
 
 window.value = 0;
+
+window.pastChoices = [];
