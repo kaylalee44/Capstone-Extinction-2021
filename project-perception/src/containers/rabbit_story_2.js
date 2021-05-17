@@ -16,10 +16,10 @@ export default function RabbitStory2Container() {
                     </p>
                     <p className="story-question">Where will you go?</p>
                     <div className="choice-container">
-                        <button onClick={AddChoiceToDB} className="choice-btn-container">
+                        <button onClick={(e) => AddChoiceToDB(e, true, "Predator")} className="choice-btn-container">
                             <Link to="/story-rabbit-2-1" className="choice-btn">Run Away.</Link>
                         </button>
-                        <button onClick={AddChoiceToDB} className="choice-btn-container">
+                        <button onClick={(e) => AddChoiceToDB(e, false, "")} className="choice-btn-container">
                             <Link to="/story-rabbit-3" className="choice-btn">Hide.</Link>
                         </button>
                     </div>

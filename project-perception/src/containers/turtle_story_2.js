@@ -19,13 +19,13 @@ export default function TurtleStory2Container() {
                     </p>
                     <p className="story-question">Where will you swim?</p>
                     <div className="choice-container">
-                        <button onClick={AddChoiceToDB} className="choice-btn-container">
+                        <button onClick={(e) => AddChoiceToDB(e, true, "Vessel Strikes")} className="choice-btn-container">
                             <Link to="/story-turtle-2-1" className="choice-btn">Swim straight up.</Link>
                         </button>
-                        <button onClick={AddChoiceToDB} className="choice-btn-container">
+                        <button onClick={(e) => AddChoiceToDB(e, true, "Bycatch in Fishing Gear")} className="choice-btn-container">
                             <Link to="/story-turtle-2-2" className="choice-btn">Swim to the right and up.</Link>
                         </button>
-                        <button onClick={AddChoiceToDB} className="choice-btn-container">
+                        <button onClick={(e) => AddChoiceToDB(e, false, "")} className="choice-btn-container">
                             <Link to="/story-turtle-3" className="choice-btn">Swim to the left and up.</Link>
                         </button>
                     </div>

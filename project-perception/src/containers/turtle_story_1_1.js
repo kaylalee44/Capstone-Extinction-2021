@@ -5,6 +5,8 @@ import StoryTitle from '../components/story/story_title';
 import TryAgain from '../components/story/try_again';
 import { scroller } from "react-scroll";
 import "../Global";
+import "firebase/database";
+import firebase from "firebase/app";
 
 export default function TurtleStoryPlasticDeathContainer() {
     const [journeyHidden, setJourneyHidden] = useState(false);
@@ -48,6 +50,11 @@ export default function TurtleStoryPlasticDeathContainer() {
         "source2Text": "",
         "source2": ""
     };
+    // let ref = firebase.database().ref("journeys");
+    // ref.once("value")
+    //     .then(function() {
+    //         ref.child(window.name + "/" + (window.value - 1) + "/popup").set(popupData); 
+    // });
 
     if (!window.endingsGotTurtle.includes("Ocean Pollution/Marine Debris")) {
         window.endingsGotTurtle.push("Ocean Pollution/Marine Debris");

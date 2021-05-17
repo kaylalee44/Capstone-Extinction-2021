@@ -50,12 +50,13 @@ export default function RabbitStorySurviveContainer() {
 
     let popupData = {
         "ending": "Survival",
-        "desc": "Pygmy rabbits are preyed upon by coyotes, badgers, bobcats, owls, foxes, and sometimes humans. Morality rates for this species can be as high as 50% in the first five weeks of life. Here are some ways to help:",
-        "steps": ["Volunteer to protect local wildlife", "Support environmental organizations that protect wildlife habitats", "Read up on the recovery plan"],
+        "desc": "The large scale loss of native shrub is the primary role of the decline of the Columbia Basin Pygmy Rabbit. Because of their small population, things can easily wipe their species out such as extreme weather, predation, disease, demographic limitations, or inbreeding.  Here’s some ways to help increase the survival of the pygmy rabbit:",
+        "steps": ["Reduce water waste indoors and outdoors", "Help conserve habitat and protect shrub landscape", "Partner with Conservation Projects"],
         "volunteerLink": "",
-        "recoveryLink": "https://ecos.fws.gov/docs/recovery_plan/Columbia%20Basin%20Pygmy%20Rabbit%20Final%20RP.pdf",
-        "sourceText": "U.S. Fish and Wildlife Service",
-        "source": "https://www.fws.gov/sagebrush/wildlife/pygmy-rabbit/",
+        "recoveryLink": "",
+        "conservationLink": "https://www.conservationnw.org/conserving-the-cutest-sagelands-critter/",
+        "sourceText": "Conservation Northwest",
+        "source": "https://www.conservationnw.org/our-work/wildlife/pygmy-rabbit/",
         "source2Text": "",
         "source2": ""
     };

@@ -69,7 +69,7 @@ export default function CaribouStoryHunterDeathContainer() {
                         With increased logging and large open spaces, woodland caribou are at a higher chance of getting hunted as they are easy to see and shoot.
                         Woodland caribou tend to move in herds, so by moving alone, it decreases its chance of surival and likelihood of getting shot and killed.
                     </p>
-                    <p className="num-endings-text">Number of endings gotten: {window.endingsGotCaribou}/4</p>
+                    <p className="num-endings-text">Number of endings gotten: {window.numEndingsGotCaribou}/4</p>
                     <TryAgain to="story-caribou-2" href="https://naturecanada.ca/discover-nature/endangered-species/woodland-caribou/" handleClick={handleClick} buttonText={buttonText} learnMore="Learn more about the Woodland Caribou" />
                 </div>
             </div>

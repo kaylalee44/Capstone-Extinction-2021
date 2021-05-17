@@ -17,10 +17,10 @@ export default function CaribouStory2Container() {
                     </p>
                     <p className="story-question">Where do you go?</p>
                     <div className="choice-container">
-                        <button onClick={AddChoiceToDB} className="choice-btn-container caribou-btn">
+                        <button onClick={(e) => AddChoiceToDB(e, true, "Logging/Hunter")} className="choice-btn-container caribou-btn">
                             <Link to="/story-caribou-2-1" className="choice-btn">Continue to go alone.</Link>
                         </button>
-                        <button onClick={AddChoiceToDB} className="choice-btn-container caribou-btn">
+                        <button onClick={(e) => AddChoiceToDB(e, false, "")} className="choice-btn-container caribou-btn">
                             <Link to="/story-caribou-3" className="choice-btn">Go up to them in hopes to join their herd.</Link>
                         </button>
                     </div>

@@ -6,7 +6,7 @@ const AddChoiceToDB = (event, storyEnded, ending) => {
     let t = event.target.textContent;
     let currentStory = window.name;
 
-    let currentJourney = window.value + 1; 
+    let currentJourney = window.value; 
     let ref = firebase.database().ref("journeys");
     
     // TODO: if user clicks try again and starts in the middle of a story, keep previous choices
@@ -19,9 +19,9 @@ const AddChoiceToDB = (event, storyEnded, ending) => {
             }
         });
 
-    // if (storyEnded) {
-    //     ref.child(currentStory + "/" + currentJourney).set({"ending": ending}); 
-    // }
+    if (storyEnded) {
+        ref.child(currentStory + "/" + currentJourney + "/ending").set(ending); 
+    }
 }
 
 export default AddChoiceToDB;

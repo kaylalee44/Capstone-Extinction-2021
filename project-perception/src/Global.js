@@ -6,3 +6,5 @@ window.endingsGotRabbit = [];
 
 window.numEndingsGotCaribou = 0;
 window.endingsGotCaribou = [];
+
+window.value = 0;
