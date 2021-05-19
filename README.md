@@ -1,4 +1,10 @@
-# Capstone-Extinction-2021
+# Project Perception 2021 (Capstone)
+
+# Website link: https://project-perception-47835.web.app/
+
+# Abstract
+
+With 35,500 species being threatened with extinction around the world, the endangered species crisis is becoming severer each day. By educating high school and college students, they can be the leaders of change needed to protect our ecosystems. Project Perception is a website designed with the intention to push these students to learn more about endangered species by engaging in interactive stories that focus on overlooked species in different regions. With this project, we strive to help people realize the urgency of species decline and make sustainable lifestyle changes to make a positive impact on our ecosystems.
 
 # What Our Code Includes
 
@@ -24,7 +30,7 @@ Here's a list of things that we wanted to add but either didn't have time for it
 - Add more stories
 - Add more facts about each species
 - Add more information on what can be done to help the animal endangerment crisis
-- Fix bugs (journey cards render in weird order, automatic scrolling down when journey cards are shown, etc.)
+- Fix bugs (journey cards render in weird order, automatic scrolling down when journey cards are shown, popups for journey cards, journey cards, etc.)
 - Add audio to the stories
 - Add mobile responsiveness
 - Add a custom domain
