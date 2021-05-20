@@ -10,18 +10,45 @@ export default function TryAgain(props) {
 
     const addPreviousChoices = () => { // add past choices if user starts in the middle of the story
         if (props.to.includes("2") || props.to.includes("3")) {
-            let currentStory = window.name;
-            let currentJourney = window.value; 
             let ref = firebase.database().ref("journeys");
-            window.pastChoices.pop();
-            ref.child(currentStory + "/" + currentJourney).set(window.pastChoices); 
+            let currentStory = window.name;
+            let currentJourney = 0; 
+            let pastChoices = [];
+            if (currentStory === "NESTING") {
+                currentJourney = window.value; 
+                window.pastChoices.pop();
+                pastChoices = window.pastChoices;
+            } else if (currentStory === "SURVIVAL") {
+                currentJourney = window.valueCaribou;
+                window.pastChoicesCaribou.pop();
+                pastChoices = window.pastChoicesCaribou;
+            } else if (currentStory === "SEARCHING") {
+                currentJourney = window.valueRabbit;
+                window.pastChoicesRabbit.pop();
+                pastChoices = window.pastChoicesRabbit;
+            }
+            ref.child(currentStory + "/" + currentJourney).set(pastChoices); 
             if (props.to.includes("2")) {
-                window.pastChoices = [window.pastChoices.shift()];
+                if (currentStory === "NESTING") {
+                    window.pastChoices = [window.pastChoices.shift()];
+                } else if (currentStory === "SURVIVAL") {
+                    window.pastChoicesCaribou = [window.pastChoicesCaribou.shift()];
+                } else if (currentStory === "SEARCHING") {
+                    window.pastChoicesRabbit = [window.pastChoicesRabbit.shift()];
+                }
             } else if (props.to.includes("3")) {
-                window.pastChoices = window.pastChoices.slice(0, 2);
+                if (currentStory === "NESTING") {
+                    window.pastChoices = window.pastChoices.slice(0, 2);
+                } else if (currentStory === "SURVIVAL") {
+                    window.pastChoicesCaribou = window.pastChoicesCaribou.slice(0, 2);
+                } else if (currentStory === "SEARCHING") {
+                    window.pastChoicesRabbit = window.pastChoicesRabbit.slice(0, 2);
+                }
             }
         } else {
             window.pastChoices = [];
+            window.pastChoicesCaribou = [];
+            window.pastChoicesRabbit = [];
         }
     }
     return(
