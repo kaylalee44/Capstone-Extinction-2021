@@ -7,7 +7,14 @@ const AddChoiceToDB = (event, storyEnded, ending, popupData) => {
     window.pastChoices.push(t);
 
     let currentStory = window.name;
-    let currentJourney = window.value; 
+    let currentJourney = 0; 
+    if (currentStory === "NESTING") {
+        currentJourney = window.value; 
+    } else if (currentStory === "SURVIVAL") {
+        currentJourney = window.valueCaribou;
+    } else if (currentStory === "SEARCHING") {
+        currentJourney = window.valueRabbit;
+    }
     let ref = firebase.database().ref("journeys");
     
     ref.once("value")
