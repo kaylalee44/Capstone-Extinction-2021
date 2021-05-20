@@ -24,9 +24,11 @@ function FooterLogo() {
 function FooterDesc() {
     return (
         <div className="footer-desc">
-            <p>Project Perception is a capstone project created by 4 University of Washington students 
+            <p>
+                Project Perception is a capstone project created by 4 University of Washington students 
                 looking to spread awareness about the endangered species crisis in hopes for people to make 
-                sustainable lifestyle changes and further spread awareness.</p>
+                sustainable lifestyle changes and further spread awareness.
+            </p>
         </div>
     );
 }

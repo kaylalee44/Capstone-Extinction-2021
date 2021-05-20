@@ -133,5 +133,4 @@ function ProfileCard(props) {
             </div>
         </div>
     );
-
 }

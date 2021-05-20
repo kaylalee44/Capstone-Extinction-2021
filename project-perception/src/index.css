@@ -1,13 +1,17 @@
 /* General CSS */
+* {
+  box-sizing: border-box;
+}
 
-html {
+html, body {
   /* position: relative;  */
   min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding:0;
   background-color: #3a444d;
 }
 
@@ -191,12 +195,12 @@ body {
 
 .landing-title {
   padding-top: 3rem;
-  font-size: 50px;
+  font-size: 24px;
   font-family: 'Cinzel', serif;
 }
 
 .landing-subtitle {
-  font-size: 24px;
+  font-size: 18px;
   font-family: 'Lato', sans-serif;
   margin-left: 3rem;
   margin-right: 3rem;
@@ -359,12 +363,12 @@ body {
 .adventure-content div {
   color: #E9E3CB;
   font-family: 'Lato', serif;
-  font-size: 28px;
+  font-size: 18px;
   margin-right: 3em;
 }
 
 .adventure-btn {
-  font-size: 28px;
+  font-size: 18px;
   text-align: center;
   padding-left: 2em;
   padding-right: 2em;
@@ -411,6 +415,7 @@ body {
 }
 
 .feature-img {
+  display: none;
   margin-right: 1em;
 }
 
@@ -515,6 +520,10 @@ body {
 
 .navbar-right, .hidden {
   display: none;
+}
+
+.navbar-title {
+  font-size: 18px;
 }
 
 .page-links {
@@ -1001,13 +1010,13 @@ body {
 .article-carousel {
   margin: auto;
   background-color: #e9e3cb;
-  height: 587px;
   width: calc(100% - 150px);
   margin-top: 2.5rem;
   margin-bottom: 5rem;
   border-radius: 10px;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .article-card {
@@ -1083,6 +1092,48 @@ body {
     font-size: 24px;
     color: #E9E3CB;
   }
+
+  .species-card {
+    height: 230px;
+  }
+
+  /* Landing page CSS */ 
+  .landing-title {
+    font-size: 32px;
+  }
+
+  .landing-subtitle {
+    font-size: 20px;
+    margin-top: 22em;
+  }
+
+  .adventure-content div {
+    margin-left: 2em;
+    font-size: 28px;
+  }
+
+  .adventure-btn {
+    margin-right: 2em;
+    font-size: 28px;
+  }
+
+  .about-links {
+    margin-bottom: 2em;
+  }
+
+  /* Make a Change CSS */
+  .change-card {
+    margin-bottom: 2em;
+  }
+
+  .article-carousel {
+    flex-direction: column;
+  }
+
+  .article-card {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }
 
 /* Desktops and laptops ----------- */
@@ -1133,6 +1184,20 @@ body {
     width: 300px;
   }
 
+  /*Landing page CSS */
+  .feature-img {
+    display: block;
+  }
+
+  .landing-title {
+    font-size: 50px;
+  }
+
+  .landing-subtitle {
+    font-size: 24px;
+    margin-top: 19em;
+  }
+
   /* Stories */
   .story-name, .species-name {
     margin-left: 25px;
@@ -1147,7 +1212,7 @@ body {
   }
 
   .tags {
-    margin-top: 2.5em;
+    margin-top: 2.5rem;
     margin-left: 15px;
   }
 
@@ -1269,6 +1334,11 @@ body {
     height: 14em;
     background-color: transparent;
     border: none;
+  }
+
+  /* Make A Change CSS */ 
+  .article-carousel {
+    height: 587px;
   }
 }
 
